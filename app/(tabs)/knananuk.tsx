@@ -13,6 +13,7 @@ export default function KnananukScreen() {
     const [selectedSong, setSelectedSong] = useState<Song | null>(null);
     const [indexVisible, setIndexVisible] = useState(false);
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({ "Misa": true });
+    const [expandedMisaSection, setExpandedMisaSection] = useState<string | null>(null);
 
     // Grouping & Sorting logic
     const groupedData = useMemo(() => {
@@ -52,6 +53,11 @@ export default function KnananukScreen() {
     const toggleCategory = (cat: string) => {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
         setExpandedCategories(prev => ({ ...prev, [cat]: !prev[cat] }));
+    };
+
+    const toggleMisaSection = (sec: string) => {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+        setExpandedMisaSection(prev => prev === sec ? null : sec);
     };
 
     const renderSongRow = (song: Song, showMeta = false) => (
@@ -147,16 +153,47 @@ export default function KnananukScreen() {
 
                                 {isExpanded && (
                                     <View style={styles.categoryBody}>
-                                        {Object.entries(sections).map(([section, songs]) => (
-                                            <View key={section} style={styles.sectionContainer}>
-                                                <View style={styles.sectionHeader}>
-                                                    <View style={styles.sectionLine} />
-                                                    <Text style={styles.sectionTitle}>{section}</Text>
-                                                    <View style={styles.sectionLine} />
+                                        {category === "Misa" ? (
+                                            // Nested Accordion for Misa
+                                            Object.entries(sections).map(([section, songs]) => {
+                                                const isSecExpanded = expandedMisaSection === section;
+                                                return (
+                                                    <View key={section} style={styles.sectionAccordion}>
+                                                        <TouchableOpacity 
+                                                            style={styles.sectionAccordionHeader}
+                                                            onPress={() => toggleMisaSection(section)}
+                                                        >
+                                                            <Text style={styles.sectionTitle}>{section}</Text>
+                                                            <Ionicons 
+                                                                name={isSecExpanded ? "chevron-up" : "chevron-down"} 
+                                                                size={16} 
+                                                                color="#c1121f" 
+                                                            />
+                                                        </TouchableOpacity>
+                                                        {isSecExpanded && (
+                                                            <View style={styles.sectionAccordionBody}>
+                                                                {songs.map(song => renderSongRow(song))}
+                                                            </View>
+                                                        )}
+                                                    </View>
+                                                );
+                                            })
+                                        ) : ["Misa Latin", "Knananuk Ingles", "Knananuk Indonesia"].includes(category) ? (
+                                            // Flat list for these categories
+                                            Object.values(sections).flat().sort((a, b) => a.id - b.id).map(song => renderSongRow(song))
+                                        ) : (
+                                            // Default Section View for others
+                                            Object.entries(sections).map(([section, songs]) => (
+                                                <View key={section} style={styles.sectionContainer}>
+                                                    <View style={styles.sectionHeader}>
+                                                        <View style={styles.sectionLine} />
+                                                        <Text style={styles.sectionTitle}>{section}</Text>
+                                                        <View style={styles.sectionLine} />
+                                                    </View>
+                                                    {songs.map(song => renderSongRow(song))}
                                                 </View>
-                                                {songs.map(song => renderSongRow(song))}
-                                            </View>
-                                        ))}
+                                            ))
+                                        )}
                                     </View>
                                 )}
                             </View>
@@ -268,12 +305,22 @@ const styles = StyleSheet.create({
     categorySubtitle: { fontSize: 13, color: '#a18d7c', marginTop: 2 },
     categoryBody: { paddingBottom: 16 },
     sectionContainer: { marginTop: 8 },
+    sectionAccordion: { 
+        borderBottomWidth: 1, borderBottomColor: '#f7f2e8',
+    },
+    sectionAccordionHeader: {
+        flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+        paddingVertical: 12, paddingHorizontal: 16, backgroundColor: '#fdfbf7'
+    },
+    sectionAccordionBody: {
+        backgroundColor: '#fff',
+    },
     sectionHeader: { 
         flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, marginVertical: 8 
     },
     sectionLine: { flex: 1, height: 1, backgroundColor: '#ead9cf' },
     sectionTitle: { 
-        marginHorizontal: 10, fontSize: 13, fontWeight: '800', color: '#c1121f', textTransform: 'uppercase', letterSpacing: 1 
+        fontSize: 13, fontWeight: '800', color: '#c1121f', textTransform: 'uppercase', letterSpacing: 1 
     },
     songCard: { 
         flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingVertical: 12,
@@ -308,7 +355,7 @@ const styles = StyleSheet.create({
         borderLeftWidth: 4, borderLeftColor: '#c1121f', marginBottom: 24 
     },
     refrainTitle: { fontSize: 14, fontWeight: '900', color: '#c1121f', textTransform: 'uppercase', marginBottom: 8 },
-    refrainText: { fontSize: 18, color: '#4b2e1f', lineHeight: 28, fontStyle: 'italic', fontStyle: 'italic' },
+    refrainText: { fontSize: 18, color: '#4b2e1f', lineHeight: 28, fontStyle: 'italic' },
     versesBox: { paddingHorizontal: 8 },
     verseText: { fontSize: 18, color: '#4b2e1f', lineHeight: 28, marginBottom: 20 },
     menuOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' },
