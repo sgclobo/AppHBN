@@ -50,19 +50,11 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-<<<<<<< HEAD
-        name="devosoens"
-        options={{
-          title: "Devosoenss ",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome6 name="hands-praying" size={24} color={color} />
-=======
         name="knananuk"
         options={{
           title: "Knananuk",
           tabBarIcon: ({ color }) => (
             <FontAwesome6 name="music" size={24} color={color} />
->>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
           ),
         }}
       />
