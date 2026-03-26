@@ -28,7 +28,11 @@ export default function Index() {
 
       <View style={styles.titleWrapper}>
         <Golden3DText text="HAROHAN" style={styles.h3} shadowOffset={2} />
+<<<<<<< HEAD
         <Golden3DText text="BA&nbsp;&nbsp;NAI" style={styles.h2} shadowOffset={4} />
+=======
+        <Golden3DText text="BA  NAI" style={styles.h2} shadowOffset={4} />
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
       </View>
     </View>
   );
@@ -86,6 +90,10 @@ const styles = StyleSheet.create({
     color: "#C58300",
   },
   layer0: {
+<<<<<<< HEAD
     color: "#FFDF00",
+=======
+    color: "#D4AF37",
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
   },
 });

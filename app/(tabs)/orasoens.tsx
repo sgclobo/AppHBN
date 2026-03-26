@@ -1,5 +1,9 @@
 import React, { useRef, useState } from "react";
 import { LayoutChangeEvent, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+<<<<<<< HEAD
+=======
+import DevosoensTab from "../components/DevosoensTab";
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
 
 type PrayerItem = {
     id?: string;
@@ -7,13 +11,19 @@ type PrayerItem = {
     section?: string;
     label?: string;
     rubric?: string;
+<<<<<<< HEAD
     source?: string;
+=======
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     content?: string;
     pages?: string[];
     has_image?: boolean;
     image_description?: string;
+<<<<<<< HEAD
     type?: string;
     number?: number;
+=======
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
 };
 
 const prayers: Record<string, PrayerItem> = {
@@ -67,7 +77,10 @@ const prayers: Record<string, PrayerItem> = {
         "label": "Orasaun ba Amo Papa",
         "content": "Ita harohan ba ita nia Amo Papa, Leão XIV.\nNa’i haraik isin diak ba nia, hametin no tahan nia.\n<b>Orasaun:</b>\nMaromak sarani hotu nia Bibi atan no mata dalan; hateke ho laran diak ba ita atan, Amo Papa Leão XIV, nebe Ita Boot mak fihir nudar Ita Kreda nia Bibi atan. Haraik atu povu nebe nia ukun simu didiak nia liafuan no esemplu sira, atu nune’e, nia bele to’o moris rohan laek hamutuk ho bibi luhan tomak nebe Ita Boot hameno ba nia. Ami harohan ne’e hodi ami Na’i Jesus Kristu hamutuk ho Espiritu Santu.\n<b>Amen.</b>",
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     "Pelas Almas do Purgatório": {
         "id": "pelas_almas_purgatorio",
         "section": "Orasoens",
@@ -88,22 +101,34 @@ const prayers: Record<string, PrayerItem> = {
         "title": "Aktu de Kontrisaun",
         "section": "Orasoens",
         "label": "Aktu de Kontrisaun",
+<<<<<<< HEAD
         "content":
             "Ha’u nia Maromak, ha’u hanoin ho laran moras sala hot-hotu ha’u halo ona kontra Ita Boot diak liu, nebe halo diak deit mai ha’u. Ha’u hasa’e lialos ba Ita Boot, hodi Ita Boot nia grasa, lakohi sala tan. Ha’u husu barak Ita Boot perdua ha’u, tanba Ita Boot laran diak ho tanba ha’u nia Na’i Jesus Kristu terus to’o mate tanba ha’u."
+=======
+        "content": "Ha’u nia Maromak, ha’u hanoin ho laran moras sala hot-hotu ha’u halo ona kontra Ita Boot diak liu, nebe halo diak deit mai ha’u. Ha’u hasa’e lialos ba Ita Boot, hodi Ita Boot nia grasa, lakohi sala tan. Ha’u husu barak Ita Boot perdua ha’u, tanba Ita Boot laran diak ho tanba ha’u nia Na’i Jesus Kristu terus to’o mate tanba ha’u."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "Aktu de Fé, Esperansa no Karidade": {
         "title": "Aktu de Fé, Esperansa no Karidade",
         "section": "Orasoens",
         "label": "Aktu de Fé, Esperansa no Karidade",
+<<<<<<< HEAD
         "content":
             "Ha’u nia Maromak, ha’u fiar no hein metin Ita Boot, ha’u hadomi Ita Boot liu sasan hot-hotu no hadomi maun alin sira nudar ha’u an rasik tanba Ita Boot."
+=======
+        "content": "Ha’u nia Maromak, ha’u fiar no hein metin Ita Boot, ha’u hadomi Ita Boot liu sasan hot-hotu no hadomi maun alin sira nudar ha’u an rasik tanba Ita Boot."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "Orasaun Atu husu Vokasaun": {
         "title": "Orasaun Atu husu Vokasaun",
         "section": "Orasoens",
         "label": "Orasaun Atu husu Vokasaun",
+<<<<<<< HEAD
         "content":
             "Jesus futar Fuan iha Eukaristia, Nailulik boot rohan laek: tanba Ita Boot nia domin laran luak, ami husu atu tulun familia sai santu; nune’e, hanesan viveiro diak ida, bele naburas vokasaun barak ba Ita nia Kreda. Haraik mos nailulik barak mai ami, nailulik sira nakonu ho Ita Boot nia Espiritu, manas ho Ita Boot nia Karidade atu buka deit Ita Boot nia reinu iha rai ne’e no Ita Boot nia gloria iha Lalehan.\n<b>Oh Jesus, Maksoin mundu nian.</b>\n<i>Haraik santidade ba ita nia nailulik sira.</i>\n<b>Oh Maria, Klero nia Liurai Feto.</b>\n<i>Haraik nailulik barak no santu ba Ita nia Kreda.</i>"
+=======
+        "content": "Jesus futar Fuan iha Eukaristia, Nailulik boot rohan laek: tanba Ita Boot nia domin laran luak, ami husu atu tulun familia sai santu; nune’e, hanesan viveiro diak ida, bele naburas vokasaun barak ba Ita nia Kreda. Haraik mos nailulik barak mai ami, nailulik sira nakonu ho Ita Boot nia Espiritu, manas ho Ita Boot nia Karidade atu buka deit Ita Boot nia reinu iha rai ne’e no Ita Boot nia gloria iha Lalehan.\n<b>Oh Jesus, Maksoin mundu nian.</b>\n<i>Haraik santidade ba ita nia nailulik sira.</i>\n<b>Oh Maria, Klero nia Liurai Feto.</b>\n<i>Haraik nailulik barak no santu ba Ita nia Kreda.</i>"
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "Oferecimento das Obras do Dia": {
         "id": "meu_deus_creio",
@@ -116,7 +141,10 @@ const prayers: Record<string, PrayerItem> = {
         "title": "Ao Espírito Santo",
         "section": "Durante o Dia",
         "label": "Ao Espírito Santo",
+<<<<<<< HEAD
         "type": "hymn",
+=======
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         "content": "Vinde Santo Espírito, vinde amor ardente, acendei na terra vossa luz fulgente.\nVinde, Pai dos pobres: na dor e aflições,\nvinde encher de gozo nossos corações.\nBenfeitor supremo em todo o momento, habitando em nós, sois o nosso alento.\nDescanso na luta e na paz encanto, no calor sois brisa, conforto no pranto.\nLuz de santidade, que no céu ardeis: abrasai as almas dos vossos fiéis.\nSem a vossa força e favor clemente, ada há no homem que seja inocente.\nLavai nossas manchas, a aridez regai, sarai os enfermos e a todos salvai.\nVossos sete dons concedei à alma do que em Vós confia:\nVirtude na vida, amparo na morte,no céu alegria. Amen."
     },
     "Consagração a N.ª Senhora": {
@@ -150,7 +178,10 @@ const prayers: Record<string, PrayerItem> = {
     "Iha Tempu Paskoa — Regina Caeli": {
         "id": "regina_caeli",
         "label": "Regina Caeli",
+<<<<<<< HEAD
         "rubric": "<i>Hahu tempu Paskoa too festa Espiritu Santu:</i>",
+=======
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         "content": "V/<i>Liurai Feto lalehan, Ita Boot neon kontente, aleluia!</i>\nR/<b>Tanba Oan Ita Boot kous, aleluia.</b>\nV/<i>Moris fali nudar Nia uluk hateten, aleluia!</i>\nR/<b>Harohan Na’i Maromak mai ami, aleluia.</b>\nV/<b>Oh Virjem Maria, Ita Boot bele ona kontente teb-tebes, aleluia!</b>\nR/<i>Tanba ami na'i Na'i moris fali lolos, aleluia!</i>\n\n<b>Orasaun:</b>\nNa'i Maromak, Ita boot halo ema hot-hotu kontente tanba Ita Boot nia Oan, ami Na'i Jesus Kristu, moris fali duni; tan nia Inan Virjem Maria, halo ami hetan rahun diak nafatin iha lalehan. Ami husu ne’e tamba ami Na'i Jesus Kristu.\n<b>Amen.</b>"
     },
     "Às Refeições": {
@@ -169,20 +200,29 @@ const prayers: Record<string, PrayerItem> = {
         "id": "nas_tentacoes",
         "section": "Durante o Dia",
         "label": "Nas Tentações",
+<<<<<<< HEAD
         "content": "«Vigiai e orai para não cairdes em tentação» – disse Jesus (Mt 26, 41).\nVigiai, isto é, fugi das ocasiões que podem levar ao pecado: certos programas de televisão, discotecas, espectáculos, leituras, conversas, divertimentos, más companhias, excessos no comer e beber...\nOrai, isto é, rezai. Diz então: «Jesus, Maria, José!» ou: «Senhor, não nos deixeis cair em tentação!»"
+=======
+        "content": "«Vigiai e orai para não cairdes em tentação» – disse Jesus (Mt 26, 41).\nVigiai, isto é, fugi das occasions que podem levar ao pecado: certos programas de televisão, discotecas, espectáculos, leituras, conversas, divertimentos, más companhias, excessos no comer e beber...\nOrai, isto é, rezai. Diz então: «Jesus, Maria, José!» ou: «Senhor, não nos deixeis cair em tentação!»"
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "Leitura": {
         "id": "leitura",
         "title": "Leitura",
         "section": "Durante o Dia",
         "label": "Leitura",
+<<<<<<< HEAD
         "content": "Lê pausadamente algum livro espiritual, sobretudo a Bíblia: «Toda a Escritura inspirada por Deus é útil para instruir, para corrigir, para educar na santidade» (2 Tm 3, 16-17). «A Ele falamos quando rezamos; a Ele escutamos quando lemos a sua palavra» (Vaticano II. D. V. 21)."
+=======
+        "content": "Lê pausadamente algum livro espiritual, sobretudo a Bíblia: «Toda a Escritura inspirada por Deus é útil para instruir, para corrigir, para educar na santidade» (2 Tm 3, 16-17). «A Ele falamos quando rezamos; a Ele escutamos quando lemos a sua palavra»."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "A Jesus Misericordioso": {
         "id": "jesus_misericordioso",
         "title": "A Jesus Misericordioso",
         "section": "Durante o Dia",
         "label": "A Jesus Misericordioso",
+<<<<<<< HEAD
         "content": "<b>Acto de Consagração:</b>\nÓ Jesus, infinita é a Vossa Bondade e inesgotáveis os tesouros da vossa graça. Confio inteiramente na vossa Misericórdia. Desejo viver no esplendor de graça e amor que brotaram do vosso Sagrado Coração na cruz.\n\n<b>Orasoens</b>\nEterno Deus, cuja Misericórdia é infinita e cujo tesouro de compaixão não tem limites, olhai propício para nós e aumentai a vossa misericórdia para connosco. «Ó Sangue e Água que brotastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em vós!».\n\n<b>Terço da Misericórdia:</b>\n<i>[Pai Nosso – Ave Maria – Credo]</i>\n\n<b>Nas contas grandes:</b>«Eterno Pai, eu Vos ofereço o Corpo, Sangue, Alma e Divindade do vosso muito Amado Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos pecados de todo o mundo».\n\n<b>Nas contas pequenas:</b>Pela sua dolorosa Paixão, tende misericórdia de nós e de todo o mundo.\n\n<b>No fim:</b> «Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e de todo o mundo»."
     },
     "Terço da Misericórdia": {
@@ -191,21 +231,32 @@ const prayers: Record<string, PrayerItem> = {
         "section": "Durante o Dia",
         "label": "Terço da Misericórdia",
         "content": "<i>[Pai Nosso – Ave Maria – Credo]</i>\n\n<b>Nas contas grandes:</b>«Eterno Pai, eu Vos ofereço o Corpo, Sangue, Alma e Divindade do vosso muito Amado Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos pecados de todo o mundo».\n\n<b>Nas contas pequenas:</b>Pela sua dolorosa Paixão, tende misericórdia de nós e de todo o mundo.\n\n<b>No fim:</b> «Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e de todo o mundo»."
+=======
+        "content": "<b>Acto de Consagração:</b>\nÓ Jesus, infinita é a Vossa Bondade e inesgotáveis os tesouros da vossa graça. Confio inteiramente na vossa Misericórdia.\n\n<b>Terço da Misericórdia:</b>\n<i>[Pai Nosso – Ave Maria – Credo]</i>\n\n<b>Nas contas grandes:</b>«Eterno Pai, eu Vos ofereço o Corpo, Sangue, Alma e Divindade do vosso muito Amado Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos pecados de todo o mundo».\n\n<b>Nas contas pequenas:</b>Pela sua dolorosa Paixão, tende misericórdia de nós e de todo o mundo.\n\n<b>No fim:</b> «Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e de todo o mundo»."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     },
     "Orasaun Kalan Nian": {
         "id": "orasaun_kalaun_nian",
         "section": "Orasaun Kalan Nian",
+<<<<<<< HEAD
         "content": "Ha’u nia Maromak, ha’u ata adora Ita Boot ho ha’u nia laran tomak. Ha’u agradese Ita Boot tanba Ita Boot halo ha’u, halo mos ha’u sai sarani, halo ha’u moris loron ida ne’e tan. Perdua sala hot-hotu ha’u ata halo ohin ne’e; ha’u halo diak ruma karik, ha’u hasa’e ba Ita Boot, hodi husu deit Ita Boot nia grasa. Ha’u ata ba toba, Ita Boot hare didiak ha’u. Keta husik ha’u monu ba tentasaun ruma. Na’i Maromak, haraik Ita Boot nia tulun no Ita Boot nia bensa mai ha’u, ba ha’u nia parente sira no ba ema hot-hotu. \n<b>Amen.</b>\n<i>Maromak hit aan mai tulun ami.</i>\n<b>Nain mai lalais sadia ami no salva ami.</b>"
     },
     "Sagrada Comunhão — Preparação": {
         "id": "sagrada_comunhao_preparacao",
         "title": "Sagrada Comunhão — Preparação",
+=======
+        "content": "Ha’u nia Maromak, ha’u ata adora Ita Boot ho ha’u nia laran tomak. Ha’u agradese Ita Boot tanba Ita Boot halo ha’u, halo mos ha’u sai sarani, halo ha’u moris loron ida ne’e tan. Perdua sala hot-hotu ha’u ata halo ohin ne’e; ha’u halo diak ruma karik, ha’u hasa’e ba Ita Boot, hodi husu deit Ita Boot nia grasa. Ha’u ata ba toba, Ita Boot hare didiak ha’u. Keta husik ha’u monu ba tentasaun ruma. Na’i Maromak, haraik Ita Boot nia tulun no Ita Boot nia bensa mai ha’u, ba ha’u nia parente sira no ba ema hot-hotu. \n<b>Amen.</b>"
+    },
+    "Sagrada Comunhão — Preparação": {
+        "id": "sagrada_comunhao_preparacao",
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         "section": "Sagrada Comunhão",
         "label": "Sagrada Comunhão",
         "content": "Senhor, eu creio em Vós, mas aumentai a minha fé!\nSenhor, eu espero em Vós, mas aumentai a minha esperança.\nSenhor, eu vos amo, mas aumentai o meu amor!\n\nVinde, ó Jesus, vinde purificar-me. Vinde, ó meu Benfeitor, e socorrei-me. Vinde, ó Médico divino, e curai-me. Vinde, ó meu Rei, e reinai em mim. Vinde, ó meu Senhor, e abençoai-me. Virgem Santíssima, vinde ajudar-me a receber Jesus. Santo Anjo da minha guarda, vinde preparar-me."
     },
     "Acção de Graças": {
         "id": "accao_de_gracas",
+<<<<<<< HEAD
         "title": "Acção de Graças",
         "section": "Sagrada Comunhão",
         "label": "Acção de Graças",
@@ -214,11 +265,20 @@ const prayers: Record<string, PrayerItem> = {
     "Alma de Cristo": {
         "id": "accao_de_gracas",
         "title": "Alma de Cristo",
+=======
+        "section": "Sagrada Comunhão",
+        "label": "Acção de Graças",
+        "content": "<b>Jesus está em mim</b>\nJesus, meu Senhor e meu Deus! Ó Jesus, viestes ao meu peito: dou-Vos infinitas graças por esta mercê – Ó Jesus, estais em mim e eu em Vós – Ó Jesus, conservai-me na vossa graça – Ó Jesus, fortalecei-me contra as tentações – Ó Jesus, dai-me horror ao pecado – Ó Jesus, não permitais que de Vós me separe jamais – Ó Jesus, antes morrer que perder-Vos – Ó Jesus, fazei que a minha morte seja a de um santo."
+    },
+    "Alma de Cristo": {
+        "id": "alma_de_cristo",
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         "section": "Sagrada Comunhão",
         "label": "Alma de Cristo",
         "content": "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro das vossas chagas escondei-me.\nNão permitais que me separe de Vós.\nDo inimigo maligno, defendei-me.\nNa hora da minha morte, chamai-me.\nE mandai-me ir para Vós, para que Vos louve com os vossos santos, por todos os séculos dos séculos. Amen."
     },
     "Reparação": {
+<<<<<<< HEAD
         "id": "accao_de_gracas",
         "title": "Reparação",
         "section": "Sagrada Comunhão",
@@ -258,16 +318,55 @@ const prayers: Record<string, PrayerItem> = {
     "Comunhão Espiritual": {
         "id": "comunhao_espiritual",
         "title": "Comunhão Espiritual",
+=======
+        "id": "reparacao",
+        "section": "Sagrada Comunhão",
+        "label": "Reparação",
+        "content": "Meu Deus, eu creio, adoro, espero e amo-Vos. Peço-Vos perdão para os que não crêem, não adoram, não esperam e não Vos amam.\n\nSantíssima Trindade, Pai, Filho, Espírito Santo, adoro-Vos profundamente e ofereço-Vos o preciosíssimo Corpo, Sangue, Alma e Divindade de Jesus Cristo presente em todos os sacrários da terra, em reparação dos ultrajes, sacrilégios e indiferenças com que Ele mesmo é ofendido. E pelos mérito infinitos do seu Santíssimo Coração e do Coração Imaculado de Maria, peço-vos a conversão dos pobres pecadores."
+    },
+    "Fica, Senhor!": {
+        "id": "fica_senhor",
+        "section": "Sagrada Comunhão",
+        "label": "Fica, Senhor!",
+        "content": "Fica, Senhor, comigo, porque é necessária a tua presença para não Te ofender. Tu sabes como facilmente Te abandono. Fica, Senhor, comigo, porque Tu és a minha vida e sem Ti esmoreço no fervor. Fica, Senhor, comigo, porque Tu és a minha Luz e sem Ti permaneço nas trevas. Fica, Senhor, comigo, para me dares a conhecer a tua vontade. Fica, Senhor, comigo, para que ouça a tua voz e Te siga. Fica, Senhor, comigo, pois desejo amar-Te muito e estar sempre na tua companhia."
+    },
+    "Novena da Confiança": {
+        "id": "novena_confianca",
+        "section": "Novena da Confiança",
+        "label": "Novena da Confiança",
+        "content": "<center><b>Ó Jesus, confio ao vosso Coração, as minhas intenções.\nOlhai para elas e para o vosso Santíssimo Coração e depois fazei o que Ele vos disser.\nÓ Jesus, conto convosco, confio em Vós, abandono-me a Vós, fico certo do vosso acolhimento. Sagrado Coração de Jesus, eu tenho confiança em Vós!</b></center>"
+    },
+    "Confiança nas Promessas de Cristo": {
+        "id": "confianca_promessas_cristo",
+        "section": "Novena da Confiança",
+        "label": "Confiança nas Promessas de Cristo",
+        "content": "Ó Jesus, que dissestes «pedi e recebereis, procurai e achareis, batei e abrir-se-vos-á!» eu bato, procuro e peço a graça...\nSagrado Coração de Jesus, eu espero e confio em Vós.\n\n* Ó Jesus, que dissestes «tudo quanto pedirdes ao Pai em meu nome, Ele vo-lo concederá!», é ao vosso Pai e em vosso nome que peço a graça...\n<i>Sagrado Coração de Jesus, eu espero e confio em Vós.</i>\n\n* Ó Jesus, que dissestes «passarão o Céu e a terra, mas as minhas palavras não hão-de passar!», confiado na infalibilidade das vossas palavras, eu peço a graça...\n<i>Sagrado Coração de Jesus, eu espero e confio em Vós.</i>"
+    },
+    "Visita ao Santíssimo Sacramento": {
+        "id": "visita_santissimo",
+        "section": "Santíssimo Sacramento",
+        "label": "Visita ao Santíssimo Sacramento",
+        "content": "Graças e louvores se dêem a todo o momento, ao Santíssimo e diviníssimo Sacramento. Ó Jesus no SS. Sacramento, tende compaixão de nós.\n\nMeu Deus, eu creio, adoro, espero e amo-Vos. Peço-Vos perdão para os que não crêem, não adoram, não esperam e não Vos amam."
+    },
+    "Comunhão Espiritual": {
+        "id": "comunhao_espiritual",
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         "section": "Santíssimo Sacramento",
         "label": "Comunhão Espiritual",
         "pages": [
             "<b>S. Francisco:</b> Como suspira o veado pelas correntes das águas, assim minha alma suspira por Vós, Senhor (Sl 41, 3). Ó Jesus, vinde e vivei em mim.",
+<<<<<<< HEAD
             "<b>Santo Afonso Maria de Ligório:</b> Meu Jesus, Eu creio que estais presente no Santíssimo Sacramento do Altar. Amo-vos sobre todas as coisas, e minha alma suspira por Vós. Mas como não posso receber-Vos agora no Santíssimo Sacramento, vinde, ao menos espiritualmente, ao meu coração. Abraço-me convosco como se já estivésseis comigo: uno-me Convosco inteiramente. Ah! Não permitais que torne a separar-me de Vós!",
             "<b>Card. Rafael Merry del Val:</b> Aos vossos pés, ó meu Jesus, me prostro e vos ofereço o arrependimento do meu coração que mergulha no seu nada na Vossa santa presença. Eu vos adoro no Sacramento do vosso amor, a inefável Eucaristia. Desejo receber-vos na pobre morada que meu coração vos oferece. À espera da felicidade da comunhão sacramental, quero possuir-vos em Espírito. Vinde a mim, ó meu Jesus, que eu venha a vós. Que o vosso amor possa inflamar todo o meu ser, para a vida e para a morte. Creio em vós, espero em vós. Amo-vos. Assim seja."
+=======
+            "<b>Santo Afonso Maria de Ligório:</b> Meu Jesus, Eu creio que estais presente no Santíssimo Sacramento do Altar. Amo-vos sobre todas as coisas, e minha alma suspira por Vós. Mas como não posso receber-Vos agora no Santíssimo Sacramento, vinde, ao menos espiritualmente, ao meu coração.",
+            "<b>Card. Rafael Merry del Val:</b> Aos vossos pés, ó meu Jesus, me prostro e vos ofereço o arrependimento do meu coração que mergulha no seu nada na Vossa santa presença. Eu vos adoro no Sacramento do vosso amor, a inefável Eucaristia."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
         ]
     },
     "Oração de S. Francisco": {
         "id": "oracao_sao_francisco",
+<<<<<<< HEAD
         "title": "Oração de S. Francisco",
         "section": "Santíssimo Sacramento",
         "label": "Oração de S. Francisco",
@@ -335,10 +434,40 @@ const prayers: Record<string, PrayerItem> = {
         "section": "Assistência aos Moribundos",
         "label": "Assistência aos Moribundos",
         "content": "1 – Para o doente, sobretudo se está em perigo de vida, deve chamar-se o sacerdote para que lhe administre os Sacramentos: Confissão, Comunhão (Sagrado Viático) e Santa Unção.\n\n2 – Dê-se-lhe a beijar o crucifixo e a medalha ou imagem de Nossa Senhora.\n\n3 – Procure-se que repita, ao menos com o coração, o Acto de Contrição, Pai-Nosso e Ave-Maria e algumas das seguintes Súplicas:\n\nSenhor, nas vossas mãos entrego o meu espírito.\nMeu Deus, eu Vos amo.\nMeu Jesus, misericórdia.\nSagrado Coração de Jesus, eu tenho confiança em Vós.\nDoce Coração de Maria, sede a minha salvação.\nS. José, rogai por nós.\nAmado Jesus, José e Maria...\n\nParte, ó alma cristã, deste mundo em nome de Deus Pai, que te criou; em nome de Jesus Cristo, Filho de Deus vivo, que por ti morreu; em nome do Espírito Santo, que sobre ti desceu."
+=======
+        "section": "Santíssimo Sacramento",
+        "label": "Oração de S. Francisco",
+        "content": "Senhor, fazei de mim um instrumento da vossa Paz:\nOnde há ódio que eu leve o Amor.\nOnde há ofensa, que eu leve o Perdão.\nOnde há discórdia, que eu leve a União.\nOnde há dúvida, que eu leve a Fé.\nOnde há erro, que eu leve a Verdade.\nOnde há desespero, que eu leve a Esperança.\nOnde há tristeza, que eu leve a Alegria.\nOnde há trevas, que eu leve a Luz."
+    },
+    "Bênção do Santíssimo — Tantum Ergo": {
+        "id": "tantum_ergo",
+        "section": "Santíssimo Sacramento",
+        "label": "Tantum Ergo",
+        "content": "Ao divino Sacramento\nInclinados adoremos,\nPois do Antigo Testamento\nA promessa recebemos,\nE em perfeito cumprimento\nJá presente aqui a temos."
+    },
+    "Benditos": {
+        "id": "benditos",
+        "section": "Benditos",
+        "label": "Benditos",
+        "content": "Bendito seja Deus;\nBendito o seu Santo Nome;\nBendito Jesus Cristo, verdadeiro Deus e verdadeiro homem;\nBendito o nome de Jesus;\nBendito o seu Sacratíssimo Coração;\nBendito o seu Preciosíssimo Sangue;\nBendito Jesus no SS. Sacramento do Altar."
+    },
+    "Confissão — Exame de Consciência": {
+        "id": "confissao_exame",
+        "section": "Confissão",
+        "label": "Exame de Consciência",
+        "content": "1.º Mandamento – Rezei todos os dias? Contribuo para o culto? Falei contra Deus ou a religião? Duvidei da fé? Acreditei em superstições? Recebi a comunhão em pecado? Confessei-me ao menos uma vez por ano?"
+    },
+    "Assistência aos Moribundos": {
+        "id": "assistencia_moribundos",
+        "section": "Assistência aos Moribundos",
+        "label": "Assistência aos Moribundos",
+        "content": "1 – Para o doente, sobretudo se está em perigo de vida, deve chamar-se o sacerdote para que lhe administre os Sacramentos: Confissão, Comunhão (Sagrado Viático) e Santa Unção."
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     }
 };
 
 function parseInlineText(input: any): React.ReactNode[] {
+<<<<<<< HEAD
     if (typeof input !== "string") {
         return [String(input || "")];
     }
@@ -348,11 +477,19 @@ function parseInlineText(input: any): React.ReactNode[] {
     let bold = false;
     let italic = false;
     let center = false;
+=======
+    if (typeof input !== "string") return [String(input || "")];
+    const tokens: React.ReactNode[] = [];
+    const regex = /(<\/?b>|<\/?i>|<\/?center>)/g;
+    let last = 0;
+    let bold = false, italic = false, center = false;
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     let key = 0;
 
     const pushText = (text: string) => {
         if (!text) return;
         tokens.push(
+<<<<<<< HEAD
             <Text
                 key={key++}
                 style={[
@@ -361,6 +498,9 @@ function parseInlineText(input: any): React.ReactNode[] {
                     center && styles.centerText,
                 ]}
             >
+=======
+            <Text key={key++} style={[bold && styles.bold, italic && styles.italic, center && styles.centerText]}>
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
                 {text}
             </Text>
         );
@@ -389,6 +529,7 @@ function renderParagraph(text?: string) {
 
 function renderPages(pages: string[] | undefined) {
     if (!pages || !pages.length) return null;
+<<<<<<< HEAD
 
     return pages.map((page, index) => (
         <View key={index} style={styles.pageBlock}>
@@ -400,6 +541,14 @@ function renderPages(pages: string[] | undefined) {
 const grouped = Object.values(prayers).reduce<
     Record<string, PrayerItem[]>
 >((acc, item) => {
+=======
+    return pages.map((page, index) => (
+        <View key={index} style={styles.pageBlock}>{renderParagraph(page)}</View>
+    ));
+}
+
+const grouped = Object.values(prayers).reduce<Record<string, PrayerItem[]>>((acc, item) => {
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
     const sec = item.section || "Orasoens";
     if (!acc[sec]) acc[sec] = [];
     acc[sec].push(item);
@@ -410,6 +559,15 @@ export default function OracoesScreen() {
     const scrollViewRef = useRef<ScrollView>(null);
     const [sectionLayouts, setSectionLayouts] = useState<Record<string, number>>({});
     const [menuVisible, setMenuVisible] = useState(false);
+<<<<<<< HEAD
+=======
+    const [activeTab, setActiveTab] = useState<'Orasoens' | 'Devosoens'>('Orasoens');
+
+    const devosoensSections = [
+        'O Terço (PT)', 'O Terço (TET)', 'O Terço da Misericórdia (PT)', 'Terço da Misericórdia (TET)',
+        'Via-Sacra', 'Oração a Santa Rita de Cássia', 'Novena a Santa Rita de Cássia', 'Novena a Nossa Senhora do Perpétuo Socorro'
+    ];
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
 
     const handleSectionLayout = (sectionName: string, event: LayoutChangeEvent) => {
         const { y } = event.nativeEvent.layout;
@@ -424,15 +582,25 @@ export default function OracoesScreen() {
         }
     };
 
+<<<<<<< HEAD
     return (
         <View style={styles.mainContainer}>
             <View style={styles.headerContainer}>
                 <Text style={styles.pageTitle}>Orasoens</Text>
+=======
+    const currentSections = activeTab === 'Orasoens' ? Object.keys(grouped) : devosoensSections;
+
+    return (
+        <View style={styles.mainContainer}>
+            <View style={styles.headerContainer}>
+                <Text style={styles.pageTitle}>{activeTab}</Text>
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
                 <TouchableOpacity onPress={() => setMenuVisible(true)} style={styles.hamburgerButton}>
                     <Text style={styles.hamburgerText}>☰</Text>
                 </TouchableOpacity>
             </View>
 
+<<<<<<< HEAD
             <ScrollView ref={scrollViewRef} style={styles.container} contentContainerStyle={styles.content}>
                 {Object.entries(grouped).map(([sectionName, items]) => (
                     <View
@@ -458,6 +626,41 @@ export default function OracoesScreen() {
                         ))}
                     </View>
                 ))}
+=======
+            <View style={styles.tabContainer}>
+                <TouchableOpacity 
+                    style={[styles.tabButton, activeTab === 'Orasoens' && styles.activeTabButton]} 
+                    onPress={() => { setActiveTab('Orasoens'); setSectionLayouts({}); }}
+                >
+                    <Text style={[styles.tabButtonText, activeTab === 'Orasoens' && styles.activeTabButtonText]}>Orasoens</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={[styles.tabButton, activeTab === 'Devosoens' && styles.activeTabButton]} 
+                    onPress={() => { setActiveTab('Devosoens'); setSectionLayouts({}); }}
+                >
+                    <Text style={[styles.tabButtonText, activeTab === 'Devosoens' && styles.activeTabButtonText]}>Devosoens</Text>
+                </TouchableOpacity>
+            </View>
+
+            <ScrollView ref={scrollViewRef} style={styles.container} contentContainerStyle={styles.content}>
+                {activeTab === 'Orasoens' ? (
+                    Object.entries(grouped).map(([sectionName, items]) => (
+                        <View key={sectionName} style={styles.section} onLayout={(e) => handleSectionLayout(sectionName, e)}>
+                            <Text style={styles.sectionTitle}>{sectionName}</Text>
+                            {items.map((item, index) => (
+                                <View key={item.id || index} style={styles.item}>
+                                    {(item.title || item.label) && <Text style={styles.itemTitle}>{item.title || item.label}</Text>}
+                                    {item.rubric ? <Text style={styles.rubric}>{parseInlineText(item.rubric)}</Text> : null}
+                                    {item.content ? renderParagraph(item.content) : null}
+                                    {item.pages ? renderPages(item.pages) : null}
+                                </View>
+                            ))}
+                        </View>
+                    ))
+                ) : (
+                    <DevosoensTab scrollViewRef={scrollViewRef as any} onSectionLayout={handleSectionLayout} />
+                )}
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
             </ScrollView>
 
             <Modal visible={menuVisible} animationType="fade" transparent={true}>
@@ -465,7 +668,11 @@ export default function OracoesScreen() {
                     <View style={styles.modalContent}>
                         <Text style={styles.modalTitle}>Índice</Text>
                         <ScrollView>
+<<<<<<< HEAD
                             {Object.keys(grouped).map(sectionName => (
+=======
+                            {currentSections.map(sectionName => (
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
                                 <TouchableOpacity key={sectionName} onPress={() => scrollToSection(sectionName)} style={styles.modalItem}>
                                     <Text style={styles.modalItemText}>{sectionName}</Text>
                                 </TouchableOpacity>
@@ -482,6 +689,7 @@ export default function OracoesScreen() {
 }
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
     mainContainer: {
         flex: 1,
         backgroundColor: "#f7f2e8",
@@ -611,4 +819,43 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold",
     },
+=======
+    mainContainer: { flex: 1, backgroundColor: "#f7f2e8" },
+    headerContainer: {
+        flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+        paddingHorizontal: 16, paddingTop: 16, paddingBottom: 8,
+        backgroundColor: "#f7f2e8", borderBottomWidth: 1, borderBottomColor: "#ead9cf",
+    },
+    hamburgerButton: { padding: 8 },
+    hamburgerText: { fontSize: 28, color: "#4b2e1f" },
+    container: { flex: 1, backgroundColor: "#f7f2e8" },
+    content: { paddingBottom: 30 },
+    pageTitle: { fontSize: 28, fontWeight: "800", color: "#4b2e1f" },
+    tabContainer: {
+        flexDirection: 'row', backgroundColor: '#f7f2e8', borderBottomWidth: 1, borderBottomColor: '#ead9cf'
+    },
+    tabButton: { flex: 1, paddingVertical: 12, alignItems: 'center' },
+    activeTabButton: { borderBottomWidth: 3, borderBottomColor: '#c1121f' },
+    tabButtonText: { fontSize: 16, fontWeight: '600', color: '#6b4f3a' },
+    activeTabButtonText: { color: '#c1121f' },
+    section: { marginBottom: 20, paddingHorizontal: 16 },
+    sectionTitle: { fontSize: 22, fontWeight: "800", color: "#c1121f", marginBottom: 10 },
+    item: { marginBottom: 16, paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: "#ead9cf" },
+    itemTitle: { fontSize: 16, fontWeight: "700", color: "#9b111e", marginBottom: 4 },
+    rubric: { fontSize: 15, fontStyle: "italic", color: "#6b4f3a", marginBottom: 6 },
+    contentText: { fontSize: 16, lineHeight: 25, color: "#2b2b2b", textAlign: "justify" },
+    pageBlock: { marginBottom: 10 },
+    bold: { fontWeight: "bold" },
+    italic: { fontStyle: "italic" },
+    centerText: { textAlign: "center", width: "100%" },
+    modalOverlay: { flex: 1, backgroundColor: "rgba(0, 0, 0, 0.5)", justifyContent: "center", alignItems: "center" },
+    modalContent: {
+        width: "80%", maxHeight: "80%", backgroundColor: "#f7f2e8", borderRadius: 12, padding: 20,
+    },
+    modalTitle: { fontSize: 24, fontWeight: "800", color: "#4b2e1f", marginBottom: 16, textAlign: "center" },
+    modalItem: { paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: "#ead9cf" },
+    modalItemText: { fontSize: 18, color: "#c1121f", fontWeight: "600" },
+    closeButton: { marginTop: 20, paddingVertical: 12, backgroundColor: "#9b111e", borderRadius: 8, alignItems: "center" },
+    closeButtonText: { color: "#fff", fontSize: 16, fontWeight: "bold" },
+>>>>>>> b945a04 (Reorganized the tabOrasoens and added tab Knananuk. Added songs)
 });
