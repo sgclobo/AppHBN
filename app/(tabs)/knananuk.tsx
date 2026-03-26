@@ -20,9 +20,10 @@ export default function KnananukScreen() {
         const groups: Record<string, Record<string, Song[]>> = {};
 
         SONGS_DATA.forEach(song => {
+            const section = song.section || 'Default';
             if (!groups[song.category]) groups[song.category] = {};
-            if (!groups[song.category][song.section]) groups[song.category][song.section] = [];
-            groups[song.category][song.section].push(song);
+            if (!groups[song.category][section]) groups[song.category][section] = [];
+            groups[song.category][section].push(song);
         });
 
         // Sort songs in sections
@@ -155,7 +156,17 @@ export default function KnananukScreen() {
                                     <View style={styles.categoryBody}>
                                         {category === "Misa" ? (
                                             // Nested Accordion for Misa
-                                            Object.entries(sections).map(([section, songs]) => {
+                                            (() => {
+                                                const order = ['Entrada', 'Responsorial', 'Ofertório', 'Comunhão', 'Final'];
+                                                return Object.entries(sections).sort(([a], [b]) => {
+                                                    const idxA = order.indexOf(a);
+                                                    const idxB = order.indexOf(b);
+                                                    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                                                    if (idxA !== -1) return -1;
+                                                    if (idxB !== -1) return 1;
+                                                    return a.localeCompare(b);
+                                                });
+                                            })().map(([section, songs]) => {
                                                 const isSecExpanded = expandedMisaSection === section;
                                                 return (
                                                     <View key={section} style={styles.sectionAccordion}>
@@ -178,7 +189,7 @@ export default function KnananukScreen() {
                                                     </View>
                                                 );
                                             })
-                                        ) : ["Misa Latin", "Knananuk Ingles", "Knananuk Indonesia"].includes(category) ? (
+                                        ) : ["Misa Latin", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
                                             // Flat list for these categories
                                             Object.values(sections).flat().sort((a, b) => a.id - b.id).map(song => renderSongRow(song))
                                         ) : (
