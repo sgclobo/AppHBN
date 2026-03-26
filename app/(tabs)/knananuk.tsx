@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { FlatList, LayoutAnimation, Modal, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, UIManager, View } from "react-native";
 import { FontAwesome6, Ionicons } from "@expo/vector-icons";
-import { Song, SONGS_DATA } from '../components/songs_data';
+import { Song, SONGS_DATA } from '../_components/songs_data';
 
 // Enable layout animations for Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {

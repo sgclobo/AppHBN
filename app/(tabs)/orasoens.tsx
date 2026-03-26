@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { LayoutChangeEvent, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import DevosoensTab from "../components/DevosoensTab";
+import DevosoensTab from "../_components/DevosoensTab";
 
 type PrayerItem = {
     id?: string;
