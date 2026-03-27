@@ -76,14 +76,18 @@ export default function DevosoensTab({ scrollViewRef, onSectionLayout }: Devosoe
 
             <View style={styles.section} onLayout={(e) => onSectionLayout('Via-Sacra', e)}>
                 <Text style={styles.sectionTitle}>Via-Sacra</Text>
-                {bvsData['Breve Via-Sacra'].pages.map((page: string, index: number) => (
-                    <View key={index} style={styles.estacaoContainer}>
-                        <Image source={estacoesImages[index]} style={styles.estacaoImage} />
-                        <View style={styles.estacaoTextContainer}>
-                            <Text style={styles.text}>{renderFormattedText(page)}</Text>
+                {bvsData['Dalan Kruz'].pages.map((page: string, index: number) => {
+                    const stationIndex = index - 4;
+                    const hasImage = stationIndex >= 0 && stationIndex < 14;
+                    return (
+                        <View key={index} style={styles.estacaoContainer}>
+                            {hasImage && <Image source={estacoesImages[stationIndex]} style={styles.estacaoImage} />}
+                            <View style={styles.estacaoTextContainer}>
+                                <Text style={styles.text}>{renderFormattedText(page)}</Text>
+                            </View>
                         </View>
-                    </View>
-                ))}
+                    );
+                })}
             </View>
 
             <View style={styles.section} onLayout={(e) => onSectionLayout('Oração a Santa Rita de Cássia', e)}>

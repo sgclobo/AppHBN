@@ -66,7 +66,7 @@ export const SONGS_TEMPO_LITURGICO: Song[] = [
     ]
   },
   {
-    id: 750,
+    id: 710,
     category: "Tempo Litúrgico",
     section: "Natal",
     title: "ALEGREM-SE OS CÉUS E A TERRA",
@@ -79,7 +79,7 @@ export const SONGS_TEMPO_LITURGICO: Song[] = [
     ]
   },
   {
-    id: 751,
+    id: 711,
     category: "Tempo Litúrgico",
     section: "Natal",
     title: "ADESTE FIDELIS",
@@ -93,7 +93,7 @@ export const SONGS_TEMPO_LITURGICO: Song[] = [
     ]
   },
   {
-    id: 752,
+    id: 712,
     category: "Tempo Litúrgico",
     section: "Natal",
     title: "JINGLE BELLS",
@@ -101,6 +101,538 @@ export const SONGS_TEMPO_LITURGICO: Song[] = [
     refrain: "Jingle Bells, Jingle Bells\nJingle all the way\nOh what fun it is to ride in a\nOne horse open sleigh\nJingle bells, Jingle Bells\nJingle all the way\nOh what fun it is to ride in a one\nHorse open sleigh",
     verses: [
       "Dashing through the snow\nIn a one horse open sleigh\nOver the hills we go\nLaughing all the way\nBells on Bobtails ring\nMaking spirits bright\nWhat fun it is to ride and sing\nA sleighing song tonight"
+    ]
+  },
+  {
+    id: 713,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ALELUIA, MORIS IHA BELEM",
+    language: "tet",
+    refrain: "Aleluia! (7x)",
+    verses: [
+      `1. Jesus moris iha Belem ho ksolok ita hananu, fo grasa ba Maria, aleluia.`,
+      `2. Jesus moris iha Belem, mai soi ona ita, moris foun ita hetan, aleluia.`
+    ]
+  },
+  {
+    id: 714,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ALELUIA, MORIS ONA NA'I MAKSOIN",
+    language: "tet",
+    refrain: "Aleluia, aleluia, moris ona Na'i Maksoin. Aleluia, aleluia, mai adora Na'i Maksoin.",
+    verses: [
+      `1. Rona mai, ha'u belun, liafoun ida kmanek: ohin iha rai Belem moris mai ita Na'i Maksoin.`,
+      `2. Rona mai, ha'u belun, liafoun ida kmanek: gloria ba Na'i, leten aas no iha rai ba ema paz.`,
+      `3. Rona mai, ha'u belun, liafoun diak kmanek: Maromak haruka mai Nia Jesus, Kristu Maksoin.`
+    ]
+  },
+  {
+    id: 715,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ALELUIA, NA'I JESUS",
+    language: "tet",
+    refrain: "Aleluia! (7x)",
+    verses: [
+      `1. Na'i Jesus, ita Maksoin, aleluia. Moris ona iha Belem, aleluia. Ho haksolok ita hananu, aleluia. Ita hetan moris foun, aleluia.`
+    ]
+  },
+  {
+    id: 716,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "AMI TUR HODI HEIN",
+    language: "tet",
+    refrain: "Ami tur hodi hein nudar udan, udan lalehan.\nMai, ami nia Maksoin!\nMai, soi, soi ami nia klamar. Halo ami nia fuan haksolok. Halo ami nia laran met-metin.",
+    verses: [
+      `1. Jesus, Kosok Oan, mai moris iha Belem, duut maran. Jesus, Kosok Oan, moris kiak tamba deit hadomi ami.`,
+      `2. Jesus, domin boot, domin la fihir ema riku ema kiak; Jesus, laran luak, mai leno, mai kasu ami sala.`
+    ]
+  },
+  {
+    id: 717,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ANJU LALEHAN",
+    language: "tet",
+    verses: [
+      `1. Anju lalehan, (2x) hananu ba ita Na'i.(2x) Ho sira ita hananu (2x) Ba Maromak ohin moris iha rai Belem.(2x)\nGloria hosana, gloria hosana, ba Na'i lalehan. (2x)`,
+      `2. Ikan ho manu...`,
+      `3. Lalehan ho rai...`,
+      `4. Aifunan iha toos...`,
+      `5. Be, mota ho tasi...`,
+      `6. Fulan ho loron matan...`,
+      `7. Fitun iha lalehan...`,
+      `8. Kalohan ho abu-abu...`,
+      `9. Rai maran ho udan...`,
+      `10. Rai manas ho malirin`
+    ]
+  },
+  {
+    id: 718,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ANJU SIRA HANANU",
+    language: "tet",
+    refrain: "Anju sira hananu knananuk ida ba Maromak. Ema sira hananu ba Maromak Kosok Oan.",
+    verses: [
+      `1. Iha Belem kalan boot iha kalan Natal nian nebe moris iha presepio roman ida boot tebes.`,
+      `2. Iha Belem kalan boot, kalan ida ksolok tebes Jesus moris iha presepio, Maria Virgem nia Oan.`,
+      `3. Iha Belem kalan boot hosi lalehan moris ita ksolok atu loke hias ba ita lalehan nia odamatan.`
+    ]
+  },
+  {
+    id: 719,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "BELEM, BELEM",
+    language: "tet",
+    verses: [
+      `1. Belem, Belem, haksolok, Belem. Na'i Maromak Oan moris, moris ona iha o leet.`,
+      `2. Ema tomak sei haksolok tamba ne'e mos, Belem. Kosok doben, rai nia Na'i, tun mai atu soi ema tomak.`
+    ]
+  },
+  {
+    id: 720,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "DAME MOSU IHA RAIKLARAN",
+    language: "tet",
+    refrain: "Dame mosu iha raiklara, gloria ba Maromak, ita Na'i. Gloria ba Oan no ba Inan; gloria iha leten as ba! Dame iha rai. (2x)",
+    verses: [
+      `1. Kosok Oan nebe moris iha rai Belem Latan hela iha duut maran hosi hamnasa ba nia Inan.`,
+      `2. Kosok Oan ne'e ita Na'i nebe mundu hadomi tebes Nain Feto nia Oan nebe halo An ba mane.`
+    ]
+  },
+  {
+    id: 721,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "DOBEN JESUS, MAI",
+    language: "tet",
+    refrain: "Doben Jesus, mai, kosok Jesus. Ami nia belun ho Maksoin. Hanorin ami nudar iha Belem, Iha presepiu, ami nia domin nian.",
+    verses: [
+      `1. Ami hakarak ba ho bibi atan sira ho sira to'o iha rai Belem atu hare kosok Oan Maksoin moris ona Na'i Maromak.`,
+      `2. Ami hakarak halo tuir anju sira nebe hananu, lori rekadu: Iha Belem ohin moris ona Kosok Oan, ita Maksoin.`,
+      `3. (Hananu hodi taka ibun)`,
+      `4. Fitun ida hatudu dalan to'o ba Kosok naroman. Naroman loke dalan mai ita atu lori mos aifutun ida.`
+    ]
+  },
+  {
+    id: 722,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "FITUN MOSU AAS LALEHAN",
+    language: "tet",
+    verses: [
+      `1. Fitun mosu aas lalehan. Rai nakukun sai naroman; Na'i Jesus hiit An mai rai, mai moris nudar ema, Mai kasu ita sala.\nEvanjeliu nia haruka: hadomi fo tulun, dame malu.`,
+      `2. Ita ema salanain, halai dook, hewai Maromak. La'o tuir dalan sala nian, kaer belik, buka riku; la hanoin moris ikus.`,
+      `3. Na'i Maromak laran luak, Nia hadomi los nian duni atu kasu ema sala Nia fo An, hili mate, mate nudar atan sala.`,
+      `4. Dala wain, dala barak, Ita ema foti an buka bosok, hadau riku, ita tauk no fo terus, Tau ba kotuk Na'i Maromak.`
+    ]
+  },
+  {
+    id: 723,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "GLORIA, ALELUIA",
+    language: "tet",
+    refrain: "Gloria, gloria, aleluia! (3x) Na'i Jesus moris ona.",
+    verses: [
+      `1. Hamutuk iha domin Kristu Jesus Maksoin nian. Hafoun an tamba Na'i nia futar lia. Hetan ksolok hosi paun Maromak nian. Ita hotu sei haklaken.`,
+      `2. Ho domin ita Kristu ita Maksoin ho ksolok ita hananu. Tamba hetan moris diak. Ho ksolok ita hatudu ba ema hotu, Kristu hadomi ema hotu.`
+    ]
+  },
+  {
+    id: 724,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "GLORIA BA NA'I",
+    language: "tet",
+    verses: [
+      `1. Gloria ba Na'i, gloria ba Na'i. Aleluia, aleluia. Na'i Maksoin to'o ona, Kosok dame ba ita hotu. Na'i Maromak to'o ona, mai soi ita ho nia domin hosi terus nia laran. Ksolok dame ba ita hotu. Na'i Maksoin to'o ona.\nGloria, gloria, aleluia, alleluia Na'i Maksoin to'o ona.`,
+      `2. Dame ba rai, dame ba rai, domin to'o ona, domin to'o ona. Na'i Maksoin to'o ona. Ksolok dame ba ita hotu. Na'i Maromak to'o ona. Ksolok lalehan domin ba rai hodi haksolok ita hotu, ksolok domin ba ema tomak. Na'i Maromak to'o ona.`,
+      `3. Naroman mai, naroman mai. Nakukun lakon, nakukun lakon. Maromak rasik mai soi ita, ksolok dame ba ita hotu. Na'i Maromak to'o ona. Ita hananu aleluia. Fo kbiit tomak no ho domin. Ksolok dame ba ita hotu. Na'i Maromak to'o ona.`
+    ]
+  },
+  {
+    id: 725,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "GLORIA IN EXCELSIS DEO",
+    language: "tet",
+    verses: [
+      `1. Fitun santu mosu ona, naroman liu fali fitun hotu. Nia mai leno ita dalan iha nakukun ne'e nia laran. Gloria in excelsis Deo. (2x)`,
+      `2. Iha Belem naroman boot; naroman tan Kosok Oan: Kosok Oan Jesus; Jesus, ita Maksoin.`,
+      `3. Kalan ida diak tebes, lalehan naroman tomak. Kalan ksolok, kalan festa; kalan santa Natal nian.`,
+      `4. Maksoin nebe hotu hein atu mai soi ema tomak, Na'i Maromak nia Oan moris, moris kiak tamba ita.`,
+      `5. Anju sira hananu haksolok, ksolok tamba Kosok Oan. Ita hotu mos haksolok, haksolok tamba Ita Maksoin.`
+    ]
+  },
+  {
+    id: 726,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "HAKLAKEN HO LIA BERAN",
+    language: "tet",
+    refrain: "Haklaken ho lia beran, hato'o ba ema hotu-hotu; fo hatene ba sira: Maksoin moris ona.",
+    verses: [
+      `1. Bibi atan sira hakfodak tan anju sira lia; hato'o lia kmanek ida: Maksoin moris ona.`,
+      `2. Maun-alin sarani hotu, hamutuk ho anju sira, Haklaken ba rai tomak: Maksoin moris ona.`,
+      `3. Ho ksolok it'hananu ho beran it'haklaken, tan ohin iha rai Maksoin moris ona.`
+    ]
+  },
+  {
+    id: 727,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "HAMRIIK BA, JERUSALEM",
+    language: "tet",
+    refrain: "Hamriik ba, Jerusalem; o roman mak ne'e. Ho gloria wain boot, Maromak haroman o.",
+    verses: [
+      `1. Maromak haraik ba liurai kbiit tesi lia nian. Haraik mos ita nia justisa ba liurai nia oan. Nia sei ukun mos ema kiak sira, halo hanesan.`,
+      `2. Justisa sei nafunan iha o nia loron, no paz boot ida sei mosu, fohorai falu fila; Nia sei ukun hosi tasi ba tasi. Hosi mota inan boot to'o rai rohan.`,
+      `3. Liurai Tarsis no na'i oan sira sei selu imposto ba Nia. Liurai Saba no Arabia sei hodi sasan fo ba Nia, Liurai boot hotu sei tuku tur ba Nia. Povo tomak sei hahi Nia.`
+    ]
+  },
+  {
+    id: 728,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "HARE BA LALEHAN",
+    language: "tet",
+    refrain: "Hare ba lalehan, nabilan, nabilan. Maromak nia Oan ho neras hakfahe, Latan ba duut maran, se los mak hatene? Maromak nia Oan mai moris nune'e. (2x)",
+    verses: [
+      `1. Na'i kosok Jesus moris ona, Nain Feto Virgem mak kous. Hiit An, tun mai hosi lalehan mai atu haksolok ita.`
+    ]
+  },
+  {
+    id: 729,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "HOSI AIDELUN LIURAI MOSU",
+    language: "tet",
+    verses: [
+      `1. Hosi aidelun, Liurai mosu, aifunan furak. La rasan ida ho Nia, iha raiklaran ne'e. Jesus Maromak Oan, nia aifunan mesak, Maria deit mak kuu.`,
+      `2. Hori uluk liu kotuk, profeta sira hateten, Ho matan, neon hateke; aifunan fuan buras ba oin. Bainhira loron to'o, morin, naroman mai, halakon dois, nakukun.`
+    ]
+  },
+  {
+    id: 730,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "IHA NATAL",
+    language: "tet",
+    refrain: "Iha Natal, iha Natal, buat hotu nabilan. Iha Natal, iha Natal, Jesus kosok Oan.",
+    verses: [
+      `1. Rai nakukun nakloke, loron nabilan liu tan, fitun iha Belem hatudu Jesus.`,
+      `2. Sinu dere ona, lalehan ho rai, iha aas hananu ba It'Na'i Maromak.`
+    ]
+  },
+  {
+    id: 731,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ITA HAHI HO KSOLOK",
+    language: "tet",
+    refrain: "Ita hahi ho ksolok tamba anju Na'i nian fo hatene mai ita Maksoin moris ona.",
+    verses: [
+      `1. Gloria ba Na'i, paz iha raiklaran. Knananuk ne'e diak tebes. Ohin loron Kosok Oan moris hosi lalehan mai soi ita.`,
+      `2. Nudar kiak, mai moris kiak hanesan kiak oan sira, ba ema hotu atu sai diak hodi fahe nia destino.`,
+      `3. Hiit an ba bibi atan sira hodi la'o ba Belem; lori ho bibi oan sira tan imi Na'i moris ona.`,
+      `4. Moris ona iha Belem, Kosok Oan, ita Maksoin. Hosi lalehan tuna ona mai Ita Maromak no Maksoin.`,
+      `5. Iha nebe bibi atan sira hanai daudaun Maromak Oan; laran metin iha sira fuan, iha liman bibi oan sira.`
+    ]
+  },
+  {
+    id: 732,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ITA HAKAT BA BELEM",
+    language: "tet",
+    refrain: "It' hakat ba Belem, aleluia. Ba hare Na'i kosok mai hosi lalehan.",
+    verses: [
+      `1. Tan ne'e, ha'u hamriik, aleluia, iha ita oin, Jerusalem.`,
+      `2. Jerusalem, cidade boot no furak, cidade harii met-metin, aleluia; povo sira hakat ba ita.`,
+      `3. It'nia kota laran be hakmatek, it'nia uma laran diak nakonu, aleluia, tan ita Na'i Maromak.`
+    ]
+  },
+  {
+    id: 733,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ITA MAKSOIN MORIS IHA BELEM",
+    language: "tet",
+    refrain: "Ita Maksoin moris iha Belem, Kristu, ita Na'i.",
+    verses: [
+      `1. Hananu ba ita Na'i Jesus Kristu. Rai tomak hananu nia naran ba reinu tomak nia rahun kmanek.`,
+      `2. Fo hatene nia Espiritu ba rai tomak, iha raiklaran nia gloria, ba reinu tomak nia kmanek.`
+    ]
+  },
+  {
+    id: 734,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "KALAN MURAK",
+    language: "tet",
+    verses: [
+      `1. Kalan murak, kalan ksolok, Na'i Jesus, Na'i Maksoin. Moris kiak iha rai, rai Belem. Haraik An, terus kiak tan hadomi. Toba ba, Na'i Jesus; ami nia doben Jesus.`,
+      `2. Kalan murak, kalan ksolok. Na'i Maksoin tun mai rai. Loke fuan, leno neon, fo hanorin. Tulun malu, keta moruk aat ba malu. Ukunfuan Na'i Maromak hadomi los ema hotu.`
+    ]
+  },
+  {
+    id: 735,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "KALAN NATAL",
+    language: "tet",
+    verses: [
+      `1. Kalan Natal, kalan hadomi. Kosok oan, doben Jesus iha Belem halo an kasian. Ita kmanek Jesus, Na'i Maromak toba hakmatek, Jesus. Dukur, ha'u doben Jesus.`,
+      `2. Kalan hadomi, kalan badame. Ho Jesus kosok oan. Ita, Maksoin mai hamutuk ho ami. Mai, fo dame, fo kmanek mai ami.`,
+      `3. Kalan badame, kalan hadomi. Kosok oan Na'i Jesus mai hamutuk ho ksolok mai ami, mai, halibur ami maluk tomak. O Jesus, kosok oan, mai halo dame ami laran.`
+    ]
+  },
+  {
+    id: 736,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "KALAN NAROMAN",
+    language: "tet",
+    verses: [
+      `1. Bibi atan sira hare, hare ba kalan sei as; Ba kalan, ba naroman, ho naroman foun lolos.`,
+      `2. Ahi, kalan be naroman, kalan kmook liu loron; Jesus Maromak Oan mai fo naroman raiklaran.`
+    ]
+  },
+  {
+    id: 737,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "KOSOK OAN MORIS ONA",
+    language: "tet",
+    refrain: "Kosok Oan moris ona, Nia naroman to'o ona. Rai nakukun sai naroman.",
+    verses: [
+      `1. Povo nebe iha nakukun hare naroman boot. Sira nebe terus nakukun hetan ksolok ho naroman. Ita mai haksolok ema tomak, Ita mai hafoun ema tomak. Sira haksolok iha Ita oin tan la tauk Ita Boot.`,
+      `2. Ita mak hasai todan nebe iha nia leten, no ai nebe hakanek sira kotuk no ema nebe hanesan sira. Kroat nebe hasouru sira no mos hatais mesak ran buat sira ne'e to'o sei soe ba ahi tan funu nia sasin.`
+    ]
+  },
+  {
+    id: 738,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "LALEHAN HO RAI, HAKSOLOK BA",
+    language: "tet",
+    verses: [
+      `1. Lalehan ho rai, haksolok ba, fo ksolok, mai hotu, hananu. Maromak Oan moris ona; Maria Virgem nia Oan.`,
+      `2. Ami nia belun Jesus, ami nia doben Maksoin, ami husu Ita atu hela nafatin iha ami nia fuan.`,
+      `3. Maun-alin sarani, tama hotu mai; ho ksolok mai hotu hakbesik. Mai, adora Maromak Oan toba hela iha duut maran.`,
+      `4. Lalehan ho rai nia Na'i, tulun atan ami oan kiak. Fuan tomak ba Ita hasae tinan ba tinan, nafatin.`
+    ]
+  },
+  {
+    id: 739,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "LORON TO'O ONA",
+    language: "tet",
+    verses: [
+      `1. Loron to'o ona, maluk sira. Tinan to'o ona mai Maksoin. Mai maluk kiak, maluk riku; maluk matenek maluk beik.\nGloria iha rai, lalehan. (2x)`,
+      `2. Mai, loro monu, loro sae; mai, tasi feto, tasi mane. Mai, maluk hotu rai ulun-ikun atu hanai, hahi Jesus.`,
+      `3. Maluk doben, mai lalais; mai husu tulun ba o nia Na'i. Mai, aman inan, alin maun, mai, feton naan, mai to'o Maromak.`,
+      `4. Mai husu tulun ba ita rai, husu hakmatek, funu hotu. Mai, Timor oan, mai monu ain; Timor nia terus todan tebes.`
+    ]
+  },
+  {
+    id: 740,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "MAI, MAI, HANAI, HAHI JESUS",
+    language: "tet",
+    verses: [
+      `1. Sarani sira, maun-alin, loron ohin Natal. Maluk sarani, doben diak: Na'i Maksoin to'o ona.`,
+      `2. O doben Timor oan hotu ho laran susar, terus aat. O maluk diak, o doben rai, ran fakar, funu, mataben.`
+    ]
+  },
+  {
+    id: 741,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "MALUK HANAI, HAHI JESUS",
+    language: "tet",
+    refrain: "Maluk hanai, hahi Jesus. Na'i Liurai los tebes nian. Hosi lalehan tun mai rai, fo naroman ba rai nakukun.",
+    verses: [
+      `1. Ukunfuan Nia hakarak fo, evanjeliu hakarak hanorin: hadomi Na'i Maromak ida; dame domin ba ema hotu.`,
+      `2. Ema se riku, fahe soi. Tulun ema sira kiak. Se matenek, hanorin ba; fo hanorin ba ema beik.`,
+      `3. Ema se kaer rota, keta dun matak, bosok, naok. Keta fo todan ba se, kiik; Tesi lia ho lialos.`,
+      `4. Se kaer kroat sei buka paz; Buka diak ba ema hotu. Hirus, la hirus, la buka odi; Tinan ba tinan tulun malu.`,
+      `5. Atu funu hotu lalais, atu rai Timor diak fali, Ita buka hadomi malu, buka dame, domin malu.`,
+      `6. Ukunfuan Na'i Maromak nian tau deit ba rua sai nune'e: Hadomi Nai Maromak tebes, tulun, halo diak ba ema.`
+    ]
+  },
+  {
+    id: 742,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "MAROMAK KSOLOK TUN MAI RAI",
+    language: "tet",
+    verses: [
+      `1. Maromak ksolok tun mai rai, mai fo Nia moris ita. (2x)\nRai tomak, mai, ita haksolok, Kristu, Maromak, tun mai ita.\nMaromak ksolok tun mai rai, mai fo Nia moris ita.`,
+      `2. Kristu Maromak iha Belem hanesan ema kasian. (2x) Rai tomak mai hahi ho neon Kristu Maromak ita Na'i.\nKristu Maromak iha Belem hanesan ema kasian.`,
+      `3. Maromak tun mai ita leet atu fo kbiit mai ita. (2x) Iha Belem kosok Jesus hadomi ita ho neon moris.\nMaromak ksolok tun mai rai mai fo Nia moris ita.`,
+      `4. Kalan nakukun iha Belem, fitun nabilan mosu. (2x) Jesus Maromak fo badame ba ema tomak kuna malu.\nFitun nabilan iha Belem Jesus Maromak oan.`,
+      `5. Maun alin tomak sei hanoin hamutuk neon nafatin.(2x) Keta hanoin buat aat ba malu, Kristu Maromak moris ona.\nMai, ita tomak sei hamutuk ho Kristu kosok oan.`
+    ]
+  },
+  {
+    id: 743,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "MATAK MALIRIN",
+    language: "tet",
+    verses: [
+      `1. Matak malirin Inan Virgem tur ahi Jesus. Ksolok los diak tebes mai leno rai. Ho anju sira fuan no laran, neon hadomi; Ita hananu. Leten aas nian ba, diak ba Maromak. Domin ho hakmatek ba sira buka diak. Rahun diak Maksoin iha rai dame, domin.`,
+      `2. Nakukun laran ema kuran, kuran ahi. Moris ho sala ha'u sei buka, buka Jesus ha'u Na'i.`,
+      `3. Oan diak Timor tomak, liu mai buka o Na'i. Hatun o todan, kasu o naha, simu ita Maksoin.`,
+      `4. Timor kiak, oan doben tur hamaran o ran; hamos o kosar, dada o iis; tanis ba o Na'i.`
+    ]
+  },
+  {
+    id: 744,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "MAUN ALIN SIRA, HAKSOLOK BA",
+    language: "tet",
+    verses: [
+      `1. Maun alin sira, hamutuk haksolok ba (2x) tan buat foun ida foin mosu mai. Jesus, foin moris, (3x) tan buat foun ida foin mosu mai.`,
+      `2. Bibi atan sira, keta tauk se tilun mai (2x) rona lia ksolok, lia foun ne'e.`
+    ]
+  },
+  {
+    id: 745,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "OHIN IHA RAI MORIS DOMIN",
+    language: "tet",
+    refrain: "Ohin iha rai moris domin, ba ema sira Na'i Maksoin.",
+    verses: [
+      `1. Haksolok, domin no paz, ba ema sira iha rai. Haksolok. domin no paz, ohin kalan Jesus mai.`,
+      `2. Haksolok, festa no paz, ba ema sira iha rai. Haksolok, festa no paz, ohin kalan mak Natal.`,
+      `3. Haksolok, kmanek no paz, ba ema sira iha rai. Haksolok, kmanek no paz, Jesus moris iha Belem.`
+    ]
+  },
+  {
+    id: 746,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "SARANI, HAKSOLOK",
+    language: "tet",
+    refrain: "Sarani, haksolok! Jesus moris ona. Nain Feto hakous iha Belem ba. Jesus, Jesus, mai, hahi Jesus! Jesus, Jesus, mai, hahi Jesus!",
+    verses: [
+      `1. Iha lalehan anju sira hananu. Mai fo tada kmanek, ho kmanek diak liu. Maromak Na'i ksolok hodi mai haraik.`,
+      `2. Bibi atan lori, saran bibi diak kasu iha luhan kmanek soin no diak. Na'i Jesus hakarak Ita nia domin.`
+    ]
+  },
+  {
+    id: 747,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "SARANI, MAI HOTU",
+    language: "tet",
+    verses: [
+      `1. Sarani, mai hotu: Ohin loron Natal. Mai hotu, adora iha Belem. Jesus, tan ita, tun hosi lalehan. Mai, ita ba adora; Mai, ita ba adora Maria nia Oan, Na'i Jesus.\nJesus, tan ita, tun hosi lalehan. Mai, ita ba adora; mai, ita ba adora Maria nia Oan, Na'i Jesus.`,
+      `2. Haliku sei kalan, bibi atan sira hodi neon badinas buka Ita Na'i. Ita ho sira hodi neon diak ba buka Jesus oan, ba buka Jesus oan, Maria nia Oan, Na'i Jesus.`
+    ]
+  },
+  {
+    id: 748,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "AI! O MUNDO INGRATO",
+    language: "pt",
+    verses: [
+      `1. Ai! O mundo ingrato não recebe a Deus. Vem, Jesus menino, vem aos braços meus. Bom Jesus, recebe tudo o meo amor dentro do meu peito vem poisar, Senhor!`,
+      `2. Partiram peregrinos Maria e Sao Jose. La da sua city Nazaré. Um dia ao fim da tarde, chegaram a Belem e não se encontra albergue p'ra Deus e sua Mãe.`
+    ]
+  },
+  {
+    id: 749,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "CRISTÃOS, ALEGRIA",
+    language: "pt",
+    refrain: "Cristãos, alegria que nasceu Jesus, A virgem Maria no-Lo deu a luz. /Jesus, Jesus, saudemos Jesus./ (2x)",
+    verses: [
+      `1. Que meiga alegria nos traz este dia de Jesus Natal não ha neste mundo prazer tão jucundo que lhe seja igual.`,
+      `2. Os anjos nos ares em ledos cantares anunciam paz o que don divino e um Deus Menino é quem no-la traz.`,
+      `3. De todo o rebanho o mais lindo anho lhe leva o Pastor a mais rica prenda que Jesus pretenda o nosso amor.`,
+      `4. La nos altos céus honra e glória a Deus que nos deu Jesus paz na terra a alma que serena e calma vive unida a Cruz.`
+    ]
+  },
+  {
+    id: 750,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "CORREI, PASTORINHOS",
+    language: "pt",
+    refrain: "Correi, pastorinhos; depressa à Belem com alma em carinhos por Deus vosso Bem.",
+    verses: [
+      `1. Pequenino esta deitado em pailhinas Deus infante. Ai! No ha no céu estrelado astro de oiro mais brillante.`,
+      `2. Oh! Levai-lhe cordeirinhos todos brancos de candura de lã branca como arminhos de olhos meigos de ternura.`,
+      `3. Trouxe a paz la das Alturas paz aos filhos de trabalho porque o amor nas almas puras vé na dor o seu atalho.`,
+      `4. Mais que estrelas do Oriente, mais que o oiro dos reis Jesus preza o inocente e dos pobres quer afagos.`,
+      `5. Pastorinhos e reis magos tudo é irmão para Deus Menino vence o orgulho e seus estragos o amor feito pequenino.`
+    ]
+  },
+  {
+    id: 751,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "ERGUEI-VOS, PASTORES",
+    language: "pt",
+    verses: [
+      `1. Erguei-vos, pastores que a noite vai alta e toda se esmalta de novo esplendor. Oh! Noite mais bela que o mais bela dia, ao mundo alumia p'ra seu Salvador.`,
+      `2. Oh! Vamos, e coro pastores a Belem saudar o Menino e a Virgem sua Mãe.`,
+      `3. De povo escolhido a prece ja cessa compriu-se a promessa do seu Jehova.`,
+      `4. De paz salvadora chegaram os dias naceu o Menino o rei de Juda!`,
+      `5. Do ceu das nuves qual chuva macia baixou por Maria Jesus Redentor.`,
+      `6. La cantam em coros os anjos nos ares em doces cantares a paz do Senhor.`
+    ]
+  },
+  {
+    id: 752,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "NOITE FELIZ",
+    language: "pt",
+    verses: [
+      `1. Noite feliz! Noite feliz! O senhor Deus de amor pobrezinho nasceu em Belem. eis na lapa Jesus nosso Bem. Dorme em paz, O Jesus! (2x)`,
+      `2. Noite feliz! Noite feliz! Eis no ar vem cantar aos pastorinhos os anjos dos céus anunciando a chegada de Deus. De Jesus Salvador! (2x)`
+    ]
+  },
+  {
+    id: 753,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "UM MENINO LINDO",
+    language: "pt",
+    refrain: "Um Menino lindo, lindo anjos dos céus a cantar: glória a Deus, ao homem paz se sempre, sempre o quizer amar. (2x)",
+    verses: [
+      `1. Salve dia tão Formosa de beleza singular (2x) que visto os pastorinhos porque tanto alegrar. (2x)`,
+      `2. Vamos todos jubilosos. O misterio desvandar duma noite em que o sol anda pela terra a brilhar.`,
+      `3. Sol bendito cuja aurora é Maria, nossa Mãe; um Menino de Deus Filho, Irmão nosso tambem.`
+    ]
+  },
+  {
+    id: 754,
+    category: "Tempo Litúrgico",
+    section: "Natal",
+    title: "VINDE TODOS A PORFIA",
+    language: "pt",
+    refrain: "Gloria in excelsis Deo.",
+    verses: [
+      `1. Ah! Vinde todos a porfia cantar um hino de louvor, hino de paz e de alegria que os anjos cantam ao Senhor.`,
+      `2. Naquela noita venturosa em que nasceu o Salvador, que os anjos com voz amorosa deram no ceu este clamor:`
     ]
   },
   {

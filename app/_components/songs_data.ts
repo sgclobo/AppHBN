@@ -13,6 +13,7 @@ import { SONGS_SANTU_SIRA } from "./songs_santu_sira";
 import { SONGS_ENGLISH } from "./songs_english";
 import { SONGS_PORTUGUES_ESPANHOL } from "./songs_portugues_espanhol";
 import { SONGS_INDONESIA } from "./songs_indonesia";
+import { SONGS_SUPLEMENTU } from "./songs_suplementu";
 import { SONGS_OTHER } from "./songs_other";
 
 export interface Song {
@@ -40,6 +41,7 @@ export const SONGS_DATA: Song[] = [
   ...SONGS_TEMPO_LITURGICO,
   ...SONGS_MARIA,
   ...SONGS_SANTU_SIRA,
+  ...SONGS_SUPLEMENTU,
   ...SONGS_PORTUGUES_ESPANHOL,
   ...SONGS_ENGLISH,
   ...SONGS_INDONESIA,

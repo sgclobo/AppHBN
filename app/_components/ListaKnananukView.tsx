@@ -117,7 +117,7 @@ export const ListaKnananukView: React.FC<ListaKnananukViewProps> = ({ onPressSon
                     </View>
                 ) : (
                     (() => {
-                        const categoryOrder = ["Misa", "Misa Latin", "Tempo Litúrgico", "Maria", "Santu Sira", "Knananuk Portugues no Espanhol", "Knananuk Inglês", "Knananuk Indonesia"];
+                        const categoryOrder = ["Misa", "Misa Latin", "Tempo Litúrgico", "Maria", "Santu Sira", "Suplementu", "Knananuk Portugues no Espanhol", "Knananuk Inglês", "Knananuk Indonesia"];
                         return Object.entries(groupedData).sort(([a], [b]) => {
                             const idxA = categoryOrder.indexOf(a);
                             const idxB = categoryOrder.indexOf(b);
@@ -189,7 +189,7 @@ export const ListaKnananukView: React.FC<ListaKnananukViewProps> = ({ onPressSon
                                                     </View>
                                                 );
                                             })
-                                        ) : ["Misa Latin", "Maria", "Santu Sira", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
+                                        ) : ["Misa Latin", "Maria", "Santu Sira", "Suplementu", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
                                             Object.values(sections).flat().sort((a, b) => a.id - b.id).map(song => renderSongRow(song))
                                         ) : (
                                             Object.entries(sections).map(([section, songs]) => (
