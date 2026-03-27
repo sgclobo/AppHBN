@@ -2,6 +2,14 @@ import { SONGS_MISA_LATIN } from "./songs_misa_latin";
 import { SONGS_MISA_TETUM } from "./songs_misa_tetum";
 import { SONGS_OTHER } from "./songs_other";
 import { SONGS_RESPONSORIAL } from "./songs_responsorial";
+import { SONGS_ALELUIA } from "./songs_aleluia";
+import { SONGS_OFERTORIO } from "./songs_ofertorio";
+import { SONGS_SANCTUS } from "./songs_sanctus";
+import { SONGS_COMUNHAO } from "./songs_comunhao";
+import { SONGS_ACAO_GRACAS } from "./songs_acao_gracas";
+import { SONGS_FINAL } from "./songs_final";
+import { SONGS_TEMPO_LITURGICO } from "./songs_tempo_liturgico";
+import { SONGS_MARIA } from "./songs_maria";
 
 export interface Song {
   id: number;
@@ -20,4 +28,12 @@ export const SONGS_DATA: Song[] = [
   ...SONGS_MISA_LATIN,
   ...SONGS_OTHER,
   ...SONGS_RESPONSORIAL,
+  ...SONGS_ALELUIA,
+  ...SONGS_OFERTORIO,
+  ...SONGS_SANCTUS,
+  ...SONGS_COMUNHAO,
+  ...SONGS_ACAO_GRACAS,
+  ...SONGS_FINAL,
+  ...SONGS_TEMPO_LITURGICO,
+  ...SONGS_MARIA,
 ];

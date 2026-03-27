@@ -13,7 +13,7 @@ export default function KnananukScreen() {
     const [selectedSong, setSelectedSong] = useState<Song | null>(null);
     const [indexVisible, setIndexVisible] = useState(false);
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({ "Misa": true });
-    const [expandedMisaSection, setExpandedMisaSection] = useState<string | null>(null);
+    const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
     // Grouping & Sorting logic
     const groupedData = useMemo(() => {
@@ -56,9 +56,9 @@ export default function KnananukScreen() {
         setExpandedCategories(prev => ({ ...prev, [cat]: !prev[cat] }));
     };
 
-    const toggleMisaSection = (sec: string) => {
+    const toggleSection = (sec: string) => {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-        setExpandedMisaSection(prev => prev === sec ? null : sec);
+        setExpandedSection(prev => prev === sec ? null : sec);
     };
 
     const renderSongRow = (song: Song, showMeta = false) => (
@@ -130,7 +130,17 @@ export default function KnananukScreen() {
                     </View>
                 ) : (
                     // Grouped View
-                    Object.entries(groupedData).map(([category, sections]) => {
+                    (() => {
+                        const categoryOrder = ["Misa", "Misa Latin", "Tempo Litúrgico", "Maria", "Knananuk Inglês", "Knananuk Indonesia"];
+                        return Object.entries(groupedData).sort(([a], [b]) => {
+                            const idxA = categoryOrder.indexOf(a);
+                            const idxB = categoryOrder.indexOf(b);
+                            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                            if (idxA !== -1) return -1;
+                            if (idxB !== -1) return 1;
+                            return a.localeCompare(b);
+                        });
+                    })().map(([category, sections]) => {
                         const isExpanded = expandedCategories[category];
                         const songCount = Object.values(sections).reduce((sum, s) => sum + s.length, 0);
 
@@ -154,10 +164,13 @@ export default function KnananukScreen() {
 
                                 {isExpanded && (
                                     <View style={styles.categoryBody}>
-                                        {category === "Misa" ? (
-                                            // Nested Accordion for Misa
+                                        {category === "Misa" || category === "Tempo Litúrgico" ? (
+                                            // Nested Accordion for Misa and Tempo Litúrgico
                                             (() => {
-                                                const order = ['Entrada', 'Responsorial', 'Ofertório', 'Comunhão', 'Final'];
+                                                const order = category === "Misa" 
+                                                    ? ['Entrada', 'Responsorial', 'Aleluia', 'Ofertório', 'Sanctus', 'Comunhão', 'Ação de Graças', 'Final']
+                                                    : ['Advento', 'Natal', 'Quaresma', 'Páscoa', 'Pentecostes'];
+                                                
                                                 return Object.entries(sections).sort(([a], [b]) => {
                                                     const idxA = order.indexOf(a);
                                                     const idxB = order.indexOf(b);
@@ -167,12 +180,12 @@ export default function KnananukScreen() {
                                                     return a.localeCompare(b);
                                                 });
                                             })().map(([section, songs]) => {
-                                                const isSecExpanded = expandedMisaSection === section;
+                                                const isSecExpanded = expandedSection === section;
                                                 return (
                                                     <View key={section} style={styles.sectionAccordion}>
                                                         <TouchableOpacity 
                                                             style={styles.sectionAccordionHeader}
-                                                            onPress={() => toggleMisaSection(section)}
+                                                            onPress={() => toggleSection(section)}
                                                         >
                                                             <Text style={styles.sectionTitle}>{section}</Text>
                                                             <Ionicons 
@@ -189,7 +202,7 @@ export default function KnananukScreen() {
                                                     </View>
                                                 );
                                             })
-                                        ) : ["Misa Latin", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
+                                        ) : ["Misa Latin", "Maria", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
                                             // Flat list for these categories
                                             Object.values(sections).flat().sort((a, b) => a.id - b.id).map(song => renderSongRow(song))
                                         ) : (

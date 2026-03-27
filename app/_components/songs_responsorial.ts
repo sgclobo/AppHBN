@@ -409,7 +409,7 @@ export const SONGS_RESPONSORIAL: Song[] = [
     ]
   },
   {
-    id: 81,
+    id: 94,
     category: "Misa",
     section: "Responsorial",
     title: "EU QUERO VIVER",
@@ -420,7 +420,7 @@ export const SONGS_RESPONSORIAL: Song[] = [
     ]
   },
   {
-    id: 82,
+    id: 95,
     category: "Misa",
     section: "Responsorial",
     title: "BENDITO SEJA JESUS CRISTO",
@@ -431,7 +431,7 @@ export const SONGS_RESPONSORIAL: Song[] = [
     ]
   },
   {
-    id: 83,
+    id: 96,
     category: "Misa",
     section: "Responsorial",
     title: "BEM-AVENTURADOS PARA SEMPRE",

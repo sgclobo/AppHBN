@@ -1,0 +1,28 @@
+# Tasks
+
+- [x] Add "Aleluia" section to "Misa" category
+- [x] Expand "Ofertório" section with 28 new songs
+    - [x] Format 28 new songs into `songs_ofertorio.ts` (Temporary IDs 200-227)
+    - [x] Update `songs_data.ts` to include new Ofertório file
+- [x] Add "Sanctus" section and songs
+- [x] Expand "Comunhão" section with ~60 new songs
+- [x] Add "Ação de Graças" section and 24 songs
+- [x] Expand "Final" section with 24 new songs
+- [x] Create "Tempo Litúrgico" category
+    - [x] Update `knananuk.tsx` to include "Tempo Litúrgico" in category order
+    - [x] Add accordion/section support for "Tempo Litúrgico" in `knananuk.tsx`
+    - [x] Create `songs_tempo_liturgico.ts` (Temporary IDs 700+)
+    - [x] Move "Virjem Maria sei kous" from `songs_final.ts` to `songs_tempo_liturgico.ts`
+    - [x] Update `songs_data.ts` to include new Tempo Litúrgico file
+- [x] Expand "Natal" section with 3 new songs
+- [x] Expand "Quaresma" section with 20 new songs
+- [x] Expand "Páscoa" section with 7 new songs
+- [x] Expand "Pentecostes" section with 3 new songs
+- [x] Integrate "Maria" category into `songs_data.ts` and `knananuk.tsx`
+- [x] Verify "Maria" category rendering and song count
+- [x] Perform full library re-indexing (Optional/Next Step)
+    - [x] Update `songs_data.ts` to include new Maria file
+- [x] Verify changes in the app
+- [x] Final verification of all new sections
+- [x] Refine Maria Category UI (remove "Default" header)
+- [x] Move "Cidadão do Infinito" (#1051 -> #525) to Ação de Graças
