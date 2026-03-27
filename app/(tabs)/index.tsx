@@ -1,19 +1,6 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-
-const Golden3DText = ({ text, style, shadowOffset }: { text: string; style?: any; shadowOffset?: number }) => {
-  const o2 = shadowOffset || 4;
-  const o1 = Math.round(o2 / 2);
-  return (
-    <View style={styles.textStack}>
-      {/* Deepest 3D shadow */}
-      <Text numberOfLines={1} adjustsFontSizeToFit style={[styles.titleText, style, styles.layer2, { top: o2, left: o2 }]}>{text}</Text>
-      {/* Mid 3D shadow */}
-      <Text numberOfLines={1} adjustsFontSizeToFit style={[styles.titleText, style, styles.layer1, { top: o1, left: o1 }]}>{text}</Text>
-      {/* Front text face */}
-      <Text numberOfLines={1} adjustsFontSizeToFit style={[styles.titleText, style, styles.layer0]}>{text}</Text>
-    </View>
-  );
-};
+import { Image, StyleSheet, Text, View, Pressable } from "react-native";
+import { router } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function Index() {
   return (
@@ -22,13 +9,20 @@ export default function Index() {
         <Image
           source={require("../../assets/images/background-image.png")}
           style={styles.image}
-          resizeMode="contain"
+          resizeMode="cover"
         />
       </View>
 
       <View style={styles.titleWrapper}>
-        <Golden3DText text="HAROHAN" style={styles.h3} shadowOffset={2} />
-        <Golden3DText text="BA&nbsp;&nbsp;NAI" style={styles.h2} shadowOffset={4} />
+        <Pressable 
+          style={styles.infoButton} 
+          onPress={() => router.push("/about")}
+        >
+          <Ionicons name="information-circle-outline" size={24} color="rgba(255, 255, 255, 0.7)" />
+        </Pressable>
+        <Text style={styles.h3}>HAROHAN</Text>
+        <Text style={styles.h2}>BA NAI</Text>
+        <Text style={styles.subtitle}>Knananuk no Orasoens Katólika</Text>
       </View>
     </View>
   );
@@ -37,55 +31,53 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2B1B2D",
-    justifyContent: "flex-end",
+    backgroundColor: "#1A0F1C",
   },
   imageWrapper: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "#1A0F1C", // Dark purple border area for fit screen
+    flex: 1,
+    width: "100%",
+    paddingTop: 40, // Pulls the image "down" within the wrapper
+    backgroundColor: "#1A0F1C",
   },
   image: {
     width: "100%",
     height: "100%",
   },
+  infoButton: {
+    position: "absolute",
+    top: 15,
+    right: 15,
+    zIndex: 10,
+    padding: 10,
+  },
   titleWrapper: {
-    paddingBottom: 40,
-    paddingLeft: 24,
-    paddingRight: 24,
     width: "100%",
-    alignItems: "flex-start", // Left aligns the contents
-  },
-  textStack: {
-    marginBottom: 4,
-  },
-  titleText: {
-    fontWeight: "900",
+    backgroundColor: "#8A1E1E", // Deep maroon/red for the banner
+    paddingHorizontal: 24,
+    paddingVertical: 35, // Equal top and bottom margins for content
+    justifyContent: "center",
+    borderTopWidth: 2,
+    borderTopColor: "#FFDF00", // Gold separator line
   },
   h2: {
     fontSize: 42,
+    fontWeight: "900",
+    color: "#FFFFFF",
     lineHeight: 48,
+    textTransform: "uppercase",
   },
   h3: {
-    fontSize: 28,
-    lineHeight: 34,
-    letterSpacing: 2,
+    fontSize: 22,
+    fontWeight: "700",
+    color: "#FFFFFF",
+    lineHeight: 28,
+    textTransform: "uppercase",
+    marginBottom: 2,
   },
-  layer2: {
-    position: "absolute",
-    color: "#8B5A00",
-    textShadowColor: "rgba(0,0,0,0.6)",
-    textShadowOffset: { width: 3, height: 3 },
-    textShadowRadius: 4,
-  },
-  layer1: {
-    position: "absolute",
-    color: "#C58300",
-  },
-  layer0: {
-    color: "#FFDF00",
+  subtitle: {
+    fontSize: 14,
+    color: "rgba(255, 255, 255, 0.8)",
+    marginTop: 8,
+    fontStyle: "italic",
   },
 });

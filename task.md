@@ -23,6 +23,18 @@
 - [x] Perform full library re-indexing (Optional/Next Step)
     - [x] Update `songs_data.ts` to include new Maria file
 - [x] Verify changes in the app
+- [x] Add "ORAÇÃO PELA FAMÍLIA" to Ação de Graças section
+- [x] Verify changes in the app
 - [x] Final verification of all new sections
 - [x] Refine Maria Category UI (remove "Default" header)
 - [x] Move "Cidadão do Infinito" (#1051 -> #525) to Ação de Graças
+- [x] Create "About" page
+    - [x] Add "i" icon to home screen
+    - [x] Create `app/about.tsx` with content
+    - [x] Add Close (X) button to About page
+    - [x] Verify About page navigation and content
+- [x] Redesign Home screen layout
+    - [x] Update `index.tsx` for full-width image cover
+    - [x] Implement solid color title banner
+    - [x] Refine layout (icon placement, padding, image position)
+    - [x] Verify final Home screen visual changes
