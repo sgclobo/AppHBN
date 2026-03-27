@@ -131,7 +131,7 @@ export default function KnananukScreen() {
                 ) : (
                     // Grouped View
                     (() => {
-                        const categoryOrder = ["Misa", "Misa Latin", "Tempo Litúrgico", "Maria", "Knananuk Inglês", "Knananuk Indonesia"];
+                        const categoryOrder = ["Misa", "Misa Latin", "Tempo Litúrgico", "Maria", "Santu Sira", "Knananuk Portugues no Espanhol", "Knananuk Inglês", "Knananuk Indonesia"];
                         return Object.entries(groupedData).sort(([a], [b]) => {
                             const idxA = categoryOrder.indexOf(a);
                             const idxB = categoryOrder.indexOf(b);
@@ -164,12 +164,14 @@ export default function KnananukScreen() {
 
                                 {isExpanded && (
                                     <View style={styles.categoryBody}>
-                                        {category === "Misa" || category === "Tempo Litúrgico" ? (
-                                            // Nested Accordion for Misa and Tempo Litúrgico
+                                        {["Misa", "Tempo Litúrgico", "Knananuk Portugues no Espanhol"].includes(category) ? (
+                                            // Nested Accordion for Misa, Tempo Litúrgico and Portugues/Espanhol
                                             (() => {
                                                 const order = category === "Misa" 
                                                     ? ['Entrada', 'Responsorial', 'Aleluia', 'Ofertório', 'Sanctus', 'Comunhão', 'Ação de Graças', 'Final']
-                                                    : ['Advento', 'Natal', 'Quaresma', 'Páscoa', 'Pentecostes'];
+                                                    : category === "Tempo Litúrgico"
+                                                    ? ['Advento', 'Natal', 'Quaresma', 'Páscoa', 'Pentecostes']
+                                                    : ['Portugues', 'Espanhol'];
                                                 
                                                 return Object.entries(sections).sort(([a], [b]) => {
                                                     const idxA = order.indexOf(a);
@@ -202,7 +204,7 @@ export default function KnananukScreen() {
                                                     </View>
                                                 );
                                             })
-                                        ) : ["Misa Latin", "Maria", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
+                                        ) : ["Misa Latin", "Maria", "Santu Sira", "Knananuk Inglês", "Knananuk Indonesia"].includes(category) ? (
                                             // Flat list for these categories
                                             Object.values(sections).flat().sort((a, b) => a.id - b.id).map(song => renderSongRow(song))
                                         ) : (
