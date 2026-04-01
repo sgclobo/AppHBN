@@ -1,14 +1,14 @@
+import { Ionicons } from "@expo/vector-icons";
+import { router, Stack } from "expo-router";
 import React from "react";
 import {
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
-  View,
   TouchableOpacity,
-  SafeAreaView,
+  View,
 } from "react-native";
-import { router, Stack } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 
 const sections = [
   {
@@ -16,13 +16,13 @@ const sections = [
     content: "Aplikativu ida ne'e dezenvolve ho objetivu atu suporta moris orasaun nian no fasilita asesu ba orasaun no knananuk Katóliku sira, halibur konteúdu iha lian oioin no kontestu kulturál Timor-Leste nian. Nia objetivu atu tulun sarani sira reza kle’an liután, partisipa kle’an liután iha liturjia, no hametin sira-nia fiar iha moris loroloron nian."
   },
   {
-    title: "Desenvolvimentu",
-    content: "Aplikasaun ida ne'e dezenvolve hosi TimorApps, ho objetivu atu tau teknolojia iha servisu fiar nian, promove asesu simples, organizadu, no dignu ba rekursu espirituál sira Kreda nian."
+    title: "Dezenvolvimentu",
+    content: "Aplikativu ida ne'e dezenvolve hosi TimorApps, ho objetivu atu tau teknolojia iha servisu fiar nian, promove asesu simples, organizadu, no dignu ba rekursu espirituál sira Kreda nian."
   },
   {
-    title: "Finalidade Aplikativu",
+    title: "Objetivu",
     list: [
-      "Atu fornese orasaun no knananuk Katóliku nian ne'ebé organiza tuir kategoria",
+      "Atu fornese orasaun no kântikus Katóliku nian ne'ebé organiza tuir kategoria",
       "Atu apoia partisipasaun iha Santa Missa no estasaun litúrjika oioin",
       "Atu promove uza lian oioin, inklui Tetum, Portugés, Inglés, no Bahasa Indonesia",
       "Atu serve hanesan instrumentu ba formasaun espirituál no devosaun pesoál"
@@ -30,17 +30,17 @@ const sections = [
   },
   {
     title: "Kolaborasaun no sujestaun",
-    content: "Aplikasaun ida-ne'e iha dezenvolvimentu kontínuu nia laran. Partisipasaun utilizadór nian esensiál ba ninia melloramentu.",
+    content: "Aplikativu ida ne'e iha dezenvolvimentu kontínuu nia laran. Partisipasaun utilizadór nian esensiál ba ninia melloramentu.",
     list: [
-      "Sujere knananuk ka orasaun foun sira",
-      "Hadia erru r ne'ebe identifika",
+      "Sujere kâbtiku ka orasaun foun",
+      "Hadia erru  ne'ebe identifika",
       "Kontribui ho tradusaun",
       "Haruka komentáriu ou proposta melloramentu"
     ]
   },
   {
     title: "Kontaktu",
-    content: "Email: drsergiolobo@gmail.com\nWhatsApp: +670 7848 2777"
+    content: "Email: timordigitalnet@gmail.com\nWhatsApp: +670 7848 2777"
   },
   {
     title: "Nota",
@@ -55,7 +55,7 @@ const sections = [
 export default function AboutScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <Stack.Screen 
+      <Stack.Screen
         options={{
           headerShown: true,
           title: "Konabá App",
@@ -66,11 +66,11 @@ export default function AboutScreen() {
               <Ionicons name="chevron-back" size={28} color="#FFDF00" />
             </TouchableOpacity>
           ),
-        }} 
+        }}
       />
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <TouchableOpacity 
-          style={styles.closeButton} 
+        <TouchableOpacity
+          style={styles.closeButton}
           onPress={() => router.back()}
         >
           <Ionicons name="close" size={28} color="#FFDF00" />

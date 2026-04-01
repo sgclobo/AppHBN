@@ -1,0 +1,5 @@
+ERROR: Unclosed quote in verses in songs_misa.ts ID 166
+ERROR: Unclosed quote in verses in songs_maria_santu.ts ID 397
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 566
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 569
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 600

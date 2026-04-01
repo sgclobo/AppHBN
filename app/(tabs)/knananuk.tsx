@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { FlatList, Modal, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, UIManager, View, SafeAreaView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Song, SONGS_DATA } from '../_components/songs_data';
-import { ListaKnananukView } from '../_components/ListaKnananukView';
-import { FavoritusView } from '../_components/FavoritusView';
+import { Song, SONGS_DATA } from '../../components/songs_data';
+import { ListaKnananukView } from '../../components/ListaKnananukView';
+import { FavoritusView } from '../../components/FavoritusView';
 
 // Enable layout animations for Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {

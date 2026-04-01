@@ -52,7 +52,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="knananuk"
         options={{
-          title: "Knananuk",
+          title: "Kântikus",
           tabBarIcon: ({ color }) => (
             <FontAwesome6 name="music" size={24} color={color} />
           ),

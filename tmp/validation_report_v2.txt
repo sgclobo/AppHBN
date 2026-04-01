@@ -1,0 +1,3 @@
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 566 (unescaped count: 3)
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 569 (unescaped count: 3)
+ERROR: Unclosed quote in verses in songs_suplementu.ts ID 600 (unescaped count: 3)

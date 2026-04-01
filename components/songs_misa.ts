@@ -1,0 +1,3333 @@
+import { Song } from "./songs_data";
+
+export const SONGS_MISA: Song[] = [
+  {
+    id: 1,
+    category: "Misa",
+    section: "Entrada",
+    title: `ANIN MALIRIN`,
+    language: "tet",
+    verses: [
+      "Anin malirin tasi fehan,\nlaloran tasi baku ba mai.\nRai badin lian mai\nfahe hakmatek matak malirin.",
+      "Kristu Maksoin, fatuk karan kmanek,\nHa'u laran metin ba Ita Boot.\nIta mak dalan los; Iori ha'u to'o lalehan.",
+      "Maski rai badin anin makaas,\nhalo halerik ha'u neon;\nmaibe ha’u fiar,\nneon metin nafatin ba Ita domin.\nLoron nakloke raiklaran,\nfitun no fulan roman nakder,\nto ksolok mai ha'u atu hahi,\nhananu Ita nia beran."
+    ],
+    tags: ["entrada", "missa", "tetum"],
+  },
+  {
+    id: 2,
+    category: "Misa",
+    section: "Entrada",
+    title: `BELE TAMA BA LALEHAN`,
+    language: "tet",
+    refrain: `Bele tama ba lalehan, (2x)\nse halo an kiik oan, (2x)`,
+    verses: [
+      "Basa Jesus dehan, (2x)\n“Hato'o mai Ha’u (2x)\nkiik oan sira ne'e.” (2x)",
+      "Basa Ha'u nia reinu, (2x)\nkiik oan sira nian. (2x)",
+      "Bele tama ba lalehan, (2x)\nse halo an kiik oan. (2x)"
+    ],
+  },
+  {
+    id: 3,
+    category: "Misa",
+    section: "Entrada",
+    title: `DIAK TEBES BA JESUS`,
+    language: "tet",
+    refrain: `Diak tebes ba Jesus, Na’i Maromak.\nIta hananu ba Aman Maromak. (2x)`,
+    verses: [
+      "Hasa’e imi laran hodi basa imi nia liman,\nImi buka hadomi Na’i Maksoin. (2x)",
+      "Hamos imi nia laran hodi hananu ba Na’i…",
+      "Taka metin imi nia matan, hodi hana’i Na’i Jesus…",
+      "Hamos imi nia moris hodi fiar ba Jesus…"
+    ],
+  },
+  {
+    id: 4,
+    category: "Misa",
+    section: "Entrada",
+    title: `DOBEN NAI`,
+    language: "tet",
+    refrain: `Doben Na’i, Maromak Na’i.\nBoot Ita nia naran iha rai hot-hotu. (2x)`,
+    verses: [
+      "Ita haraik kmanek ba kiik oan sira.\nImi reza, imi hananu ba Na’i. (2x)",
+      "Ita nia glória horik iha lalehan.\nIta doben, Ita hanorin ami. (2x)",
+      "Ita nudar Na’i-Lulik ba nafatin.\nIta hili ami hodi serbi Na’i. (2x)"
+    ],
+  },
+  {
+    id: 5,
+    category: "Misa",
+    section: "Entrada",
+    title: `AMI MAI HASA’E KSOLOK`,
+    language: "tet",
+    refrain: `Ami mai hasa’e ksolok ba Ita hotu,\nTimor oan tomak dulas liman basa liman.\nAmi kontenti hodi ita dehan hamutuk:\nViva Maromak! Viva Aman Maromak!`,
+    verses: [
+      "Mai haksolok basa liman hananu ba Na’i,\nHahi Na’i Maromak nia futar naran.",
+      "Jesus Kristu mak ami nia moris naroman,\nDalan be lori ami ba lalehan kmanek.",
+      "Madre Maria, Tulun-Oan, harohan ba ami,\nAtu ami rona nafatin Ita nia Lia.",
+      "Aman Maromak, ksolok boot ba ami hotu,\nTamba Ita haraik Ita nia domin mai ami."
+    ],
+  },
+  {
+    id: 6,
+    category: "Misa",
+    section: "Entrada",
+    title: `AMI MAI HASA’E KSOLOK II`,
+    language: "tet",
+    refrain: `Ami mai hasa’e ksolok, ami hotu basa liman.\nDulas liman hodi hahi Na’i Maromak.`,
+    verses: [
+      "Hananu ba Maromak, haksolok oin-oin,\nIta simu kmanek boot hosi Na’i Jesus.",
+      "Mai ita hotu reza, mai ita hotu hahi,\nNa’i Maromak doben haraik bensa mai.",
+      "Ho ksolok ami dulas, ho ksolok ami basa,\nViva Na’i Maromak! Viva Na’i Jesus!"
+    ],
+  },
+  {
+    id: 7,
+    category: "Misa",
+    section: "Entrada",
+    title: `AMI MAI ITA NIAN`,
+    language: "tet",
+    refrain: `Ami mai Ita nian, Na’i Maromak.\nSimu ami, doben ami, O Na’i.`,
+    verses: [
+      "Hasa’e laran ba Maromak, saran an tomak,\nIta mak ami nia Na’i, ami nia Aman.",
+      "Hanesan kiik oan sira besik ba Inan,\nAmi mos mai Ita oin hodi husu tulun.",
+      "Haraik kmanek no naroman ba ami klamar,\nAtu ami moris nafatin iha Ita doben."
+    ],
+  },
+  {
+    id: 8,
+    category: "Misa",
+    section: "Entrada",
+    title: `FILA MAI`,
+    language: "tet",
+    refrain: `Fila mai, fila mai,\nImi nebe dook hosi Aman.`,
+    verses: [
+      "Aman hein hela imi ho laran doben,\nFila mai imi moris fali iha Nia domin.",
+      "Na’i Jesus bolu nafatin imi klamar,\nMai tuir Nia dalan, dalan ba lalehan.",
+      "Keta tauk, keta laran susar, fila mai,\nBasa Maromak perdua imi nia sala."
+    ],
+  },
+  {
+    id: 9,
+    category: "Misa",
+    section: "Entrada",
+    title: `HAKSOLOK`,
+    language: "tet",
+    refrain: `Haksolok, (2x) ita hananu ba Na’i.\nHaksolok, (2x) ita hahi Maromak.`,
+    verses: [
+      "Maromak diak tebes, haraik moris mai,\nIta basa liman hodi hahi Nia beran.",
+      "Jesus Kristu Maksoin, horik iha ne’e,\nIta simu Nia ho laran ksolok boot.",
+      "Ema hot-hotu mai, mai ita hananu,\nHaksolok nafatin ba Na’i nia domin."
+    ],
+  },
+  {
+    id: 10,
+    category: "Misa",
+    section: "Entrada",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ksolok boot bainhira ema dehan:\nla'o ba Na'i Maromak nia kadunan.\nTo'o tiha o nia odamatan,\nksolok tebes, Jerusalem.",
+      "2. Nudar sidade harii met-metin;\nJerusalem la nakdoko.\nBa to'o nia, ema sa'e wain-wain,\natu hahi Maromak naran.",
+      "3. Iha neba Na'i Maromak tesi lia\niha David nia kadunan laran;\nhusu hakmatek to ba Jerusalem,\nhakmatek ba nia uma laran.",
+      "4. Tamba ha'u nia maun alin, ha'u nia belun,\nhusu hakmatek ba sidade ne'e.\nTamba Na'i Maksoin nia uma kmanek,\nhu'u harohan ba o, Jerusalem."
+    ],
+  },
+  {
+    id: 11,
+    category: "Misa",
+    section: "Entrada",
+    title: `MAI ITA HOTU`,
+    language: "tet",
+    refrain: `Mai ita hotu, mai besik ba altár,\nHasa’e hamulak ba Na’i Maromak.`,
+    verses: [
+      "Iha ne’e Jesus saran Isin ho Ran,\nAtu fo moris rohan-laek mai ita.",
+      "Mai ita laran ida, mai ita fiar,\nHodi hananu glória ba Maromak.",
+      "Na’i Jesus, haraik dame mai ami,\nAtu ami moris haksolok nafatin."
+    ],
+  },
+  {
+    id: 12,
+    category: "Misa",
+    section: "Entrada",
+    title: `HANA`,
+    language: "tet",
+    refrain: `Hana`,
+    verses: [
+      "1. Mai, ita hana'i, hahi ita Maksoin.\nHasa'e ba Na'i Maromak ita an tomak",
+      "2. Mai, ita hananu, hananu ho ksolok\nNa'i Maromak boot liu hotu, Nia ita Na'i.",
+      "3. Na'i tutor lia halo rai no lalehan\ntuku tur, ita hana'i ba Na'i Maromak.",
+      "4. Ita rai no povu, Na'i Maromak, nia soin;\nlaran metin ba Na'i Maksoin, Nia ita Aman."
+    ],
+  },
+  {
+    id: 13,
+    category: "Misa",
+    section: "Entrada",
+    title: `HAMUTUK HO MUNDU TOMAK`,
+    language: "tet",
+    refrain: `Hamutuk ho mundu tomak ita hahi ba ita Na`,
+    verses: [
+      "1. Ba lalehan, ba loron, ba buat hotu, ba manu,\nba mota, ha'u Na'i; ba malirin, ba anin,\nba be tasi nian ba moris nebe ita hadomi.",
+      "2. Ba paz, ksolok, hadomi,\nba aihan, justisa, ha'u Na'i;\nba foinsa'e, labarik, ema hot-hotu,\nba moris nebe ha'u hadomi.",
+      "3. Ba Kreda, Maromak nia povu,\nba povu halibur iha ne'e;\ntan ksolok Nia to mai ita,\ntamba Missa Eukaristia ne'e."
+    ],
+  },
+  {
+    id: 14,
+    category: "Misa",
+    section: "Entrada",
+    title: `HAKSOLOK LORON OHIN`,
+    language: "tet",
+    verses: [
+      "1. Haksolok loron ohin ba los Na'i Maromak.\nHaksolok loron ohin.",
+      "2. Haksolok loron ohin, belun sira hananu.\nHaksolok loron ohin.",
+      "3. Haksolok ba ita tomak, loron diak haksolok.\nHaksolok ba ita tomak.",
+      "4. Maromak sei hamutuk, hamutuk ho ita.\nMaromak sei hamutuk."
+    ],
+  },
+  {
+    id: 15,
+    category: "Misa",
+    section: "Entrada",
+    title: `HAHI NA`,
+    language: "tet",
+    verses: [
+      "1. Hana'i, hahi Na'i bele hotu.\nMai, ita haksolok, hahi Na'i. Aleluia, aleluia.\nHana'i, hahi Na'i bele hotu. Aleluia.\nMai, ita haksolok, hahi Na'i. Aleluia, aleluia, aleluia."
+    ],
+  },
+  {
+    id: 16,
+    category: "Misa",
+    section: "Entrada",
+    title: `HAHI ITA NA`,
+    language: "tet",
+    refrain: `Haksolok no hananu ba, maun alin sira.\nMai, ita hotu hahi Na`,
+    verses: [
+      "1. Na'i, Aman Maromak.",
+      "2. Na'i, Liurai lalehan.",
+      "3. Na'i, Aman laran luak.",
+      "Gloria, gloria ami hasa'e ba ita.\n1. Aman, bele halo hotu.",
+      "2. Ita naran boot tebes.",
+      "3. Hadomi ema hot-hotu.",
+      "Ami hana'i, hahi Ita Boot,\nkmanek wain, Jesus Kristu\nho mos Espiritu Santu,\nmak ukun tinan ba tinan.\nAmen, amen, amen, amen, amen."
+    ],
+  },
+  {
+    id: 17,
+    category: "Misa",
+    section: "Entrada",
+    title: `FOTI NEON BA MAROMAK`,
+    language: "tet",
+    refrain: `Foti neon ba Maromak, hananu ba Maromak,\ntan Maromak naran boot Hu hotu-hotu. (2x)`,
+    verses: [
+      "1. Maromak boot liu ita hamutuk\nhodi haksolok ita tinan ba tinan.",
+      "2. Kristu mak dalan los no Maksoin;\nita hodi neon harohan ba Maromak.",
+      "3. Na'i hatodan an iha lalehan laran,\nami hahi no hana'i Ita Boot."
+    ],
+  },
+  {
+    id: 18,
+    category: "Misa",
+    section: "Entrada",
+    title: `FO KSOLOK MAI HA`,
+    language: "tet",
+    refrain: `Kanta hosana, kanta hosana;\nkanta hosana ba ha`,
+    verses: [
+      "1. Fo ksolok, Na'i, mai ha'u; fo mai ksolok.\nFo ksolok, Na'i, mai ha'u ohin.\nFo ksolok, Na'i, mai ha'u; fo mai ksolok.\nHalo ha'u haksolok ho Ita.",
+      "2. Fo dame...\nHalo ha'u hakmafek ho Ita.",
+      "3. Fo domin...\nHalo ha'u hadomi Ita."
+    ],
+  },
+  {
+    id: 19,
+    category: "Misa",
+    section: "Entrada",
+    title: `DIAK TEBES, KSOLOK TEBES`,
+    language: "tet",
+    refrain: `Diak tebes, ksolok tebes\nmoris hamutuk ita nia vokasaun;\nbuka moris ho hadomi\nba Maromak nia reinu. (2x)`,
+    verses: [
+      "1. Iha ne'e ita halibur atu hatudu ba ita Na'i.\nKsolok domin hodi hakarak serbi Nia.",
+      "2. Hadulas mesa ida ho hadulas krus ida,\nho Kreda hamutuk Kristu, Ita nia naroman.",
+      "3. Ita moris, tau neon metin ba Kristu, ita Liurai,\nita klamar la deskansa tamba vokasaun boot\ntebes duni."
+    ],
+  },
+  {
+    id: 20,
+    category: "Misa",
+    section: "Entrada",
+    title: `LORON FESTA`,
+    language: "tet",
+    refrain: `Loron festa, loron festa, loron festa hadomi.\nLoron festa, loron festa, loron festa iha fuan.`,
+    verses: [
+      "1. Kreda nakloke atu ita halibur.\nSarani mai hotu ho ksolok iha fuan.\nNe'e mak loron haksolok nian; Na'i haraik mai ita.",
+      "2. Hot-hotu hamutuk hadulas altar,\nnudar familia Maromak ninian.",
+      "3. Hot-hotu fuan ida met-metin ba malu.\nMaun alin ida-ida fo ksolok, hadomi."
+    ],
+  },
+  {
+    id: 21,
+    category: "Misa",
+    section: "Entrada",
+    title: `LA`,
+    language: "tet",
+    refrain: `La`,
+    verses: [
+      "1. Haraik Ita lialos no ita roman\natu leno netik ami dalan ba Maromak.",
+      "2. Na'i Maromak ha'u nia ksolok;\nha'u sei hahi Nia beibeik loron kalan.",
+      "3. Gloria ba Aman no ba Oan,\nno ba Espiritu Santu.",
+      "4. Nudar hori uluk, oras ne'e,\ntinan ba tinan, nafatin. Amen."
+    ],
+  },
+  {
+    id: 22,
+    category: "Misa",
+    section: "Entrada",
+    title: `LALEHAN RAI FOUN`,
+    language: "tet",
+    refrain: `Lalehan rai foun Na`,
+    verses: [
+      "1. Ita, Maromak nia Oan, mak haraik liberdade.\nIta Boot tesi lia, sei tuir karidade.",
+      "2. Mate ita sei manan ho Kristu, ita sei manan.\nHo gloria Maromak nian, sei moris ba bei-beik.",
+      "3. Na'i, Ita reinu mak tebes ho domin no lialos,\nho dame no justisa, ho gloria no santidade."
+    ],
+  },
+  {
+    id: 23,
+    category: "Misa",
+    section: "Entrada",
+    title: `ITA POVU HALIBUR HAMUTUK`,
+    language: "tet",
+    refrain: `Aleluia (4x)`,
+    verses: [
+      "1. Ita povu halibur hamutuk, Na'i.\nIta povu halibur hamutuk\natu hahi Ita naran santu,\nno moris ha dame.",
+      "2. Ita povu halibur hamutuk, Na'i.\nIta povu halibur hamutuk\natu rona Ita lia,\nno hanoin Ita dame.",
+      "3. Mundu mos sei hatene\nami mesak maun alin,\nami mesak maun alin\nnudar Ita Boot."
+    ],
+  },
+  {
+    id: 24,
+    category: "Misa",
+    section: "Entrada",
+    title: `ITA HOTU MAROMAK NIA POVU`,
+    language: "tet",
+    refrain: `Ita hotu Maromak nia povu,\nita mai hamutuk tan nia naran.`,
+    verses: [
+      "1. Povu halibur tan duni Nia lia,\npovu hamutuk ho Kristu Jesus.",
+      "2. Povu ne'e moris iha baptismu nia be,\npovu ne'e simu Espiritu Santu.",
+      "3. Povu ne'e han Jesus nia futar Isin,\npovu ne'e hemu Jesus nia futar Ran.",
+      "4. Povu ne'e metin iha fiar, iha domin,\npovu ne'e hein iha Kristu Jesus.",
+      "5. Povu ne'e hana'i Maromak, ita Na'i;\npovu ne'e hahi ita Na'i Jesus Kristu."
+    ],
+  },
+  {
+    id: 25,
+    category: "Misa",
+    section: "Entrada",
+    title: `IHA FOHO TUTUN BA`,
+    language: "tet",
+    refrain: `Iha foho tutun ba anin hu ba mai\nha`,
+    verses: [
+      "1. Fuan hananu, Na'i, lia menas ida terik,\nkatak Ita Boot domin lolos moris nian.\nFuan hananu, Na'i, lia menas ida terik,\nkatak Ita Boot domin rohan laek.",
+      "2. Ha'u haksolok, Na'i, ho lia dadoli hahi\nIta nia beran; ha'u temi loron kalan.\nHa'u haksolok, Na'i, ho lia dadoli hahi\nIta nia beran; kmanek ba nafatin."
+    ],
+  },
+  {
+    id: 26,
+    category: "Misa",
+    section: "Entrada",
+    title: `HO KSOLOK BOOT TEBES, ALELUIA`,
+    language: "tet",
+    refrain: `Ho ksolok boot tebes, aleluia;\nha`,
+    verses: [
+      "1. Tan ne'e ha'u hamriik, aleluia;\niha ita oin, Jerusalem.",
+      "2. Jerusalem, sidade boot no furak,\nsidade hari met-metin, aleluia;\npovu sira hakat ba ita.",
+      "3. O nia kota laran be hakmatek,\no nia uma laran diak nakonu, aleluia,\ntan ita Na'i Maromak."
+    ],
+  },
+  {
+    id: 27,
+    category: "Misa",
+    section: "Entrada",
+    title: `HODI DALAN ESPERANSA`,
+    language: "tet",
+    refrain: `Hodi dalan esperansa, hamutuk domin\nita ba hasouru ita Na`,
+    verses: [
+      "1. Iha dalan ema nian Kristu kuda fini,\nliafuan rohan laek atu fo moris ba ema.",
+      "2. Iha dalan ba Emaus, Kristu mosu ema leet;\nksolok tebes ba ita, Nia nafatin ho ita.",
+      "3. Molok rai nakukun ita han Paun ne'e\nnudar moris ho Kristu, kesi ita ho Nia.",
+      "4. Na'i Jesus hela ho ita nudar ita lialos,\natu ita bele halo mundu sai foun tali.",
+      "5. Na'i hela ho ita, sai Aihan ita vida\nnakfilak Nia isin nudar Aihan ba ita."
+    ],
+  },
+  {
+    id: 28,
+    category: "Misa",
+    section: "Entrada",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Na'i boot tebes sadia ita; haraik perdia ba ita sala.",
+      "2. Gloria ba Padre, ba Filho, ba Espiritu Santu",
+      "3. nudar hori uluk oras ne'e tinan ba tinan nafatin.\nAmen."
+    ],
+  },
+  {
+    id: 29,
+    category: "Misa",
+    section: "Entrada",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Na'i, bolu ema hotu: lorosa'e, loromonu.",
+      "2. Hosi Sião, foho furak; Nia nabilan.",
+      "3. Ita Maromak mai; Nia sei koalia.",
+      "4. Halibur iha Ha'u oin, Ha'u emar sira.",
+      "5. Rona mai, Ha'u povu! Ha'u mak koalia.",
+      "6. Hasai sakrifisiu hahi ba Na'i Maromak."
+    ],
+  },
+  {
+    id: 30,
+    category: "Misa",
+    section: "Entrada",
+    title: `NA`,
+    language: "tet",
+    verses: [
+      "1. Na'i Jesus, Ita ami nia ksolok. (2x)\nNa'i Jesus, Ita mak halibur ami. (2x)\nNa'i Jesus, Ita mak halibur ami\nIha Ita nia domin.",
+      "2. Na'i Jesus, Ita ami nia dalan. (2x)\nEma tomak kuran Ita Boot. (2x)\nEma tomak kuran Ita Boot...",
+      "3. Ita Boot hatene ami nia sola. (2x)\nMaibe Ita foti ami neon. (2x)\nIta la'o hamutuk ho ami...",
+      "4. Ohin, loron Na'i ninian. (2x)\nAmi simu Ita Boot nia lia. (2x)\nIta la'o hamutuk ho ami..."
+    ],
+  },
+  {
+    id: 31,
+    category: "Misa",
+    section: "Entrada",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Buka hametin unidade iha Na'i nia Espiritu\nhamutuk ihas dame,\nIta hananu hodi haklaken.",
+      "2. Ita hotu isin lolon ida deit iha Na'i Jesus.",
+      "3. Ita hotu esperansa ida deit iha Na'i Jesus."
+    ],
+  },
+  {
+    id: 32,
+    category: "Misa",
+    section: "Entrada",
+    title: `MAROMAK MAK BOLU`,
+    language: "tet",
+    refrain: `Maromak, Ita mak bolu no ami la`,
+    verses: [
+      "1. Ami la'o ba It'nia mesa, ami la'o ba It'nia altar,\nhodi simu It'nia lia; ami ba ho hananu.",
+      "2. Ami hakarak moris ho ita, lor-loron ba nafatin.\nFo mai ami It'nia domin, fo ksolok mai ami.",
+      "3. Ita fo, fahe ba malu fo be moris ita laran,\nbe It'nia tronu nabilan hato'o ami lia."
+    ],
+  },
+  {
+    id: 33,
+    category: "Misa",
+    section: "Entrada",
+    title: `MAROMAK LORON NE`,
+    language: "tet",
+    refrain: `Maromak loron ne`,
+    verses: [
+      "1. Lalehan, loron, fulan no fitun,\nto'o foho no tetuk tun tasi nia mai.\nEma, balada, aifunan, aifuan,\nosan mean no mutin Ita ninian.",
+      "2. Dader, loron sa'e, kaer ha'u knaar\nno buka matenek, hanoin ha'u Na'i.\nKosar no kole, ha'u matan ba leten,\nha'u fuan ba aas, ha'u Na'i to tulun.",
+      "3. Riku, kiak, matenek eh beik,\nema diak eh aat, ha'u alin no maun.\nHa'u fuan no laran, tulun, hadomi\nto liman ba malu, tan sira Jesus."
+    ],
+  },
+  {
+    id: 34,
+    category: "Misa",
+    section: "Entrada",
+    title: `MAI LA`,
+    language: "tet",
+    verses: [
+      "1. Mai, la'o ho ha'u ba Maromak uma. (3x)\nIha neba haksolok, ksolok, ksolok.",
+      "2. Lalehanla dook ba Maromak uma. (3x)",
+      "3. Jesus mak dalan ba Maromak uma. (3x)",
+      "4. Jesus mak naroman iha Maromak uma. (3x)",
+      "5. Jesus mak domin iha Maromak uma. (3x)",
+      "6. Jesus mak damen iha Maromak uma. (3x)",
+      "7. Ita hahi Nia iha Maromak uma. (3x)"
+    ],
+  },
+  {
+    id: 35,
+    category: "Misa",
+    section: "Entrada",
+    title: `MAI HOTU HAKBESIK MAROMAK`,
+    language: "tet",
+    refrain: `Mai hotu, hakbesik Maromak: haksolok no hananu!`,
+    verses: [
+      "1. Rai tomak hawelok Maromak, serbi ita Na'i haksolok.\nMai nia tutor oin, hananu ksolok nian.",
+      "2. Sei hatene katak Maromak ida deit.\nIta, Nia mak halo, ita ninian.\nIta nia povu bibi luhan Na'i nian.",
+      "3. Mai, tama nia odamatan hodi hananu.\nHana'i, hahi Na'i Maromak,\nagradese, hawelok nia naran.",
+      "4. Tamba Na'i Maromak diak liu hotu;\nNia domin ba bei-beik, Nia lialos ba nafatin.",
+      "5. Hasa'e ba Maromak Padre bele hot-hotu;\nMaromak Filho, Jesus Kristu, ita Na'i;\nba Espiritu Santu. Amen."
+    ],
+  },
+  {
+    id: 36,
+    category: "Misa",
+    section: "Entrada",
+    title: `LORON KSOLOK BOOT`,
+    language: "tet",
+    verses: [
+      "1. Loron ida ne'e mak loron domin nian\nhamutuk halibur ho ksolok\natu haklaken Na'i nia Naran.\nLoron ida ne'e mak loron domin nian\nAleluia, aleluia. Ami haklaken ho ksolok boot\ntan Na'i nia hahalok tomak. Aleluia, aleluia.",
+      "2. Loron ida ne'e mak Na'i to perdua.\nHamutuk halibur ho ksolok\natu haklaken Na'i nia Naran.\nLoron ida ne'e mak Na'i to perdua."
+    ],
+  },
+  {
+    id: 37,
+    category: "Misa",
+    section: "Entrada",
+    title: `LORON IDA NE`,
+    language: "tet",
+    refrain: `Loron ida ne`,
+    verses: [
+      "1. Israel nia ema, dehan ba,\n\"Ninia diak, diak ba oin nafatin.\"\nAraao uma maka dehan ba,\n\"Ninia diak, diak ba oin nafatin.\"\nDehan ba Na'i Maromak nia uma,\n\"Ninia diak, diak ba oin nafatin.\"",
+      "2. Iha ema diak sira knua,\nho hananu ksolok manan nian,\nita Na'i liman los halo diak,\nfoti Ita liman los, Maromak.\nMaromak liman los todan tebes;\nliurai liman, liman Na'i Maromak."
+    ],
+  },
+  {
+    id: 38,
+    category: "Misa",
+    section: "Entrada",
+    title: `LORON FOUN SA`,
+    language: "tet",
+    refrain: `Loron foun sa`,
+    verses: [
+      "1. Dolan tomak mundu ne'e nian dada ita ba lalehan.\nJesus Kristu mak dalan, lori ita ba lalehan.",
+      "2. Ita ema nia vida laos deit iha terusu,\nalin maun ita hetan, halo ita hadomi malu.",
+      "3. Dalan nobun iha raiklaran halo ita la para,\ntamba buat nobun sei liu, domin deit hasa'e ba Ita."
+    ],
+  },
+  {
+    id: 39,
+    category: "Misa",
+    section: "Entrada",
+    title: `JUNTOS COMO IRMÃOS`,
+    language: "tet",
+    refrain: `Juntos como irmãos, members duma igreja.\nVamos caminhando ao encontro do Senhor.`,
+    verses: [
+      "1. No longo caminhar pelo deserto, pela dor\nnão podemos avançar sem ajuda do Senhor.",
+      "2. Unidos a rezar, unidos na mesma canção,\nvivemos a nossa fé com a ajuda do Senhor.",
+      "3. Unidos a cantar vamos dizer a toda a gente\nque vale a pena viver na esperança e no amor.",
+      "4. Nos vamos trabalhar na construção dum mundo novo\nonde reinará o amor, onde reinará a paz."
+    ],
+  },
+  {
+    id: 40,
+    category: "Misa",
+    section: "Entrada",
+    title: `JUNTOS CANTANDO A ALEGRIA`,
+    language: "tet",
+    refrain: `Juntos cantando a alegria\nde estarmos unidos na fé e no amor.\nJuntos sentindo em nossas vidas\na alegre presença do Senhor.`,
+    verses: [
+      "1. Somos a Igreja peregrina que Ele fundou,\nsomos um povo que caminha sem parar.\nEntre cansaços e esperanças, para Deus,\nnosso amigo, Jesus, nos levará.",
+      "2. Há uma fé que alumia o ourso andar,\numa esperança que nos leva a confiar.\nMesmo que nos assustem as trevas de morte,\nnosso amigo, Jesus, nos guiará.",
+      "3. É o Senhor que nos assiste o caminhar;\ncom amizade nos vai acompanhar.\nSe mil perigos nos espreitam sem cessar,\nnosso amigo, Jesus, nos salvará."
+    ],
+  },
+  {
+    id: 41,
+    category: "Misa",
+    section: "Entrada",
+    title: `RAIKLARAN, HANANU`,
+    language: "tet",
+    refrain: `Bidu, ho ksolok, hananu hahi Na`,
+    verses: [
+      "1. Povu tomak, hananu;\npovu tomak hana'i Trindade.\nHahi ho ksolok, hawelok kmanek hotu\nnebe hatudu Na'i nia beran boot.",
+      "2. Povu tomak haksolok;\npovu hotu tuku tur hana'i\nNa'i nia beran ho buat kmanek hotu\nnebe haklaken Na'i nia domin lolos.",
+      "3. Rai klaran, hananu;\npovu hosi rai ulun rai ikun,\nhalo rai klaran hawelok hahi Na'i\nnebe hakiak rai klaran ho Nia domin."
+    ],
+  },
+  {
+    id: 42,
+    category: "Misa",
+    section: "Entrada",
+    title: `RAHUN DIAK BA IDA BE MAI`,
+    language: "tet",
+    refrain: `Rahun diak ba ida be mai hodi Na`,
+    verses: [
+      "1. Povu raiklaran hakseek,\nhana'i Maromak ho knananuk ksolok.",
+      "2. Tan Na'i boot liu hotu,\nkbiit makaas,\nNia raiklaran tomak nia Liurai.",
+      "3. Tan povu hotu iha Nia ukun,\nhalo reinu hotu kiik liu Nia.",
+      "4. Haraik rahun kmanek mai ita,\ntuir Jacob nia domin.",
+      "5. Hawelok, haksolok ba Maromak,\nhakseek hananu ba Na'i.",
+      "6. Hananu knananuk ba Maromak, hananu;\nhananu knananuk ba ita nia Liurai hananu.",
+      "7. Maromak mundu tomak nia Liurai,\nhananu knananuk mesak kmanek.",
+      "8. Maromak ukun povu raiklaran,\nMaromak hein An iha fatin santu."
+    ],
+  },
+  {
+    id: 43,
+    category: "Misa",
+    section: "Entrada",
+    title: `OHIN MAROMAK NIA LORON BOOT`,
+    language: "tet",
+    verses: [
+      "1. Ohin Maromak nia loron boot,\nho Nia ita mai haksolok,\nhodi hana'i, hahi Nia.\nOhin Maromak nia loron boot.\n\nAleluia, aleluia,\nita sei hatudu katak sa,\nninia hahalok foun tomak.\nAleluia, aleluia.",
+      "2. Ohin Maromak hatudu nia domin...",
+      "3. Ohin Maromak hatudu perdaun.."
+    ],
+  },
+  {
+    id: 44,
+    category: "Misa",
+    section: "Entrada",
+    title: `OHIN LORON, LORON HANA`,
+    language: "tet",
+    refrain: `Ohin loron, loron hana`,
+    verses: [
+      "1. Husik buat hotu, mai uma Kreda,\nhana'i, hahi Na'i Maromak.\nHasa'e ba Nia klamar no isin,\nterus eh ksolok; diak eh aat.",
+      "2. Loron Domingo loron harohan,\nrona Maromak lialos.\nKomunga, simu aihan lalehan,\nkbiit makaas, tulun diak nian."
+    ],
+  },
+  {
+    id: 45,
+    category: "Misa",
+    section: "Entrada",
+    title: `OHIN ITA MAI HAHI`,
+    language: "tet",
+    refrain: `Ohin ita mai hahi ita nia Maksoin bele tomak,\nhahi, hawelok ita Nain nebe halo ita moris.\nMai hotu, hahi ita Aman, domin los nia hun\nnebe halibur ita hadulas altar.`,
+    verses: [
+      "1. Ha'u buka ita, ha'u tuir ita,\nha'u hein ita, ha'u hadomi ita.",
+      "2. Ha'u fiar metin, ha'u laran metin,\nha'u kaer metin ita ukunfuan."
+    ],
+  },
+  {
+    id: 46,
+    category: "Misa",
+    section: "Responsorial",
+    title: `OHIN DADER`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ohin dader, data ida tan\nha'u mai harohan no husu ita roman,\ntamba ha'u la bele la'o tan ba oin,\nhakarak rona Ita lia nebe dehan:\nAman hadomi, Nia bolu ha'u,\nAtu to ksolok ha'u.",
+      "2. Ohin ne'e karik dala ida tan,\nha'u ba tanis, hamnasa, hanoin\nbase la hatene loron aban nian.\nBuat ha'u hatene mak ida ne'e los:\nkatak ha'u Aman bolu ha'u nafatin\natu to ksolok ha'u."
+    ],
+  },
+  {
+    id: 47,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Mai hosi fatin barak, halibur iha ne'e.\nEma lubun boot nebe tuir Ita lia.",
+      "2. Hosi fatin dook tebes, hakbesik ba altar ne'e.\nSimu moris foun hamutuk ho Ita Boot."
+    ],
+  },
+  {
+    id: 48,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Na'i Maromak laran luak. Nia soi ita tan nia domin,\nno to mai ita moris rohan laek.",
+      "2. Ami hakat ba Ita uma atu hananu no harohan;\nami hahi no agradese ita nia kmanek wain."
+    ],
+  },
+  {
+    id: 49,
+    category: "Misa",
+    section: "Responsorial",
+    title: `UDAN BE TUN`,
+    language: "tet",
+    refrain: `Udan be tun hosi lalehan mai sai habokon no haburas rai; nune`,
+    verses: [
+      "1. Nu'u fini be monu ba rai moris buras to'o to folin, nune'e mos Na'i tutor liafuan sei to folin iha ema moris.",
+      "2. Fini ne'e Na'i nia futar lia, Kristu mak kuda iha fuan; ida nebe rona ho laran sei hetan moris rohan laek.",
+      "Ami harohan ba Ita, O Na'i, rona ami nia hamulak!"
+    ],
+  },
+  {
+    id: 50,
+    category: "Misa",
+    section: "Responsorial",
+    title: `SIM, NA`,
+    language: "tet",
+    refrain: `Sim, Na`,
+    verses: [
+      "1. Ha'u rona Ita bolu, \"Mai tuir Ha'u, sai ha'u nia liman iha mundu ne'e, serbisu Ha'u nia toos, hare Ha'u nia bibi sira, saran o nia an ba nafatin.\"",
+      "2. Ita nia naha sei la todan, Ita Mak dalan maski kalan boot. ha'u sei kaer ha'u krus atu serbi no tuir Ita, ha'u fuan haksolok iha buat hotu ha'u halo.",
+      "3. Buat hotu Ita husu ha'u sei halo tuir sei haruka ha'u, ha'u sei ba tan Ita, ha'u nia susar hotu simu ho hakmatek iha Ita hakarak mak ha'u paz."
+    ],
+  },
+  {
+    id: 51,
+    category: "Misa",
+    section: "Responsorial",
+    title: `SE O RONA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Se o rona anin nia lia bolu nafatin o; se o rona tempu nia lia haruka o atu hein; O rasik sei decide."
+    ],
+  },
+  {
+    id: 52,
+    category: "Misa",
+    section: "Responsorial",
+    title: `RAHUN KMANEK`,
+    language: "tet",
+    refrain: `Rahun kmanek ba ida nebe rona Na`,
+    verses: [
+      "1. Na'i tutor lia nudar matadalan, lori ha'u ba Aman lalehan."
+    ],
+  },
+  {
+    id: 53,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Hadomi los nian maka ne'e; to an ba mate tan belun sira. imi tuir ha'u haruka, imi sei sai ha'u belun los.",
+      "2. Imi sei rona halo tuir: hadomi ema sira nebe halo aat ba imi husu tulun ba sira.",
+      "3. Imi mak halo tuir ne'e. Imi nia Aman mak Na'i Maromak. Aman diak no doben, horik lalehan aas nian ba."
+    ],
+  },
+  {
+    id: 54,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    verses: [
+      "1. Na'i Jesus, ami hana'i, hanoin ami. Ami isin ami klamar, Ami Timor oan kiak, Fo ba Ita, ami Na'i.",
+      "2. Maun Jesus, Maromak Oan, Tulun ami, atan kiak. Ami husu, ami reza, Halo funu hotu ona.",
+      "3. Maun Jesus no belun boot, Timor oan tanis mate, Rona ami tulun ami, Fakar ran terus todan."
+    ],
+  },
+  {
+    id: 55,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Ha'u sei husik ha'u nia dai iha tasi ibun. Ha'u sei kaer ha'u knaar ho Ita, ha'u Na'i. Sei hadid fatin ba Ita nia dalan; ha'u sei kuda Ita liafuan iha ha'u nia sorin: Nia sei moris duni, nia sei buras duni.",
+      "2. Ha'u sei husik ha'u nia soin no rai; ha'u sei fo ha'u nia tempu no serbisu ba ema. Nune'e, sei hatene katak Ita Boot iha. Ho ha'u nia kbiit ha'u sei loke ha'u nia laran, ba Ita Boot nia domin, ba Ita Boot nia dame."
+    ],
+  },
+  {
+    id: 56,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    verses: [
+      "1. Na'i, ha'u mak ne'e, rona Ita lia. Ha'u hakarak saran an ba Ita, o Na'i. Iha mundu ne'e hamutuk ho maus, ha'u husik buat hotu atu tuir deit Ita.",
+      "2. Na'i, ha'u Maksoin; haraik matan mai ha'u; basa Ita Boot rasik fihar ha'u ata. Ha'u haksolok tan Ita bolu, halo ha'u sai roman ba ema hot-hotu. O Na'i, ha'u moris ba Ita. Ha'u saran an tomak, ohin to'o mate."
+    ],
+  },
+  {
+    id: 57,
+    category: "Misa",
+    section: "Responsorial",
+    title: `MAROMAK LIMAN LOS`,
+    language: "tet",
+    refrain: `Maromak liman los hatudu Nia kbiit. Maromak liman los foti ha`,
+    verses: [
+      "1. Hananu hahi Na'i, tan Nia diak. Ninia domin boot tebes, rohan laek."
+    ],
+  },
+  {
+    id: 58,
+    category: "Misa",
+    section: "Responsorial",
+    title: `MAI, KOKO BA`,
+    language: "tet",
+    refrain: `Mai, koko ba hodi hare Na`,
+    verses: [
+      "1. Hahi Maromak loron kalan; ha'u ibun hahi nafatin Nia. Maromak ha'u nia gloria, ema kiik sira rona Nia ho ksolok.",
+      "2. Na'i nia santu sira hana'i Maromak ba. Buat ida la kuran ba sira be hadomi Nia. Ema riku sira sei sasi kiak. Buat ida la kuran ba sira buka Maromak.",
+      "3. Ha'u oan sira besik mai hodi rona ha'u; ha'u hanorin imi hamtauk Maromak. Imi se mak hakarak moris? Se mak hakarak hatene?",
+      "4. Hare o nanal keta sala, hare o ibun keta dehan lia bosok.",
+      "Halo buat diak, soe buat aat; buka nafatin dame to'o hetan."
+    ],
+  },
+  {
+    id: 59,
+    category: "Misa",
+    section: "Responsorial",
+    title: `LARAN METIN BA NA`,
+    language: "tet",
+    refrain: `Laran metin ba Na`,
+    verses: [
+      "1. Ba sira klamar mos ksolok tebes, sira be tuir Maromak ukunfuan; ba sira be tuir Nia ukun ksolok boot, buka Nia ho laran diak.",
+      "2. Ha'u klamar latan ba rai rahun, ho Ita tutor lia ha'u moris fali; ha'u klamar laran susar tebes, to ksolok ha'u ho Ita liafuan.",
+      "3. Ha'u hili dalan los no diak nian. Tuir uluk Ita ukun no hakarak. Sei tuir nafatin dalan Na'i Maromak bainhira ha'u iis seidauk kotu.",
+      "4. Ha'u haksolok tebes iha susar laran, tan Ita lia to moris hias ha'u fuan; maski kalan ha'u hanoin Ita naran, buka tuir nafatin Ita nia hakarak."
+    ],
+  },
+  {
+    id: 60,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HANANU BA NA`,
+    language: "tet",
+    refrain: `Hananu ba Na`,
+    verses: [
+      "1. Hananu ba Na'i knananuk foun ida,\nba buat furak nebe Nia halo.",
+      "2. Na'i hatudu nia diak;\nba rai sira hatudu nia justisa.",
+      "3. Rai klaran tomak hare ona,\nita Maromak nia diak."
+    ],
+  },
+  {
+    id: 61,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HALIBUR AMI, NA`,
+    language: "tet",
+    refrain: `Halibur ami, Na`,
+    verses: [
+      "1. Iha Na'i ida deit; domin nia Maromak.\nIha mos Liurai ida; Na'i nia povu nian.",
+      "2. Moris atu sai oan; Na'i Maromak ninian\nsai maun alin ba malu; forma familia ida."
+    ],
+  },
+  {
+    id: 62,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HAKSOLOK BA, BASA IMI NARAN`,
+    language: "tet",
+    refrain: `Haksolok ba, basa imi nia naran\nhakerek ona iha lalehan.`,
+    verses: [
+      "1. Rahun diak ba imi be kiak,\nbasa Maromak nia reinu imi nian.",
+      "2. Rahun diak ba imi be hamlaha,\nbasa imi sei hetan aihan wain.",
+      "3. Rahun diak ba imi be ohin loron tanis,\nbasa imi sei hamnasa.",
+      "4. Rahun diak ba imi nebe terus tan Maromak naran,\nbasa reinu lalehan imi nian.",
+      "5. Rahun diak ba imi be laran mos,\nbasa imi sei hare Maromak.",
+      "6. Rahun diak ba sira be hakmatek,\nbasa sei hanaran sira Maromak oan."
+    ],
+  },
+  {
+    id: 63,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HAHI, HANA`,
+    language: "tet",
+    refrain: `Hahi, hana`,
+    verses: [
+      "1. Maromak hanoin ita, tulun ita.\nLeno mai ita Nia tutor oin naroman.",
+      "2. Iha ema sei hatene Maromak dalan,\niha ema leet ema sei hetan Nia tulun.",
+      "3. Rai hotu sei hetan ksolok\ntan Na'i Maromak tesi lia la sola."
+    ],
+  },
+  {
+    id: 64,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HADOMI, FO DAME`,
+    language: "tet",
+    refrain: `Hadomi, fo dame, perdaun, tulun.\nHadomi, perdaun.`,
+    verses: [
+      "1. Jesus dehan iha nia Evanjelho:\nema sei hirus malu, sei hatan iha tribunal.",
+      "2. Jesus hanorin, dehan nune'e:\nema sei bolu nia maluk bulak, sei dadur iha ahi.",
+      "3. Jesus dehan hodi hanorin:\na perdua o nia maluk hitu nulu data hitu.",
+      "4. Jesus to hanorin dehan:\nimi perdua maluk sira nia sola, Maromak perdua imi."
+    ],
+  },
+  {
+    id: 65,
+    category: "Misa",
+    section: "Responsorial",
+    title: `EMA HOTU HATENE`,
+    language: "tet",
+    refrain: `Ema hotu hatene: Maromak diak tebes.`,
+    verses: [
+      "1. Hana'i nafatin ha'u Na'i,\nha'u ibun hahi Nia kalan loron.\nMaromak ha'u nia kbiit,\nkiak sira haksolok rona Nia.",
+      "2. Ita hotu haklaken Na'i nia beran,\nhamutuk hawelok Nia naran.\nHa'u buka, Maromak rona ha'u;\nsadia ha'u hosi susar laran.",
+      "3. Hahi Maromak, imi sei haksolok.\nImi neon sei la susar.\nKiak ida ba hatan, nia hetan tulun;\nhetan tulun ba nia susar."
+    ],
+  },
+  {
+    id: 66,
+    category: "Misa",
+    section: "Responsorial",
+    title: `DIAK, HA`,
+    language: "tet",
+    refrain: `Diak, ha`,
+    verses: [
+      "1. Ba Ita, ha'u Na'i, hasa'e ha'u klamar\nha'u tau neon ba Ita, ha'u nia Maksoin.",
+      "2. Na'i, hasai ha'u hosi susar laran;\nha'u nia funu maluk keta manan ha'u.",
+      "3. Na'i, hanorin Ita nia hakarak\nIta Boot nia dalan hatudu mai ha'u ba."
+    ],
+  },
+  {
+    id: 67,
+    category: "Misa",
+    section: "Responsorial",
+    title: `ATAN SIRA, HAHI BA`,
+    language: "tet",
+    refrain: `Atan sira, hahi ba; Hahi ba Maromak naran;\ndiak oin sa Na`,
+    verses: [
+      "1. Ohin loron ba nafatin.\nDiak oin sa Na'i Maromak naran.",
+      "2. Na'i boot tebes, boot liu hotu.",
+      "3. Ninia ukun aas liu hotu.",
+      "4. Se mak sukat Na'i Maromak."
+    ],
+  },
+  {
+    id: 68,
+    category: "Misa",
+    section: "Responsorial",
+    title: `AMI SEI HELA NONOK`,
+    language: "tet",
+    refrain: `Ami sei hela nonok, sei se tilun ba\nMaromak nia liafuan tun mai to`,
+    verses: [
+      "1. Na'i Maromak, Liurai lalehan ho rai.\nNa'i Maromak mak iha kbiit.",
+      "2. Na'i Maromak hodi kbiit\nhalo ona lalehan ho raiklaran.",
+      "3. Na'i Maromak iha hori uluk;\nMaromak rohan laek, sei hela metin nafatin.",
+      "4. Mota, anin, tasi, foho lori Nia lia\nMaromak nia lia namkari ba fatin hot-hotu."
+    ],
+  },
+  {
+    id: 69,
+    category: "Misa",
+    section: "Responsorial",
+    title: `AMI HAHI ITA BOOT NIA JUSTISA`,
+    language: "tet",
+    refrain: `Ami ha hi Ita Boot nia justisa,\nami haklaken Ita Boot laran luak, Kristu, Na`,
+    verses: [
+      "1. Rai hotu iha Maromak futar liman,\nfoho aas tomak Maromak nia soi.",
+      "2. Rai, tasi hotu Maromak ninian,\ntan sira Maromak nia liman fatin.",
+      "3. Hahi, hana'i ba Na'i Maromak,\ntan Nia Ita Maksoin."
+    ],
+  },
+  {
+    id: 70,
+    category: "Misa",
+    section: "Responsorial",
+    title: `LARAN BA ITA, AMI NA`,
+    language: "tet",
+    refrain: `Laran ba Ita, ami Na`,
+    verses: [
+      "1. Ita naran ami hananu, tan Ita domin boot tebes.\nHa'u hakilar, Ita rona; to mai tebes kbiit ha'u klamar.",
+      "2. Liurai hotu hahi Ita, bainhira rona Ita lia.\nLa'o hananu Na'i Maromak dalan,\nNa'i Maromak diak boot tebes.",
+      "3. Maski la'o ho fuan taridu,\nha'u fiar metin iha Ita nia tulun.\nEma kiak no ema kiik Ita hadomi.\nNa'i Maromak boot oin sa.",
+      "4. Fo liman atu soi ata oan.\nKalan loron ha'u sader ba Ita Boot.\nIta hadomi tinan bainloron.\nLa husik buat Ita hakiak."
+    ],
+  },
+  {
+    id: 71,
+    category: "Misa",
+    section: "Responsorial",
+    title: `LABARIK BARAK MAI BESIK JESUS`,
+    language: "tet",
+    verses: [
+      "1. Labarik barak mai besik Jesus,\nNia bensa diak sira hakarak husu;\nNia eskolante sira hare labarik barak;\n\"Ba tiha dook hotu; Jesus lakohi imi.\"",
+      "Maibe Jesus hirus sira, \"Husik labarik sira mai.\nHa'u nia reinu kikoan sira nian,\nho mos ba ema nebe hanesan sira\". (2x)"
+    ],
+  },
+  {
+    id: 72,
+    category: "Misa",
+    section: "Responsorial",
+    title: `KOALIA BA, NA`,
+    language: "tet",
+    refrain: `Koalia ba, Na`,
+    verses: [
+      "1. Hatudu mai, Na'i, Ita dalan be Ita hakarak ha'u tuir.\nHatudu, Na'i, Ita dalan; ha'u hakarak rona Ita lian.",
+      "2. Na'i, loke ami nia tilun tan kleur ona mak la rona.\nRona deit mak mundu nia lia; la rona Ita nia lian.",
+      "3. Mundu ne'e iha ema barak\nmak seidauk hatene Ita Boot.\nOhin Ita sei tenik nafatin:\n\"Imi sai ba, sasin Ha'u nian.\"",
+      "4. Loke ba ami nia fuan be Ita halo atu hadomi.\nDala ruma taka metin netik; la husik Ita atu tama."
+    ],
+  },
+  {
+    id: 73,
+    category: "Misa",
+    section: "Responsorial",
+    title: `IHA FOHO SANTU`,
+    language: "tet",
+    refrain: `Iha foho santu Na`,
+    verses: [
+      "1. Na'i, Ita oan mak ne'e; ha'u rona Ita Boot bolu.\nHa'u saran an ba Ita, Na'i; hodi la'o tuir Ita Boot.",
+      "2. Na'i, ha'u ata folin laek haksolok rona Ita bolu;\nhalo ha'u sai roman ba ema tomak iha rai.",
+      "3. Na'i, ha'u maksoin, haraik matan mai ha'u,\nbasa Ita rasik fihar ha'u, ho ksolok hatan (ba) Ita Boot\nha'u saran an tomak to'o mate."
+    ],
+  },
+  {
+    id: 74,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Hodi laran ha'u hadomi Ita Boot nia ukunfuan.\nHodi hakarak tuir kalan loron.",
+      "2. Ha'u sei hili dalan los iha ha'u mods,\natu la ses hosi Ita Boot nia ukun.",
+      "3. Ita Boot deit mak bele to mai ha'u\ntan susar mak ha'u hetan iha rai nia laran.",
+      "4. Maromak nia lia ami matadalan;\nno roman leno ami dalan.",
+      "5. Ema nia lia anin hodi bele,\nMaromak nia lia hela nafatin.",
+      "6. Diak ba ema sira iha raiklaran\nrona tuir Maromak nia lia."
+    ],
+  },
+  {
+    id: 75,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Na'i Maromak, se tilun mai ha'u atan.\nHatan ha'u tan susar no kiak.",
+      "2. Tulun ha'u, Maromak, tan Ita ha'u belun;\nsadia atan ha'u laran metin ba Ita.",
+      "3. Na'i Maromak, hanoin ha'u, rona ha'u.\nTan ha'u bolu Ita Boot loron tomak.",
+      "4. Fo ha'u klamar ksolok lalehan;\ntan ha'u klamar ha'u to ba Ita.",
+      "5. Ita laran luak no diak tebes;\ndiak ba sira be harohan."
+    ],
+  },
+  {
+    id: 76,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `O hare Maromak nia gloria. (4x)`,
+    verses: [
+      "1. Ha'u sei dehan: Se o fiar Na'i Maromak,\no hare Nia gloria. (2x)",
+      "2. Ha'u sei dehan: se o hatene Na'i Maromak.",
+      "3. Ha'u sei dehan: se o terus tan Maromak.",
+      "4. Ha'u sei dehan: se o perdua tan Maromak."
+    ],
+  },
+  {
+    id: 77,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ha'u mak ukun tasi, lalehan,\nrona Ha'u povu nia hakilar,\nmoris iha nakukun no sala:\nHa'u sei soi sira.\nHa'u mak halo fitun iha kalan;\nHa'u sei halo nakukun roman;\nse los lori roman ba sira?\nHa'u sei haruka se?",
+      "2. Ha'u mak ukun kalohan no udan.\nHa'u tahan ha'u povu susar;\nHa'u tanis tan hadomi sira.\nsira hadook-an hosi Ha'u.\nHa'u sei hamamar sira fuan;\nto fuan hatene hadomi;\nHa'u sei hato'o ha'u lia ba sira.\nHa'u sei haruka se?",
+      "3. Ha'u mak ukun anin no roman.\nHa'u hare ema kiak no kiik.\nHa'u sei halo testa ba sira;\nHa'u sei soi sira."
+    ],
+  },
+  {
+    id: 78,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ha'u hadomi Maromak tan rona ha'u lia no ha'u bolu,\ntan hakruuk mai ha'u nia tilun\niha loron nebe ha'u bolu.",
+      "2. Dadur metin ha'u mate nia laran,\nha'u susar laran taridu.\nHa'u temi Maromak nia naran,\nJesus mai tulun ha'u ata.",
+      "3. Na'i Jesus laran diak no mos, ita Na'i laran luak.\nNa'i Maromak, ema kiik ha'u kole\nno ha'u susar Nia to tulun."
+    ],
+  },
+  {
+    id: 79,
+    category: "Misa",
+    section: "Responsorial",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Hatudu Ita Boot dalan mai ha'u ata,\nhanorin mai ha'u Ita nia dalan.",
+      "2. Hanorin ha'u la'o ita lialos;\nIta ha'u nia Na'i, ha'u nia Maksoin.",
+      "3. Maromak, ha'u hein Ita boot loron tomak;\ntan Ita Boot nia laran luak."
+    ],
+  },
+  {
+    id: 80,
+    category: "Misa",
+    section: "Responsorial",
+    title: `EU QUERO VIVER`,
+    language: "pt",
+    refrain: `Eu quero viver na Tua alegria,\ncontigo serei feliz cada dia;\neu quero seguir-Te, Senhor, meu bem,\ncontigo irei mais além.`,
+    verses: [
+      "Irei mas além, se Tu vais comigo,\nserei para todos o melhor amigo.\nIrei mas além caminhando em frente,\nserei dedicado para toda a gente.\nIrei mas além, o Senhor meu Deus\ndepois desta vida a glória dos céus."
+    ],
+  },
+  {
+    id: 81,
+    category: "Misa",
+    section: "Responsorial",
+    title: `BENDITO SEJA JESUS CRISTO`,
+    language: "pt",
+    refrain: `Bendito seja Jesus Cristo\np`,
+    verses: [
+      "1. Gloria à Jesus Cristo, o Filho de Deus,\ngloria à Jesus Cristo, nosso Salvador.\nGloria à Jesus Cristo, Cordeiro de Deus.\nGloria à Jesus Cristo, O que nos amou."
+    ],
+  },
+  {
+    id: 82,
+    category: "Misa",
+    section: "Responsorial",
+    title: `BEM-AVENTURADOS PARA SEMPRE`,
+    language: "pt",
+    verses: [
+      "1. Bem-aventurados são os pobres;\nbem-aventurado a quem chorou.\nBem-aventurado a quem constroe,\ne faz permanecer, a paz amanhecer.\nBem-aventurado!\nO pobre porque um dia ainda reinará.\nQuem chora because um dia se consolará.\nQuem vive pela paz porque ela vai chegar\nbem-aventurados para sempre.",
+      "2. Bem-aventurado a quem procure\no reino da justiça e do amor.\nQuem conhece a força do perdão\ne sabe conservar sem mancha o coração.\nBem-aventurado!\nO justo porque um dia ainda governará,\no homem que perdoa porque vencerá.\nO puro por ser filho mais chegado ao Pai.\nbem-aventurados para sempre!",
+      "3. Bem-aventurado a quem padece\npor causa da justiça e do perdão.\nBem-aventurado a quem sofreu\npor causa do seu Deus, por causa dos irmãos.\nBem-aventurado!\nFeliz a todo aquele que se faz irmão,\nque faz da sua vida uma libertação,\nque também se inseriu sem compactuar.\nbem-aventurados para sempre!"
+    ],
+  },
+  {
+    id: 83,
+    category: "Misa",
+    section: "Responsorial",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Nia hanorin deit lialos, aleluia.\nMai haroman ami neon, aleluia.",
+      "2. Hananu no simu ba, aleluia.\nIta Na'i nia tutor lia, aleluia.",
+      "3. Tan Nia domin ita moris, aleluia,\nloron loron ba nafatin, aleluia.",
+      "4. Jesus doben, moris Nain, aleluia,\nfo domin mai atan ami, aleluia."
+    ],
+  },
+  {
+    id: 84,
+    category: "Misa",
+    section: "Aleluia",
+    title: `MORIS SUSAR EH DIAK, ALELUIA`,
+    language: "tet",
+    verses: [
+      "1. Moris susar eh diak, aleluia,\ntuir Jesus ukunfuan, aleluia;\nmetin ba Na'i Jesus, aleluia.",
+      "Aleluia, aleluia, aleluia.",
+      "2. Liman ba liman to, aleluia,\ntulun malu beibeik, aleluia,\nmidar deit, buka diak, aleluia.",
+      "3. La temi kulit eh rai, aleluia,\nMaromak ida deit, aleluia,\nita tomak Nia soi, aleluia."
+    ],
+  },
+  {
+    id: 85,
+    category: "Misa",
+    section: "Aleluia",
+    title: `KRISTU NIA ROMAN`,
+    language: "tet",
+    refrain: `Kristu nia roman nabilan iha mundu tomak.\nAleluia, aleluia.`,
+    verses: [
+      "1. Hananu ba knananuk foun ida,\nhananu ba Na'i, mundu tomak.\nHananu ba Na'i, hawelek nia naran.",
+      "2. Hana'i Maromak tan Nia diak,\ntan Nia laran luak ba ema hotu,\ntan Nia soi ema tomak.",
+      "3. Na'i nia liman halo buat kmanek,\nNa'i nia liman kmanek tebes,\nkmanek oi-oin mosu ita oin.",
+      "4. Sei la mate, maibe sei moris\natu haklaken Na'i nia hahalok\ntan Nia laran luak ba nafatin.",
+      "5. Fatuk ida be ema hewai\nnakfilak ba fatuk inan;\nbuat ne'e hotu mai hosi Maromak."
+    ],
+  },
+  {
+    id: 86,
+    category: "Misa",
+    section: "Aleluia",
+    title: `ITA FUTAR LIA DOMIN`,
+    language: "tet",
+    verses: [
+      "1. Ha'u mai atu se tilun, rona\nIta nia futar lia, Ita nia futar lia domin. (2x)",
+      "2. Ha'u hakarak se tilun, rona.",
+      "3. Ha'u hakarak hatene didiak.",
+      "4. Raiklaran sei ba moris hotu."
+    ],
+  },
+  {
+    id: 87,
+    category: "Misa",
+    section: "Aleluia",
+    title: `HANA`,
+    language: "tet",
+    refrain: `Hana`,
+    verses: [
+      "1. Kristu haraik An to'o mate,\nhodi mate iha krus.\nTamba ne'e Maromak foti Nia\nhodi to ba Nia naran ida boot liu hotu."
+    ],
+  },
+  {
+    id: 88,
+    category: "Misa",
+    section: "Aleluia",
+    title: `DALAN DIAK NO MAKSOIN`,
+    language: "tet",
+    refrain: `Dalan diak no Maksoin mak Jesus, aleluia.`,
+    verses: [
+      "1. Na'i Maromak ha'u naroman no Maksoin.\nHa'u tauk tali se?\nNa'i Maromak sei tahan ha'u moris.\nHa'u tauk tali se?",
+      "2. Buat ida deit husu ba Maromak,\nha'u husu beibeik ho laran:\natu horik Maromak nia kadunan\nlor-loron iha ha'u nia moris tomak.",
+      "3. Na'i Maromak rona ha'u lian;\nhanoin ha'u atan.\nHa'u harohan ho ha'u laran,\nha'u nia oin buka Ita Boot."
+    ],
+  },
+  {
+    id: 89,
+    category: "Misa",
+    section: "Aleluia",
+    title: `BA NA`,
+    language: "tet",
+    refrain: `Ba Na`,
+    verses: [
+      "1. Ema tomak hahi Ita Boot naran,\nMaromak nia naran.\nTan Ita hadomi, la hein seluk,\nhadomi los Nia duni."
+    ],
+  },
+  {
+    id: 90,
+    category: "Misa",
+    section: "Aleluia",
+    title: `ALELUIA, KRISTU, ITA NIA MORIS`,
+    language: "tet",
+    refrain: `Aleluia (3x)`,
+    verses: [
+      "1. Kristu, ita nia moris,\nita nia dalan los, lialos.",
+      "2. Kristu Jesus, Na'i Maromak.\nNia deit mak to liberdade.",
+      "3. Kristu, Nia to an ba mate;\nmate tan ita ema."
+    ],
+  },
+  {
+    id: 91,
+    category: "Misa",
+    section: "Aleluia",
+    title: `ALELUIA, KRISTU ITA DALAN`,
+    language: "tet",
+    refrain: `Aleluia (3x)`,
+    verses: [
+      "1. Kristu ita dalan,\nKristu rasik dehan: Nia ita dalan.",
+      "2. Kristu ita moris,\nKristu rasik dehan: Nia ita moris.",
+      "3. Kristu ita lialos,\nKristu rasik dehan: Kristu ita lialos."
+    ],
+  },
+  {
+    id: 92,
+    category: "Misa",
+    section: "Aleluia",
+    title: `ALELUIA, NA`,
+    language: "tet",
+    refrain: `Aleluia, aleluia,\nNa`,
+    verses: [
+      "1. Hahi Maromak ho hananu foun ida\ntan Nia halo buat diak.\nHo liman los Nia manan,\nmanan funu: Nia liman santu.",
+      "2. Na'i Maromak to tada ksolok lalehan;\nNia to sai ba rai hotu Nia lialos.\nNia laran luak diak, diak nafatin:\nto tulun ba ema Israel."
+    ],
+  },
+  {
+    id: 93,
+    category: "Misa",
+    section: "Aleluia",
+    title: `ALELUIA, AGRADESSE`,
+    language: "tet",
+    refrain: `Aleluia, aleluia,\nagradece ba Maromak!\nAleluia, aleluia,\nita ha hi Nia naran.`,
+    verses: [
+      "1. Haksolok ba! Kristu moris hias;\nlori mai ita moris rohan laek.",
+      "2. Haklaken ba! Kristu moris hias;\nNia mak dalan, lialos ba nafatin.",
+      "3. Hato'o ba mundu raiklaran:\nita Liurai mak Jesus Kristu!"
+    ],
+  },
+  {
+    id: 94,
+    category: "Misa",
+    section: "Ofertório",
+    title: `HAMUTUK HO PAUN NO TUA`,
+    language: "tet",
+    refrain: `Hamutuk ho paun no tua ne’e,\nAmi hasa’e ami klamar ba Ita. (2x)`,
+    verses: [
+      "Paun no tua ne’e Na’i, serbisu ema nian,\nSimu hodi halo sai Kristu Isin no Ran.",
+      "Hamutuk mos ho ami nia terus no ksolok,\nSimu ba O Na’i, halo ami sai Ita nian.",
+      "Aman Maromak, fakar kmanek mai ami hotu,\nAtu ami nia sakrifisiu to Ita oin."
+    ],
+    tags: ["ofertorio", "missa", "tetum"],
+  },
+  {
+    id: 95,
+    category: "Misa",
+    section: "Ofertório",
+    title: `NA’I, AMI HARAIK ITA`,
+    language: "tet",
+    refrain: `Na’i, ami haraik Ita,\nPaun no tua hosi rai.`,
+    verses: [
+      "Serbisu liman nian, ksolok laran nian,\nSimu ba O Na’i, atu ami moris diak.",
+      "Hanesan paun dulas, hanesan tua fakar,\nAmi klamar mos dulas haksolok ba Ita.",
+      "Fakar bensa kmanek ba Timor oan hotu,\nAtu ami moris hamutuk iha Ita dame."
+    ],
+  },
+  {
+    id: 96,
+    category: "Misa",
+    section: "Ofertório",
+    title: `MAI HOTU MAUN ALIN, HASA’E BA NA’I`,
+    language: "tet",
+    refrain: `Aleluia, aleluia, aleluia.`,
+    verses: [
+      "1. Mai hotu, maun alin, hasa'e ba Na’i\nita moris tomak hodi hahi Nia\nho neen, ho laran hasa'e ba Na’i, aleluia.",
+      "2. Ita liman hasa’e, maun alin raiklaran,\nsakrifisiu diak ba Aman Maromak,\nsusar ho ksolok ba Na’i hasa’e, aleluia.",
+      "3. Simu, Aman Santu, ami isin no klamar,\nperdua haraik ba ami nia sola,\nho Kristu Jesus, ami nia maun boot, aleluia.",
+      "4. Ami hotu nia susar, ami hotu nia knaar,\nksolok hotu ho domin ami tomak ninian,\nhosi Kristu Jesus hasa’e ba Ita, aleluia."
+    ],
+  },
+  {
+    id: 97,
+    category: "Misa",
+    section: "Ofertório",
+    title: `KRISTU, AMI MAKSOIN`,
+    language: "tet",
+    refrain: `Kristu, ami Maksoin, ami nia moris, ami nia dalan.\nNa’i, Aman lalehan, rona ami lia, simu ami kick.`,
+    verses: [
+      "1. Ami nia isin, klamar simu hamutuk tua no paun. (2x)"
+    ],
+  },
+  {
+    id: 98,
+    category: "Misa",
+    section: "Ofertório",
+    title: `ITA BOOT SIMU BA`,
+    language: "tet",
+    refrain: `Ita Boot simu ba, ha`,
+    verses: [
+      "1. Hodi sa los mai atu tau tan ba mutuk\nnebe nailulik hasa’e ba Maromak.\nMaibe ha'u hanoin, hanoin ho laran moras:\nha'u ema mukit ida.",
+      "2. Tau tan ba hostia ha'u saran moris tomak;\nnailulik iha altar hasa’e ba Maromak."
+    ],
+  },
+  {
+    id: 99,
+    category: "Misa",
+    section: "Ofertório",
+    title: `IHA ITA MISSA`,
+    language: "tet",
+    refrain: `Iha Ita Missa, ami nia Missa;\niha ita moris, ami nia moris. (2x)`,
+    verses: [
+      "1. Ami bele hasa’e so ba Ita Boot?\nBuat tomak ami fo ba Ita, Na’i.",
+      "2. Iha paun no tua ami nia domin,\nami hasa’e ba ita hodi hetan kbiit.",
+      "3. Simu ho laran luak ami nia moris,\nhodi haraik mai ami tulun Na’i nian."
+    ],
+  },
+  {
+    id: 100,
+    category: "Misa",
+    section: "Ofertório",
+    title: `HASA’E BA NA’I, ITA AMAN`,
+    language: "tet",
+    refrain: `Hasa’e ba Na’i, ita Aman,\npaun no tua ita domin. (2x)`,
+    verses: [
+      "1. Simu, Na’i, ami nia kolen.\nSimu, Na’i, ami nia lia\nhodi hanoin Ita Oan nia mate.\nHaraik mos moris hias."
+    ],
+  },
+  {
+    id: 101,
+    category: "Misa",
+    section: "Ofertório",
+    title: `BA ITA ALTAR`,
+    language: "tet",
+    refrain: `Loron ida ne’e ho Missa ida ne’e\nharaik moris foun mai ami. (2x)`,
+    verses: [
+      "1. Ba Ita altar ohin ami hasa’e,\nhasa’e ami paun no buat tomak;\npaun be mai hosi ami nia kolen\nno tua be mai hosi rai.",
+      "2. Na’i, haraik, fo tulun mai ami,\natu ami hamulak ho neen;\nba oras ne’e ami hadia an daudaun,\natu simu Na’i Maksoin.",
+      "3. Ksolok hamutuk iha Nia tutor oin.\nTan ita Maksoin moris ona,\nNa’i, mai simu ho laran luak,\nbuat ami ksolok ba Ita."
+    ],
+  },
+  {
+    id: 102,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI NIA VIDA HASA’E BA ITA`,
+    language: "tet",
+    refrain: `Ami nia vida hasa’e ba Ita,\nami nia domin Ita Boot nian.`,
+    verses: [
+      "1. Maromak, liurai hotu nia Liurai.\nNia mak ha'u sei serbi.\nMaromak, ha'u moris Na’i,\nha'u saran ha'u an ba Nia Oan.",
+      "2. Sasan hot-hotu ha'u nian,\nha'u Na’in nian.\nHa'u sei moris atu hahi Nia,\noras ne’e no ba nafatin.",
+      "3. Sei serbi Na’i ho ha'u nia kbiit tomak,\nho ha'u isin lolon tomak.",
+      "Ha'u sei se tilun ba ninia hakarak,\nha'u sei halo tuir Nia nafatin.\nHa'u mak be turu kahur ho tua\natu soi maun alin sira.\nHa'u sei lori to'o ba Na’i sira\nbe dook hosi Maromak."
+    ],
+  },
+  {
+    id: 103,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI MORIS, ISIN NO KLAMAR`,
+    language: "tet",
+    refrain: `Ami moris, isin no klamar hasa’e ba Ita, ami Na’i.`,
+    verses: [
+      "1. Aihan moris, aihan lalehan, hakotu lia atu fo;\ntun mai tebes, tun rasik mai,\nhorik hamutuk ho atan sira.",
+      "2. Kalis laran tua kahur be, fila ba Kristu tutor ran;\nhare ami kiak no hamrook,\ntan ami kuran diak lalehan."
+    ],
+  },
+  {
+    id: 104,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI KARAN FOLIN LAEK`,
+    language: "tet",
+    refrain: `Na’i, simu ba! (2x)`,
+    verses: [
+      "1. Timor oan tuku fur, hana’i.\nNa’i, simu, simu ba.",
+      "2. Ami karan folin laek, fo tomak.\nAman, ...",
+      "3. Kiak robot rai, oin nakraik, hana’i.\nNa’i, ...",
+      "4. Ami rain no povu fo tomak.\nNa’i, ...",
+      "5. Ami diak, ami aat fo tomak.\nNa’i, ...",
+      "6. Ami unam, ami toos fo tomak.\nNa’i...",
+      "7. Ami knaar no eskola fo tomak.\nNa’i, ...",
+      "8. Ami kosar, ami ran fo tomak.\nNa’i, ...",
+      "9. Ami kiak no susar fo tomak.\nNa’i, ..."
+    ],
+  },
+  {
+    id: 105,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI HAKBESIK BA ALTAR`,
+    language: "tet",
+    refrain: `Simu ba, Na’i, ami buat karan.\nNudar sakrifisiu Jesus Kristu laran luak.`,
+    verses: [
+      "1. Ami hakbesik ba altar atu hasa'e buat karan\nPaun no tua nudar tada ami isin klamar tomak.",
+      "2. Ami nia moris no ami mate fo ba Ita\nAmi nia ksolok no ami susar fo ba Ita.\n\nBuat hotu ami hasa’e ba Ita. (2x)\nAmi harohan Ita nia kbiit, Na’i. (2x)"
+    ],
+  },
+  {
+    id: 106,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI HAKAT SA’E BA ALTAR`,
+    language: "tet",
+    refrain: `Simu ba, Na’i; simu ba, Na’i\nAmi karan folin laek ne’e. (2x)`,
+    verses: [
+      "1. Ami hakat sa’e ba altar lori ami nia buat karan.\nAmi tan ne’e tuku tur hana’i ba ita Aman lalehan.",
+      "2. Maski ami karan la folin maibe ami hasa’e ho fuan.\nMaski ami ema sola nain la kuran domin ba ita."
+    ],
+  },
+  {
+    id: 107,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI FUAN HANANU`,
+    language: "tet",
+    refrain: `Ami fuan hananu hahi Ita, o Aman laran luak;\nhalo Ita futar laran malirin fan karan ami hasa’e.\nAmi liman fane buat karan ne e\nhodi foti matan hateke ba Ita,\nhusu ita simu, simu netik ba.`,
+    verses: [
+      "1. Halulik ba, a Na’i, buat karan hirak ne’e\nnebe Ita rasik haraik ba Ita nia Kreda.",
+      "2. Keta hewai, a Na’i, karan folin laek ne’e,\nnudar tada isin klamar, ami domin ba Ita."
+    ],
+  },
+  {
+    id: 108,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI AMAN IHA LALEHAN`,
+    language: "tet",
+    refrain: `Fo bensa mai ami karan,\nhare ba labarik iha mundu fane liman husu domin;\nfo bensa mai ami karan,\nhare ba kafuas be terus tan maluk,\numa, aihan laek.`,
+    verses: [
+      "1. Ami Aman iha lalehan, buat hotu ami fo;\nuitoan be ami halo, mas ami hakarak to.",
+      "2. Ba ema Maromak lia tun,\nOan mane haruka mai,\niha mundu nia mai haklaken\n\"Reinu domin to'o ona.\"\n\nHaliku, o Na’i, ami husu,\nhamlaha be hetan iha mundu\nho ema be moris diak.\n\nFo bensa mai Ita Kreda,\nho nia ami la'o ami dalan,\nkait liman no domin."
+    ],
+  },
+  {
+    id: 109,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMAN MAROMAK, ATAN OAN AMI`,
+    language: "tet",
+    refrain: `Aman Maromak, ata oan ami hasa’e ba Ita, ami Na’i,\nami isin no klamar.\nSimu no hano’in paun trigu, tua ami hasa’e ba Ita.`,
+    verses: [],
+  },
+  {
+    id: 110,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMAN LALEHAN, SIMU AMI`,
+    language: "tet",
+    refrain: `Aman lalehan, simu ami;\namis isin, ami klamar hamutuk ho Jesus isin no Ran.`,
+    verses: [
+      "1. Ami hakbesik ba altar,\nhasa’e paun no tua ba Ita Boot.",
+      "2. Aman doben, laran luak,\nIta la hewai ami hasa’e."
+    ],
+  },
+  {
+    id: 111,
+    category: "Misa",
+    section: "Ofertório",
+    title: `PAI NOSSO, QUE ESTAIS NO CÉU`,
+    language: "pt",
+    refrain: `Abençoai nossa oferta; olhai as crianças do mundo\nSuspirando por amor.\nAbençoai nossa oferta; olhai os velhinhos que sofrem\nSem ninguém, nem lar nem pão.`,
+    verses: [
+      "1. Pai nosso que estais no céu, tudo nos queremos dar.\nO pouco que nos fizemos também vamos ofertar.",
+      "2. Aos homens que Deus quis falar\ne à terra o Filho mandou.\nA todos veio anunciar o reino de Deus chegou.\n\nOlhai, Senhor, nos Vos pedimos;\na fome que existe no mundo e a pobreza dos sem pão.\nOlhai, Senhor, a Vossa Igreja;\ncom ela nos caminhamos de mãos dadas por amor."
+    ],
+  },
+  {
+    id: 112,
+    category: "Misa",
+    section: "Ofertório",
+    title: `OFERTAS SINGELAS`,
+    language: "pt",
+    refrain: `É Teu também nosso coração;\naceita, Senhor, a nossa oferta\nQue será depois na certa\no Teu próprio Ser. (2x)`,
+    verses: [
+      "1. Ofertas singelas, pão e vinho sobre a mesa colocamos.\nSinal do trabalho que fizemos e aqui depositamos.",
+      "2. Recebe, Senhor, da natureza\ntodo o fruto que colhemos.\nRecebe o louvor de nossas obras\ne o progresso que fizemos.",
+      "3. Sabemos que tudo tem valor\ndepois que a terra visitaste.\nEmbora tivéssemos pecado\nfoi bem mais o que pagaste."
+    ],
+  },
+  {
+    id: 113,
+    category: "Misa",
+    section: "Ofertório",
+    title: `MINHA VIDA TEM SENTIDO`,
+    language: "pt",
+    refrain: `Eu Te ofereço este pão,\neu Te ofereço o meu amor. (2x)`,
+    verses: [
+      "1. Minha vida tem sentido cada vez que eu venho aqui.\nE Te faço o meu pedido de não me esquecer de Ti.\nMeu amor é como este pão que era trigo,\nque alguém plantou depois colheu.\nE depois tornou-se salvação,\ne deu mais vida e alimentou o povo meu.",
+      "2. Minha vida tem sentido cada vez que eu venho aqui.\nMeu amor é como este vinho que era fruto\nque alguém plantou depois colheu.\nE depois encheu-se de carinho,\ne deu mais vida e saciou o povo meu.\n\nEu Te ofereço vinho e pão;\neu Te ofereço meu amor."
+    ],
+  },
+  {
+    id: 114,
+    category: "Misa",
+    section: "Ofertório",
+    title: `SUSAR EH DIAK AMI NIAN`,
+    language: "tet",
+    refrain: `Susar eh diak ami nian, simu ami isin, Na’i.\nSusar eh kiak ami nian, simu ami domin, Na’i. (2x)`,
+    verses: [
+      "1. Ami lakon Ita dalan iha kalan, Na’i, ba loron ohin. (2x)\nAmi la hatene tuir Ita dalan, Kuran hadomi.",
+      "2. Ami lakon Ita dalan iha kalan, Na’i, ba loron ohin. (2x)\nAmi la hatene tuir hodi hein Ita nia tulun.",
+      "3. Nudar ema lakon aihan, Na’i, ba loron ohin. (2x)\nAmi nia moris tomak hotu la hatene hadomi."
+    ],
+  },
+  {
+    id: 115,
+    category: "Misa",
+    section: "Ofertório",
+    title: `SIMUNETIKBA`,
+    language: "tet",
+    refrain: `Hasa’e ba Ita iha altar.\nSimu ba, simu netik ba, Na’i:\nSimu ba, simu netik ba, nudar santu sakrifisiu. (2x)`,
+    verses: [
+      "1. Ami nia paun, Na’i, simu ba.\nAmi nia tua, Na’i, simu bal.",
+      "2. Ami nia knaar... ami nia kole...",
+      "3. Ami nia moras... ami nia terus...",
+      "4. Ami nia ksolok... ami nia susar...",
+      "5. Ami nia moris... ami nia mate..."
+    ],
+  },
+  {
+    id: 116,
+    category: "Misa",
+    section: "Ofertório",
+    title: `SIMU, NA`,
+    language: "tet",
+    refrain: `Simu, Na’i, paun no tua santu nudar sakrifisiu\nKristu laran luak. (2x)`,
+    verses: [
+      "1. Simu ba, ha’u Na’i, ha’u nia presente\npaun no tua santu ihas ha’u nia fatin.",
+      "2. Simu ba, ha’u Na’i, ha’u nia ksolok, susar,\nha’u moris no mate, ha’u to ba Ita.",
+      "3. Ha’u fo ba Na’i ha’u nia kosar ben,\niha ha’u nia fatin, nune’e ba nafatin."
+    ],
+  },
+  {
+    id: 117,
+    category: "Misa",
+    section: "Ofertório",
+    title: `SIMU BA, HA`,
+    language: "tet",
+    verses: [
+      "1. Simu ba, ha’u Na’i,\npaun no tua nebe ami hasa’e ba Ita Boot. (2x)\n\nNakfilak tiha ba Kristu nia Isin no Ran\nnebe mate iha krus iha Golgotha. (2x)",
+      "2. Simu ba, ha’u Na’i,\nsakrifisiu nebe ami hasa’e ba Ita Boot.",
+      "3. Na’i, laran luak,\ntau matan ba terus nebe ami hato’o."
+    ],
+  },
+  {
+    id: 118,
+    category: "Misa",
+    section: "Ofertório",
+    title: `SA LOS MAK BELE HASA’E`,
+    language: "tet",
+    refrain: `Kristu, buat be ami iha, Kristu, lori mai Ita.\nHodi ksolok boot, ami mai hasa’e,\nami nia Maromak, ami mai hasa’e.`,
+    verses: [
+      "1. Sa los mak bele hasa’e ba Ita Boot, ami nia Maromak?\nSa mak bele hasa’e?\nIta be laran luak ba ami maksala,\nami nia Maromak, ba ami maksala.",
+      "2. Simu ami nia serbisu, terus buka aihan,\nami nia Maromak, terus buka aihan.\nAmi nia loron balun be hanesan mamuk,\nami nia... be hanesan mamuk.",
+      "3. Paun nebe ami hasa’e mai hosi terus,\nami nia... mai hosi terus.\nTua ne’e ami kahur, ami nia kosar ben,\nami nia... ami nia kosar ben.",
+      "4. Ami nia kiak tomak hasa’e ba Ita,\nami nia... hasa’e ba Ita.\nMaski uitoan karik ho fuan ami hasa’e,\nami nia... ho fuan ami hasa’e."
+    ],
+  },
+  {
+    id: 119,
+    category: "Misa",
+    section: "Ofertório",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na’i, simu ba, paun no tua ne’e;\naihan santu nebe ami hato’o. (2x)`,
+    verses: [
+      "1. Na’i, ami hasa’e aihan sira ne’e atu hahi Ita naran.",
+      "2. Tua uvas ne’e nakfilak ba Kristu nia Ran\nnakfakar iha krus."
+    ],
+  },
+  {
+    id: 120,
+    category: "Misa",
+    section: "Ofertório",
+    title: `NA`,
+    language: "tet",
+    refrain: `Buat nebe ami iha ami nia fuan;\nkiik oan teb-tebes maibe hatene hadomi,\nami nia fuan, Na’i, bele simu ba.`,
+    verses: [
+      "1. Na’i, ami mesak labarik,\nbuat la barak ami atu fo;\nmaibe buat nebe ami iha,\nami hakarak fo ba Ita Boot."
+    ],
+  },
+  {
+    id: 121,
+    category: "Misa",
+    section: "Ofertório",
+    title: `NA`,
+    language: "tet",
+    refrain: `Rahun wain ba Ita domin nebe,\nNa’i, haraik mai ami.\nNudar ami moris hun:\nIta Oan, Kristu Jesus.`,
+    verses: [
+      "1. Na’i, ami mai hasouru;\nho neen tomak ami harohan.\nHodi ami laran hotu maski buat diak laek.",
+      "2. Ami hasa’e buat be ami iha:\nami isin, ami klamar.\nNudar domin nebe tada iha Na’i,\nami Maromak.",
+      "3. Tulun ami, Na’i Maromak;\nami tomak Ita fihir.\nPerdua sola hotu,\nhadook hosi susar tomak."
+    ],
+  },
+  {
+    id: 122,
+    category: "Misa",
+    section: "Ofertório",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na’i, ami mai hasa’e, knananuk ida ne’e. (2x)`,
+    verses: [
+      "1. Paun no tua omi nia kolen\nami hasa’e iha Missa ne’e\natu hahi no agradesse Na’i Maromak,\nami Aman doben.",
+      "2. Ami ksolok no ami hakarak,\nami susar no ami laran\ntau hamutuk ho buat karan\natu hahi Na’i nia naran.",
+      "3. Kmanek wain ba Aman Maromak,\nba Kristu ami Maksoin,\nba Espiritu, ami Na’i,\noras ne’e ba nafatin."
+    ],
+  },
+  {
+    id: 123,
+    category: "Misa",
+    section: "Sanctus",
+    title: `MAROMAK AMI NA`,
+    language: "tet",
+    refrain: `Maromak, ami Na’i, ami Aman doben.`,
+    verses: [
+      "1. Loron toun ida ne’e ho haksolok no hananu;\nloron toun ida ne’e Ita Boot hiit\nAmi mai ne’e.",
+      "2. Kalan loron buka ksolok,\nkalan loron buka diak;\nhamutuk nudar maun alin\nbuka Ita Boot, ami nia Maromak.",
+      "3. Ami hasa’e nia ba ami Maromak\nami susar, ami nia diak,\nami terus, ami moras,\nami nia moris ami nia mate."
+    ],
+  },
+  {
+    id: 124,
+    category: "Misa",
+    section: "Sanctus",
+    title: `MAROMAK NIA BIBI OAN NO. 1`,
+    language: "tet",
+    verses: [
+      "1. Maromak nia bibi oan, (2x) Kristu, ami Na’i.\nMaromak nia bibi oan, nebe kasu mundu nia sala,\nhanoin ami.",
+      "2. Maromak nia bibi oan, (2x) Kristu, ami Na’i.\nMaromak nia bibi oan, nebe kasu mundu nia sala,\nharaik dame mai ami."
+    ],
+  },
+  {
+    id: 125,
+    category: "Misa",
+    section: "Sanctus",
+    title: `MAROMAK NIA BIBI OAN NO. 2`,
+    language: "tet",
+    verses: [
+      "Maromak nia bibi oan, kasu mundu nia sala,\nhanoin ami, hanoin ami. (2x)",
+      "Maromak nia bibi oan, kasu mundu nia sala,\nharaik dame mai ami."
+    ],
+  },
+  {
+    id: 126,
+    category: "Misa",
+    section: "Sanctus",
+    title: `MAROMAK NIA BIBI OAN NO. 3`,
+    language: "tet",
+    verses: [
+      "Maromak nia Bibi Oan, be kasu mundu nia sala,\nhanoin ami. (2x)",
+      "Maromak nia Bibi Oan, be kasu mundu nia sala,\nharaik dame mai ami."
+    ],
+  },
+  {
+    id: 127,
+    category: "Misa",
+    section: "Comunhão",
+    title: `KRISTU NIA ISIN`,
+    language: "tet",
+    refrain: `Kristu nia isin, moris nudar paun,\nHamenon domin ba ita hotu.`,
+    verses: [
+      "Mai ita hotu simu ho laran mos,\nJesus Kristu horik iha ita laran.",
+      "Ita moris fali iha Nia naroman,\nDalan ba lalehan nakloke ona.",
+      "Na’i Jesus, keta husik ami mesa,\nHorik nafatin ho ami iha mundu ne’e."
+    ],
+    tags: ["comunhao", "missa", "tetum"],
+  },
+  {
+    id: 128,
+    category: "Misa",
+    section: "Comunhão",
+    title: `FURAK OIN SA MORIS IHA DOMIN`,
+    language: "tet",
+    refrain: `Oin sa ita domin to ksolok mai ami\nhodi moris hamutuk nudar maun alin.`,
+    verses: [
+      "1. Furak oin sa ita moris iha ksolok laran;\nnudar maun alin iha neon ida deit.",
+      "2. Furak oin sa ita moris tuir ukun domin;\nnune’e ita moris tuir Kristu hakarak.",
+      "3. Furak oin sa ita halo buat nebe morin;\nnune’e ita halo tuir ukun domin.",
+      "4. Furak oin sa ita halo buat nebe kmanek;\nnune’e ita halo tuir ukun domin.",
+      "5. Furak oin sa ita halo buat nebe midar;\nnune’e ita halo tuir ukun domin.",
+      "6. Furak oin sa ita halo buat nebe justo;\nnune’e ita halo tuir ukun domin."
+    ],
+  },
+  {
+    id: 129,
+    category: "Misa",
+    section: "Comunhão",
+    title: `FURAK OIN SA`,
+    language: "tet",
+    verses: [
+      "1. Furak oin sa, maun alin sira;\nmoris ho ksolok no moris hakmatek. (2x)\nNune’e ita sasin tuir lolós Kristu nia hanorin. (2x)",
+      "2. Furak oin sa, maun alin sira;\nita moris tuir Na’i hakarak. (2x)\nNune’e ita hatudu katak ita Maromak nia oan. (2x)",
+      "3. Hadomi malu tuir Kristu haruka\nNe’e mak ukun Na’i fo ba ita. (2x)\nMoris tuir ukun ne’e ita haksolok no moris hakmatek. (2x)"
+    ],
+  },
+  {
+    id: 130,
+    category: "Misa",
+    section: "Comunhão",
+    title: `EUKARISTIA SAKRAMENTU BOOT TEBES`,
+    language: "tet",
+    verses: [
+      "Eukaristia sakramentu boot tebes\nNa’i Jesus nia tutor isin lolos;\naihan moris ba Nia ema sira\nbe hakat ba tuir dalan lalehan.",
+      "Anju sira hotu no mos santu tomak\nhalibur an, hana’i, hahi Jesus;\nNa’i Jesus hiit An mai lor-loron,\nharaik aihan tutor Isin no Ran."
+    ],
+  },
+  {
+    id: 131,
+    category: "Misa",
+    section: "Comunhão",
+    title: `EMA JUDEU HOBUR TUIR NA`,
+    language: "tet",
+    refrain: `Ami ba los nebe? Ita deit haraik\nmai ami kiak moris rohan laek. (2x)`,
+    verses: [
+      "1. Ema Judeu hobur tuir Na’i Jesus:\ntan sira han ikan ho paun.\nIkan ho paun halo sira sei bosu\nto’o foti Jesus ba liurai.",
+      "2. To’o tali oras hanorin komunha.\nSub-subar tiha husik Jesus.\nSira murmura tan sira la fiar\nNa’i Jesus to Nia Isin sira han."
+    ],
+  },
+  {
+    id: 132,
+    category: "Misa",
+    section: "Comunhão",
+    title: `EH KRISTU MAK TENE ITA`,
+    language: "tet",
+    refrain: `Eh Kristu mak tene ita, ita hakbesik Na’i nia mesa:\natu ba komunga nia Isin, Sakramentu domin.`,
+    verses: [
+      "1. Maromak nia han mak tun hosi lalehan\natu halo raiklaran moris.",
+      "2. Se hakbesik Ha’u sei la hamlaha tan;\nse fiar Ha’u sei la hamrook tan.",
+      "3. Ema la moris deit hodi aihan;\nmaibe hodi mos Maromak nia liafuan.",
+      "4. Simu no hola ba, ne’e Ha’u nia Isin;\nsimu no hemu ba, ne’e Ha’u nia Ran.",
+      "5. Se hola Ha’u Isin no hemu Ha’u Ran,\nnia sei moris ba nafatin.",
+      "6. Ita hotu hamutuk isin ida deit,\nIta bele hola han mesa ida deit."
+    ],
+  },
+  {
+    id: 133,
+    category: "Misa",
+    section: "Comunhão",
+    title: `KARIDADE VIRTUDE IDA`,
+    language: "tet",
+    refrain: `Karidade virtude ida Na’i Maromak hadomi liu.\nNia la hirus, laran maus; karidade mak hadomi.`,
+    verses: [
+      "1. Bele hatene lia oi-oin maibe la iha karidade\nhalo nudar sinu ida, lian lerek, la ba lalehan.",
+      "2. Bele hatene siik lolos ema hot-hotu nia destinu;\nhalo nudar folin laek se la iha karidade."
+    ],
+  },
+  {
+    id: 134,
+    category: "Misa",
+    section: "Comunhão",
+    title: `BA FATIN DOMIN, MORIS HO DAME`,
+    language: "tet",
+    refrain: `Ba fatin domin, moris no dame, Maromak horik ba.`,
+    verses: [
+      "1. Kristu nia domin halibur ita ne’e\nita sei haksolok ho laran kmanek\nsei hamutuk ho laran diak ita Maromak\nno sei hadomi malu ho neon kmook.",
+      "2. Hamutuk nune’e hodi hare diak malu\nita labele haketak malu hodi hirus;\nketa haklelek malu no rai kuna,\nNa’i Jesus Kristu horik ho ita.",
+      "3. Ami sei hamutuk ho santu sira,\nhare Ita oin ho Kristu Maromak;\nami rahun sei dadi boot no diak,\ntinan ba tinan nafatin. Amen."
+    ],
+  },
+  {
+    id: 135,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ba Aman Maromak nia domin, ha'u sei hananu (2x)",
+      "2. Ba Espiritu hela ho ita, ha'u sei hananu (2x)",
+      "3. Mundu hananu tomak sei bok ba lalehan Jesus moris hias (2x)\nbasa Jesus moris hias. (3x)"
+    ],
+  },
+  {
+    id: 136,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    verses: [
+      "1. Ha'u sei dehan: \"Se o fiar na'i Maromak...\" (2x)\nO hare nia gloria. nia gloria. (4x)",
+      "2. Ha'u sei dehan: \"Se o hatene Na'i Maromak...\"",
+      "3. Ha'u sei dehan: \"Se o terus tan Maromak...\"",
+      "4. Ha'u sei dehan: \"Se o perda tan tan Maromak...\""
+    ],
+  },
+  {
+    id: 137,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HANANU BA ITA NA`,
+    language: "tet",
+    verses: [
+      "1. Hananu ba ita Na'i, halo buat oi-oin.\nHalo Na'i'i klaran mai, Jesus ita nia Makssoin klaran mai.",
+      "2. Na'i, hatudu ba dalan diak mai ami atan sira;\nmoris-railek tomak hare nakukun atu hodi diak naroman.",
+      "3. Na'i Jesus, ita Makssoin, hodi mai hosi lalehan;",
+      "4. Alin-maun ksolok boot taka mutu mai hadahur;\nno hawelok Na'i Maromak oras ne'e no ba nafatin."
+    ],
+  },
+  {
+    id: 138,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Se mak han Ha'u nia, nia sei la hamlaook;\nse fiar Ha'u hamprook.",
+      "2. Ita hotu be halibur iha ne'e, halo isin ida deit\nita hotu han paun ida, no hemu hosi kalis ida.",
+      "3. Maromak nia paun tun hosi lalehan\natu moris ba mundu tomak.",
+      "4. Ema ida bele bele to'o Ha'u, karik Ha'u Aman lo to;",
+      "5. Nia sei katak moris hias iha loron ikus.\nHa'u katak lolos ba ha:\nse mak fiar Ha'u sei hetan moris rohan laek."
+    ],
+  },
+  {
+    id: 139,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HADOMI HO HAH ALOK`,
+    language: "tet",
+    refrain: `Nudar loron haroman rai, ita domin fo ksolok;\nnudar tasi hadulas rai, ita domin fo ksolok;\nnudar udan habokon rai, ita domin fo ksolok;\nnudar mota buka buat, ita manek fo ksolok!`,
+    verses: [
+      "1. Hadomi buka hari buat be ema horan diak.",
+      "2. Hadomi la halo aat hadomi la rai hirus.\nHAdomi la bobAr lia, hadomi ho laran mos."
+    ],
+  },
+  {
+    id: 140,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Mundu sei hadomi sei hatene katak imi Ha'u belun eh lae.",
+      "2. Imi sei hadomi malu; nudar katak imi Ha'u imi.",
+      "3. Ami hatene katak ami sei hadomi maun alin sira;",
+      "4. Ami hadomi nafatin, karik mate teni.",
+      "5. Ita'e'e ita sei malu karik, Maromakolok tebes duni.",
+      "6. Tamba domin, ita ho Na'i Jesus isin ida deit,",
+      "7. hodi bele han hamutuk iha Nia meja.",
+      "8. La iha ema ida hatu raiklaran iha Nia.\nbele haketak ita hosi Maromak nia domin.",
+      "9. Nia ita nia vida, ita la tauk buat ida."
+    ],
+  },
+  {
+    id: 141,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HADOMI HA`,
+    language: "tet",
+    refrain: `Hadomi ha`,
+    verses: [
+      "1. Se hadomi ho laran luak mos, se hadomi hanesan malu Ha'u.",
+      "2. Hadomi la hatene hirus, hadomi la halo aat;\nhadomi la hatene karak, hadomi koalia los.",
+      "3. Hadomi ho liafuan lia, hadomi ho lari dade;\nhadomi ho bobar lia, hadomi ho lialos.",
+      "4. Hadomi terus buat hotu, hadomi ema hotu fiar,\nhadomi ba buat hotu, hadomi ba beibeik.",
+      "5. Ita, ita esperansa sei hotu iha lalehan;\nesperansa Ita; hadomi sei la hotu, hela-hela ba nafatin."
+    ],
+  },
+  {
+    id: 142,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Maski nakukun, la'o kalan nia laran,\nmaski ha'u tauk, la'o ba oin nafatin.",
+      "2. Maski rai fila, ha'u lakon ha'u nia dalan;\nmaski la hetan ksolok ba ha'u fuan.",
+      "3. Maski taridu ha'u fuan no no ha'u laran;\nmaski la hetan ksolok ba ha'u fuan.",
+      "4. Maski ha'u susar, monu oin nakukun;\nmaski ha'u kosar, liman ain kole.",
+      "5. Maski ha'u dalan lakon ha'u, maski la hare Maromak futar oin."
+    ],
+  },
+  {
+    id: 143,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ita be Paun komunha mesak ida, ita hotu han hamutuk isin ida deit\nhosi kaleidos.",
+      "2. \"Ema ida la mai to'o Ha'u se Ha'u Aman la fo;\nHa'u sei halo nia kakak moris hias iha loron ikus.\"",
+      "3. Tebetebes Ha'u katak ba imi; loron ikus Ha'u nafatin moris.",
+      "4. se fiar ne'e Paun sei moris hosi lalehan.\nIda ne'e Paun tun hosi lalehan.\nSe hola Nia sei la mate.",
+      "5. Se hola Paun ne'e, sei moris ba nafatin.",
+      "6. Se hola Ha'u isin no hemu Ha'u ran,\nnia hela ho Ha'u, Ha'u hela ho nia."
+    ],
+  },
+  {
+    id: 144,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HAMLAHA, HAMROOK`,
+    language: "tet",
+    refrain: `Ham laha, hamrook, ami liman, ain kole\nou ba hasouru Ita Boot.\nIta Boot nudar Isin mak fo nia kbit mai ami`,
+    verses: [
+      "1. Hot-hotu simu aihan diak ne'e,\nita tomak halibur isin lon lon ida deit\nsura hamutuk sura hamutuk\nhodi Maromak nia hadomi.",
+      "2. Kalan loron ha'u hanoin Maromak.\nKalan loron hare Maromak\nbainhira ha'u ba hasouru Nia,\nbainhira ha'u ba hare Nia?",
+      "3. Liu hosi rai fuik ema hananu, deit\nliu hosi nakukun ema tanis.\nSira buka Ita Boot nia naroman,\nsira hakarak Ita Boot nia hadomi."
+    ],
+  },
+  {
+    id: 145,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HELA HO AMI, JESUS, LORON NE`,
+    language: "tet",
+    verses: [
+      "1. Hela ho ami, Jesus, loron ne'e;\nhela ho ami hodi ho ami hodi\nhela ho ami, haraik naroman no paz\nsei la'o toi mai.\nHela ho ami, haraik naroman\nrai kalan sei la to'o mai\niha dalan mundu ne'e nian.\nJésus, loron kalan,",
+      "2. hela ho ami, Jesus diak, iha susar,\nhela ho ami iha diak,",
+      "3. Hela ho ami iha rai ne'e sei diak, iha i susar,\nhela ho ho ami iha funu ne'e nia laran."
+    ],
+  },
+  {
+    id: 146,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HA`,
+    language: "tet",
+    refrain: `Maromak oan.`,
+    verses: [
+      "1. Ha'u Timor oan, ha'u klamar tanis.\nTerus no susar, ha'u Aman doben,\ntan Nia mesak ha'u rikusoi.\nHo Na'i Jesus, ho ita belun;\nita sei la'o hamutuk Nia.\nSei funu hasouru buat aat no sala.\nSei titu diak Maromak nian.",
+      "2. Buka mateneke, ha'u no ksolok kna'ar\nhalo rai naruk, moris no ksolok.\nMaibe, ha'u ema keta haluha:\nha'u nia Maromak, ha'u Aman doben.",
+      "3. Atu soi diak, hetan lalehan,\nha'u sei la'o hetan Maromak dalan,\nla'o tuir nafatin Maromak ukun;",
+      "4. Tuir ukunfuan hadomi Maromak nian,\nNia ukunfuan hadomi nian nian,\nhadomi malu, fo tulun malu;\nla bele oho, fo terus ema;\ntan ita hotu rai ha'u lakon oan dalan.",
+      "5. Ha'u lemo rai, ha'u lakon uma dalan;\nha'u la'o rai, ha'u la'o uma.\nHetan Maromak iha ha'u dalan,\nNia moris tulun ha'u, fo tulun ha'u.\nNia simu ha'u, fo tulun ha'u dalan rohan.",
+      "6. Ha'u la'o to'o ona ha'u uma lalehan;\nHa'u to'o uma, uma lalehan.\nLa hanoin fan ha'u moris ikus;\ntan ha'u fiar Maromak, ha'u Na'i."
+    ],
+  },
+  {
+    id: 147,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HELA HO AMI, JESUS, TUR HO AMI`,
+    language: "tet",
+    refrain: `Hela ho ami, Jesus, tur ho ami. (2x)`,
+    verses: [
+      "1. Iha ita Emaus\nIta rai ita Emaus domin fahe ita paun tomak\nIta fahe iha loron.",
+      "2. Ami sei hadomi malu tuir ita nia hatudu.\nNa'i Maromak tau hadomi iha ami laran."
+    ],
+  },
+  {
+    id: 148,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS, AMI NIA MORIS`,
+    language: "tet",
+    refrain: `Jesus, ami nia moris; Jesus, ami nia Maromak.`,
+    verses: [
+      "1. Kristu dehan: \"Ha'u aihun diak.\"\nHa'u Aman doben, Ha'u Aman toos nain.\nAi sanak la fuan, Nia sei tesi, soe, soe ba dook.\nAi sanak to fuan bar, Nia sei hamos\natu nia fuan tebar.",
+      "2. Kristu dehan: \"Ha'u aihun toos diak Nain.\"\nImi la'o ho Jesus, ami nia sei halo, halo diak oi-oin.\nLa'o hamutuk Nia mak sei hetan dalan,\ndalan Maromak.",
+      "3. Ha'u maluk doben buka ho Nia.\nLa'o maluk hela Nia.\nKeta husik Maromak, ita ho moris abut; abut namlele,\nDook hosi Jesus, ita lakon, lakon reinu lalehan."
+    ],
+  },
+  {
+    id: 149,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS, DALAN DIAK, HALOS NO AMI MORIS`,
+    language: "tet",
+    refrain: `Paun ksolok nian, tun hosi lalehan`,
+    verses: [
+      "1. Ami ema la'o rai, la'o hakat ba lalehan;\nami",
+      "2. Jesus, ami nia dalan; dada ami ba Maromak,\nSe sala la'o tuir Jesus, moris; se sala bele hetan nakukun,\nema",
+      "3. Hosi nakukun laran, no hosi sala laran;\nsei buka deit lialos, no lialos mak Na'i Jesus.",
+      "4. Jesus, lialos no moris, no dalan Na'i Maromak;\nema tuir dalan ne'e sei hetan Na'i Maromak."
+    ],
+  },
+  {
+    id: 150,
+    category: "Misa",
+    section: "Comunhão",
+    title: `ITA SEI HADOMI MALU`,
+    language: "tet",
+    refrain: `Ita sei hadomi malu ho laran mos\nIta sei hadomi hela nafatin ita leet\nMaromak ita`,
+    verses: [
+      "1. Ita Na'i Jesus Kristu hadomi, halibur ita.",
+      "2. Ita nobun hamutuk, hamtauk, hadomi Maromak.",
+      "3. Kristu, to laran; ho neon ida deit.",
+      "4. Keta buka fahe malu;",
+      "5. Ho laran hakarak hare ha'u nia Na'i Maromak.",
+      "6. Haksolok hadomi oras ne'e ba nafatin. Amen."
+    ],
+  },
+  {
+    id: 151,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS DOBEN`,
+    language: "tet",
+    refrain: `Jesus, ha`,
+    verses: [
+      "1. La'o doben mutuk ho Nia la susar.\nLa'o hamutuk ho be matak malirin haro ha'u klamar.",
+      "2. Fo neon diak haksolok hatudu klamar. Dalan los.\nTan Nia nararan boot, nararan metantu,\nla'o ho Nia foho leet, rai met-metin,",
+      "3. Maski la'o foho metin, la tauk buat aat ida\nIt Boot la'o hamutuk ho ha'u;\nho It grása no tulun nafatin.",
+      "4. It hadia mai ha'u aihan furak\niha ema laran aat sira oin,\nba ha'u ulun It kose mina morin\nNo ha'u kalis nakonu, naksalin.",
+      "5. Laran diak no grása tuir ha'u,\nkala loron ha'u moris nia laran.\nHa'u tur fatin mak ita kadunan\nloron-loron bainhira ha'u sei moris."
+    ],
+  },
+  {
+    id: 152,
+    category: "Misa",
+    section: "Comunhão",
+    title: `ITA NIA MORIS`,
+    language: "tet",
+    refrain: `Mai, ita hotu hakbesik altar, simu Kristu isin\nnudar aihan ba ita klamar, maski data wain la soi.`,
+    verses: [
+      "1. Ita nia moris nudar tali ida\nnebe tutan lalehan ho rai ne'e.\nIta nebe tutan metin nobun ho rai hamaluk,\nita tali k hun kledik hun mak Kristu.",
+      "2. Ita nia moris nudar we, suli ba rai.\nIta kuru mos fahe ho hadomi,\nita domin los suli hosi Kristu.",
+      "3. Ita nia moris nudar deruk ida\nnebe ho midar ba tempu\nita ku'u took fahe ba malu ho lolos.\ntuir domin los, domin Kristu nian"
+    ],
+  },
+  {
+    id: 153,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HIIT AN MAI, NA`,
+    language: "tet",
+    refrain: `Hiit an mai, Na`,
+    verses: [
+      "1. Nudar rusa buka os be, ami buka ita Boot,\ntan rusa wain hamrook los, ita ami nia bematan.",
+      "2. Ami la'o ba ita altar atu simu ita ho haksolok.\nAmi sa'e la'o ita Boot.",
+      "3. Sira be hare ha'u terus, dehan: \"Maromak iha nebe?\"\nNa'i iha ita leet, ita ho hadomi tan Maromak sei soi ita.",
+      "4. Bele terus karik ba, ha'u hanoin Na'i Maromak."
+    ],
+  },
+  {
+    id: 154,
+    category: "Misa",
+    section: "Comunhão",
+    title: `ITA UKUN MORIS`,
+    language: "tet",
+    refrain: `Mai Na`,
+    verses: [
+      "1. Maromak sira, leno liurai sira;\ntulun sira atu ukun diak kmanek ita ema,\natuk ukun diak ata oan sira;\natuk ukun diak ita ema,\nukun ami hodi lialos loron matan,",
+      "2. Hosi foho tun tun mai lialos matan,\nhosi leten tun tun mai lialos.\nTau matan ba ata oan sira oan,\ntulun netik netik ema kiak oan sira,\nsadia netik netik ema kiak oan sira,\nharaik todan ba ema laran aat.",
+      "3. Maromak, ami neon nakukun,\nami buka ukun ninin,\nbuka deit riku soi no moris;\n\nla tauk sala, lakon diak lalehan\nhodi bosok, naok, fakar ran;\nhodi sola hasouru ita Boot.",
+      "4. Ami sola Na'i no Liurai ita Boot Maromak;\nto naroman, leno ami laran laran\natu buka liliu diak lalehan,\nloron kalan. Hanoin ami, ukun ami rai,\nhalo funu hotu lalais."
+    ],
+  },
+  {
+    id: 155,
+    category: "Misa",
+    section: "Comunhão",
+    title: `ITA HADOMI MALU KARIK`,
+    language: "tet",
+    refrain: `Ita hadomi malu tebes karik, Kristu iha ita leet.`,
+    verses: [
+      "1. Kristo nia domin hananu halibur ema tomak,\nhaksolok ho ita atu moris tuir Nia domin ne'e,\n\"Hadomi malu nudar Ha'u hadomi imi.\"",
+      "2. Ita hotu halibur, halo isin ida no fuan ida,\nita hadook buat hotu ho halak atak domin;\nfunun, nune ne Kristu bele hela iha ita leet.",
+      "3. Mai, to perda ba malu\nnudar Na'i halo perdu ita sola,\nnune'e ita halo tuir Kristu nia hakarak,\nat ita bele hetan moris rohan laek. Amen."
+    ],
+  },
+  {
+    id: 156,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS FO NARAMAN`,
+    language: "tet",
+    refrain: `Jesus fo naroman nakukun; leno ami dalan.`,
+    verses: [
+      "1. Ha'u fuan terus, dook, dook ita Boot;\nha'u horik dook Boot, dook.",
+      "2. La hetan ksolok bainhira mesak,\ndook Na'i Maromak, Maromak dalan.",
+      "3. Ha'u kalan ne'e la'o tuir lalehan,\nMaromak dalan lalehan, dalan.",
+      "4. Hatudu dalan, ha'u Aman doben,\nha'u loron oin nakukun, la'o sola dalan.",
+      "5. Loron foun sei mai, naroman sei mai,\nMaromak tulun tulun, tulun.",
+      "6. Ita fiar metin, ita laran metin;\nnian\nhamutuk ksolok, ksolok nafatin."
+    ],
+  },
+  {
+    id: 157,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAI, UKUN HA`,
+    language: "tet",
+    refrain: `Mai, Na`,
+    verses: [
+      "1. Ita ukun fo moris ba mundu raiklaran",
+      "2. Ita ukun fo ksolok ba ema hotu-hot.",
+      "3. Ita ukun fo tulun ba ema laran kmaus"
+    ],
+  },
+  {
+    id: 158,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAI, NA`,
+    language: "tet",
+    refrain: `Mai, Na`,
+    verses: [
+      "1. Mai hela ho ha'u nafatin no tulun no kbit mai ha'u.",
+      "2. Leno isin neon fo ha'u laran tuir lialos ita hanorin.",
+      "3. Ha'u laran metin ba Ita; hasai ha'u hosi buat aat.",
+      "4. Mai, hela metin ho ha'u tinan ba tinan nafatin."
+    ],
+  },
+  {
+    id: 159,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAI HOTU, MAUN ALIN`,
+    language: "tet",
+    refrain: `Mai hotu, maun alin, it`,
+    verses: [
+      "1. Ba aihan furak Na'i bolu gracia oan oan sira nian.",
+      "2. Paun mak Kristu no tua Ran ninin.\nHo ksolok ita hakbesik ba Na'i nia meja.",
+      "3. Hadulas isin mak domin sei sai boot.",
+      "4. Aihan ksolok habosu ita hotu;\nNia ita kbit iha ita moris tomak."
+    ],
+  },
+  {
+    id: 160,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAI, NA`,
+    language: "tet",
+    refrain: `Mai, Na`,
+    verses: [
+      "1. Ho ha'u nia liman hakarak fo, mai, Na'i Jesus, mai.",
+      "2. Ba ha'u nia maun alin ha'u sei fo tulun...\nHo ha'u nia ibun hakarak hananu...",
+      "3. Domin ho ksolok iha ha'u nia fuan...\nHasa'e harohan ba ha'u nia Na'i..."
+    ],
+  },
+  {
+    id: 161,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS RASIK DEHAN`,
+    language: "tet",
+    refrain: `Jesus rasik dehan: `,
+    verses: [
+      "1. Se han aihan Ha'u sei, se hemu tua ne'e\nsei moris ba bei-beik, sei hetan diak.",
+      "2. Aihan ida ne'e hosi lalehan mai;\nse hola, han nia sei la hetan mate.",
+      "3. Aihan Ha'u to Ha'u aihan\nharaik to'o ba imi, to mans ba imi."
+    ],
+  },
+  {
+    id: 162,
+    category: "Misa",
+    section: "Comunhão",
+    title: `KRISTU, AMI ITA NIA KREDA`,
+    language: "tet",
+    refrain: `Kristu, ami it`,
+    verses: [
+      "1. Ema be la'o dau-daun ba Aman Maromak nia uma\nNeon ida deit, laran tuir dalan tiar nian,\nho Kristu ami belun, ho Kristo ami Na'i.",
+      "2. Ami ita emar, Na'i, ami ita emar.\nHo ita Boot roman, no ita nia kbit,\ntan ami knaar iha kaer hodi to sasin ami nia tiar.",
+      "3. Kristu terus ho susar oi-oin.\nPovu be terus ho susar povu\niha sira isin no sira nia klamar.\nMaibe sira laran metin iha Kristu Maksoin,\nho laran ksolok hariu mundu foun."
+    ],
+  },
+  {
+    id: 163,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS HA`,
+    language: "tet",
+    refrain: `Jesus ha`,
+    verses: [
+      "1. Bematam ha'u mos to'o diak, haksolok fuan ha'u nia fuan.",
+      "2. Sei lori liu hosi inur, rai sei nakukun;\nmaibe ha'u nia Maromak sei leno ha'u nia ain fatin.",
+      "3. Bele iha mate laran sei hein ita Boot;\nha'u sei la tauk destinu, ha'u fiar ita Boot.",
+      "4. Hadia hela mai, Paun hadia moris nian;\nhadia mos kalis ida ho tua moris nian."
+    ],
+  },
+  {
+    id: 164,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAI, JESUS, AMI NA`,
+    language: "tet",
+    refrain: `Mai, Jesus, ami Na`,
+    verses: [
+      "1. Ha'u mak mundu nia naroman.\nSe mak tuir Ha'u sei hetan naroman.",
+      "2. Se hakbesik Ha'u sei la hamlaha tan ona.",
+      "3. Se han aihan moris tun hosi lalehan nafatin.",
+      "4. Ha'u mak dalan los, lialos no moris foun.\nHa'u deit mak sei lori imi ba Aman Maromak.",
+      "5. Ha'u mak bibi atan diak.\nHa'u hatene Ha'u nia bibi oan no fo vida ba sira.",
+      "6. Ha'u mak Liurai lialos nian.",
+      "7. Ida nebe iha lialos rona Ha'u aisanak lia.\nHa'u mak aihun, imi ha'u mak aifuan barak.\nSe mak ho Ha'u sei fo aifuan barak."
+    ],
+  },
+  {
+    id: 165,
+    category: "Misa",
+    section: "Comunhão",
+    title: `LA`,
+    language: "tet",
+    verses: [
+      "1. La'o mesak tuir rai fuik,\nbuka ha'u maun, ha'u maun Jesus.\nNakukun laran belun, fuan namlele.\nBuka ha'u belun, ha'u Na'i Maksoin.\nData wain ema barak la hadomi,\nterus todan mesak.\nMaibe Jesus rasik mak dehan: (2x)\n\"Se todan, Ha'u sei kasu naha.\" (2x)",
+      "2. Tahu laran holo riba,\nha'u isin dodok, ha'u klamar foer;\nfoti matan ba lalehan,\nbolu ha'u Na'i, ha'u tanis sola."
+    ],
+  },
+  {
+    id: 166,
+    category: "Misa",
+    section: "Comunhão",
+    title: `JESUS, ITA FIHIR HA`,
+    language: "tet",
+    verses: [
+      "1. Na'i, ita ema Maksoin, ho lia midar, ho lia mamar;\nIt buka ema, se mak matan hakarak.\nJesus, ita fihir ha'u bolu ha'u naran;\nho hamnasa, ita bolu ha'u husik hela tasi ibun,\nho it Boot.",
+      "2. It Na'i, ita bolu ha'u tasi naran, ita la'o, ami hakarak tuir,\nIta Boot dehan: \"Imi tuir Ha'u mai!\"",
+      "3. Na'i, ita bolu ha'u ata. Ita dehan: \"La bele lori bukae,\nla bele lori bukae eh kohe.\"",
+      "4. Na'i, ita dehan bukae ata: \"Faan buat hotu,\nto ba ema kiak, o sei hetan premiu lalehan.\"",
+      "5. Na'i, ita bolu lais; \"Husik rai, riku no soi;\nhare ba",
+      "6. Na'i, ita bolu hamaus: \"Se hakarak, tuir Ha'u mai,\nHa'u toos boot, ema la iha.\""
+    ],
+  },
+  {
+    id: 167,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NE`,
+    language: "tet",
+    refrain: `Ne`,
+    verses: [
+      "1. Sei agradesse ha'u Na'i oin sa tan diak hotu Nia to.\nSei tone kalis maksoin hodi harohan Na'i nia naran.",
+      "2. Kmanek ba Na'i tutor matan,\nNia belun sira nia tan\nha'u ita atan, ita atan teto nia oan.\nIta hasai ha'u hosi susar laran."
+    ],
+  },
+  {
+    id: 168,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAROMAK IHA HA`,
+    language: "tet",
+    refrain: `Maromak iha ha`,
+    verses: [
+      "1. Ema barak ha'u la'o neon ita Boot,\nla buka dalan seluk dook ita Boot,\nhodi hamamuk sira laran,\nikus fall laran mukit.\nMaibe fall ita sei nafatin\nbesik sira loron.",
+      "2. Ha'u sira mukit loron hare\nema barak mukit la tuir,\nIha tinan rihun resin\nLaran metin deit ba rai laran haluha.",
+      "3. Rai ne'e ita Boot sei oin seluk\nkarik ema tomak sarani tomak.\nLaran metin ba ita Boot.\nLaran metin ba ita Boot.\nMaibe barak sei lahaluha\ntan ne'e susar beibeik."
+    ],
+  },
+  {
+    id: 169,
+    category: "Misa",
+    section: "Comunhão",
+    title: `SE KOMUNGA HA`,
+    language: "tet",
+    refrain: `Se komunha Ha`,
+    verses: [
+      "Jesus dehan: \"Ha'u paun moris tun hosi lalehan;\natu halo raiklaran moris.\"",
+      "1. Ha'u Isin aihan tebes ida,\nHa'u Ran tua tebes isin.",
+      "2. Se komunha Ha'u Isin no hemu Ha'u Ran\nhela ho Ha'u, Ha'u horik ho nia.",
+      "3. Imi bei bei han mana iha raifuk no no mate tiha.\nSe han paun Ha'u sei, Nia sei la mate.\n\nSe han paun Ha'u sei, moris to Aman moris Ha'u Nain,\nse komunha Ha'u isin moris no ba Espiritu Ha'u.",
+      "4. Gloria ba Aman, ba Oan no ba Espiritu Santu,\nnudar hori uluk, oras ne'e no ba nafatin."
+    ],
+  },
+  {
+    id: 170,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NA`,
+    language: "tet",
+    verses: [
+      "1. Na'i Jesus hatudu dalan los, dalan los.\nNa'i Jesus hanorin lialos Kristu.\nLialos, dalan han moris Jesus Kristu.\nMai, ba lalehan dalan han Na'i Jesus. (2x)",
+      "2. Ema diak ita sei fo han, sei fo han;\nketa karak, buka fo hatais.",
+      "3. Ema moras ita ba hare, ba hare;\nema mate ita ba hakoi, tribunal;\nketa tauk tahan ema kiik.",
+      "4. Lia ruma ita selu aat, selu aat;\nhan, hemu hodi kosar ben."
+    ],
+  },
+  {
+    id: 171,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Diak iha buat hotu Nia halo,\nNia sira ba sira be harohan.",
+      "2. Nia besik ba sira be harohan tebes,\nbesik ba harohan sira.",
+      "3. Nia hakarak diak ba ema hotu,\nrona ema sira tanis no soi sira.",
+      "4. Ba ema hadomi laran aat, Nia fo todan;\nmaibe ema laran aat, Nia fo todan.",
+      "5. Ha'u nia klamar haksolok;\nha'u nia ibun hananu, hahi Maromak.",
+      "6. Buat moris tomak, hahi Maromak naran,\ntinan ba tinan, nafatin. Amen."
+    ],
+  },
+  {
+    id: 172,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MAROMAK NIA VONTADE`,
+    language: "tet",
+    refrain: `Maromak nia vontade kmanek boot,\nha`,
+    verses: [
+      "1. Diak ba ema be la hetan sala;\nsira la'o tuir Maromak nia ukun.",
+      "2. Diak ba ema be tuir Maromak nia ukun;\nsira buka Nia ho laran tomak.",
+      "3. Ita haraik ita ukunfuan atu ami halo tuir lolos.",
+      "4. Halo ha'u moris metin beibeik\nhodi halo tuir ita ukunfuan.",
+      "5. Ha'u sei la hetan neon susar,\ntan ha'u tuir ita ukunfuan."
+    ],
+  },
+  {
+    id: 173,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NE`,
+    language: "tet",
+    refrain: `Ne`,
+    verses: [
+      "1. Hadomi sarani hanesan loron Na'i Jesus,\nnudar susar eh ksolok ita sei hamutuk,\nhadomi atu malu hanesan Na'i Jesus. (2x)",
+      "2. Atu imi nia vida oras ne'e\nvida ne'e nia vida ho Maromak\nHadomi malu diak tebetebes,\nsei hetan maun Jesus iha imi leet",
+      "3. Hakruuk ba sira be monu ona\ntuir Na'i Jesus to liman ho perda;\n\nHadomi sira be iha sola\nsei hetan maun Jesus iha imi leet",
+      "4. Jesus hanorin ita loron krus,\nsarani tenke\nSe imi loron nia ho ksolok boot krus\nimi hetan duni paz ho salvacao."
+    ],
+  },
+  {
+    id: 174,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NA`,
+    language: "tet",
+    verses: [
+      "1. Na'i Jesus nia ukun hanorin;\nNia hanorin; to dame ba malu ida ne'e,\nmoris nia sei hetan ksolok ba bei-beik.",
+      "2. Ita hotu mak moris iha rai;\nita Na'i Jesus nia ukunfuan;\nita la rai nia, sei hetan fakara ran,\nita la hetan dame, hadomi malu.",
+      "3. Ita hotu tuir dalan sarani;\nsei hatudu Jesus ukunfuan;\nita moris la tuir ukunfuan ida ne'e,\nita la, fakara ran no mate.",
+      "4. Rai Timor mak terus no nofunu.\nNa'i Jesus hatudu to dalan;\n\nNa'i oin nusa mak funu bele hotu laiais,\nTimor oan atu hadomi malu.",
+      "5. Na'i Jesus fo ida deit,\natu natan rai nia funu;\nsei hadomi nudar Nia hadomi ema,\noin nune'e rai nia didiak.",
+      "6. Rai Timor atu hetan damen,\nTimor oan atu moris diak ba malu;\nse hakribi tiha moris aat no sala,\nbuka haktulun, dame, hadomi malu."
+    ],
+  },
+  {
+    id: 175,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NE`,
+    language: "tet",
+    refrain: ``,
+    verses: [
+      "1. Gloria ba Aman hakia ita. Gloria ba Oan Maksoin.\nGloria ba Espiritu moris Nain; fo mai ita Ninia domin.\n\nHamutuk iha domin nia laran ida ho paun rasik ida.",
+      "2. Ema hotu mesak ita nia maun alin. Hadomi.\nNusik Na'i Eukaristia ita, ema bele han ita.\nNinia isin no Nia ran haraik ita hetan kbit.\nIta sei paun no tua mak tuir ba domin.",
+      "3. Hodi paun no tua nakfilak ba Na'i nia Isin.\nHanesan Maromak oan, ema hadulas altar,\nhot-hotu besik Na'i soi soi ita.",
+      "4. Badai ai Kristu mai Nia ita rasik kaer serbisu malu.\nEma hotu kaer serbisu atu halo hanesan Kristu.\nFoin libur ema, halo povu ida."
+    ],
+  },
+  {
+    id: 176,
+    category: "Misa",
+    section: "Comunhão",
+    title: `NA`,
+    language: "tet",
+    refrain: `Los, tamba Na`,
+    verses: [
+      "1. Maromak mak ita hotu nia Aman;\nmaun alin, ita hadomi deit mak Nia.\nMoris deit ita ita hadomi Aman deit,",
+      "2. Maromak hadomi ita ida-idak.\nNune'e, ita sei moris ba domin ne'e\ndomin boot\nIha Nia, tamba Nia, Na'i, mak domin.",
+      "3. Maun alin, hela hamutuk, fiar deit ita Na'i.\nHela isin domin, moris iha domin.\nMoris ba loron, liu loron, liu riku tomak,\nliu buat hotu, loron.\nLos, tamba Na'i, Na'i mak domin.\n\nNa'i mak domin, ita nia moris.\nNa'i mak domin. Nia Halos.\nNa'i mak domin, ita moris karik domin ida ne'e\nbuat ida sei sei sai ho Aman Maromak."
+    ],
+  },
+  {
+    id: 177,
+    category: "Misa",
+    section: "Comunhão",
+    title: `MORIS KOLOK IHA DOMIN LARAN`,
+    language: "tet",
+    refrain: `Moris ksolok iha domin laran;\nNa`,
+    verses: [
+      "1. Tan Kristu ne'e domin libur ita hotu hananu;\nita haksolok tan hananu;\nhadomi malu tuir Nia hanorin;\nnune'e, it hadomi tebes Na'i Maromak.",
+      "2. Mai, soe hamutuk moris iha neon ho laran ida deit,\nhodi buat nebe halo ita haketak malu.\nKeta halo aat, fo terus no oho malu\nta Kristu, ita nia Maksoin, horik ho ita.",
+      "3. Moris iha dame no domin nia laran\ntakat ita hatene perda katak\nLialos ne'e Kristu hanorin malu\natu ita moris iha ksolok ba nafatin."
+    ],
+  },
+  {
+    id: 178,
+    category: "Misa",
+    section: "Comunhão",
+    title: `QUE BOM É O PÃO`,
+    language: "pt",
+    refrain: `Que bom é o pão que Tu nos das,\noferta do Teu amor, Senhor.\nQue bom é o pão que Tu nos das,\no pão saboroso que és Tu.`,
+    verses: [
+      "1. Cada vez que repartirdes este pão,\nFazei-o em memória da minha morte.",
+      "2. Lembrai-vos em memória da minha morte Mim ate Eu vir,\nDe novo juntar-Me convosco.",
+      "3. O meu Corpo é o alimento que vos dou.\nComei, saciai a vossa fome."
+    ],
+  },
+  {
+    id: 179,
+    category: "Misa",
+    section: "Comunhão",
+    title: `VEM, IRMÃO`,
+    language: "pt",
+    refrain: `Vem, irmão, vem para a mesa;\nvem, irmão e meu amigo.\nDou-te a força e o amor,\nEu vou para a vida sempre contigo.`,
+    verses: [
+      "1. Vive na esperança, irmão, e encontrarás o Senhor.",
+      "2. Fala com Ele na fé, e terás o seu amor.\nVamos, irmão, comungar! Cristo amou todos nós,\nconosco vem ao altar.",
+      "3. Na mesa Cristo se dá, em verdadeira comida,\nquanta coragem teremos se o levarmos para a vida.",
+      "4. Na mesa Cristo se dá, nova aliança de amor.\nEle quer ser nosso irmão, na alegria e na dor."
+    ],
+  },
+  {
+    id: 180,
+    category: "Misa",
+    section: "Comunhão",
+    title: `CORAÇÃO SANTO, TU REINARÁS`,
+    language: "pt",
+    refrain: `Coração santo, Tu reinarás.\nTu nosso encanto sempre serás rei.`,
+    verses: [
+      "1. Como soldado vela a seu rei,\nassim meu sangue por Ti darei.",
+      "2. Se o mundo iníquo me combater,\nsempre a Teu lado hei-de vencer.",
+      "3. Jesus soberano, deixa-me ser\nTeu guarda d'honra até morrer."
+    ],
+  },
+  {
+    id: 181,
+    category: "Misa",
+    section: "Comunhão",
+    title: `POR UM PEDAÇO DE PÃO`,
+    language: "pt",
+    refrain: `Eu também vi muita gente encontrar novamente\no caminho de Céu.\nEu também vi muita gente voltar novamente\nao convívio de Deus. (4x)\nPor um pedaço de pão. (4x)`,
+    verses: [
+      "Por um pedaço de pão, por um pouco de vinho,\neu já vi mais de um irmão se desviar no caminho.\nPor um pedaço de pão e por um pouco de vinho,"
+    ],
+  },
+  {
+    id: 182,
+    category: "Misa",
+    section: "Comunhão",
+    title: `CORAÇÃO SACERDOTAL DE JESUS`,
+    language: "pt",
+    verses: [
+      "Coração sacerdotal de Jesus, multiplicai os sacerdotes.\nCoração sacerdotal de Jesus, santificai os sacerdotes.\nCoração sacerdotal de Jesus,\natual, actual pelos sacerdotes.",
+      "Nossa Senhora do Rosário de Fátima, Rainha do clero,\nrogai pelo Santo Padre, pelo nosso prelado,\npor todo o clero e pelos nossos seminários."
+    ],
+  },
+  {
+    id: 183,
+    category: "Misa",
+    section: "Comunhão",
+    title: `BAINHIRA NA`,
+    language: "tet",
+    verses: [
+      "1. Ha'u hamlaha, o to aihan mai Ha'u.\nBainhira Na'i, ha'u la dauk hetan ita Boot?\nHa'u malirin, o fo hatais mai Ha'u.\nMaibe ha'u Na'i, ha'u la dauk hetan ita Boot.\nBa maun alin terus o sei loran metin\nho o nia domin sei fo ksolok ba sira.",
+      "2. Ha'u kuran Na'i, humu o be mai Ha'u.\nBainhira Na'i, ha'u la dauk hetan ita Boot?\nHa'u hetan susar, o fo tulun mai Ha'u.\nMaibe ha'u Na'i ha'u la dauk hetan ita Boot.",
+      "3. Ha'u la'o dalan, o fo uma ba Ha'u.\nBainhira Na'i, ha'u la dauk hetan ita Boot?\nHa'u iha dadur, o ba visita Ha'u.\nHa'u hatene ona. Ita hamutuk ami."
+    ],
+  },
+  {
+    id: 184,
+    category: "Misa",
+    section: "Comunhão",
+    title: `UMA ESPIGA`,
+    language: "pt",
+    refrain: `Uma espiga dourada pelo sol,\ncacho de uvas que um homem cortou\nse convertem para nós em pão e vinho de amor;\nno Corpo e Sangue do Senhor.`,
+    verses: [
+      "1. Comungamos trigo na mesma semeadura,\nsomos moinho, a vida nos tritura with dor,\nDeus nos faz Eucaristia no amor.",
+      "2. Como grãos que fazem um só pão,\ncomo notas do mesmo cantor,\ncomo gotas de água que se fundem no mar,\nos cristãos um só corpo de Deus formar.",
+      "3. Sentar-se à mesa do Senhor,\ncomo filhos, Seu pão comungar,\nnesta mesma esperança caminhando irão\ne na vida como irmãos se hão-de amar."
+    ],
+  },
+  {
+    id: 185,
+    category: "Misa",
+    section: "Comunhão",
+    title: `SENHOR, NÓS TEMOS FOME`,
+    language: "pt",
+    refrain: `Senhor, nós temos fome, Senhor, nós temos sede;\nnão a fome de pão, não a sede de água!\nSão razdes de viver o que nos falta. (2x)`,
+    verses: [
+      "1. De um extremo mar ao outro, Senhor,\na Vossa palavra, mas não a encontramos.",
+      "2. Ninguém fala de Ti, ninguém nos pode ensinar,\nqueremos profetas que apontem caminhos para nós guiar.",
+      "3. Enquanto muitos se arrastam na fome e no sofrimento\nhá outros que vivem no seu bem estar,\ncomo donos do mundo, servir.",
+      "4. O que nos falta é servir,\nnem só de pão vive o homem,\nmas vive também de toda a palavra\nque vem de Deus."
+    ],
+  },
+  {
+    id: 186,
+    category: "Misa",
+    section: "Comunhão",
+    title: `COMUNHÃO E UNIÃO`,
+    language: "pt",
+    refrain: `Comunhão é união e união com Deus;\ncomunhão é união e verdade,\nnossas almas unidas se fundem\ne as mãos se estreitam em paz.`,
+    verses: [
+      "1. Na mesa com Cristo me sentirei\ne outro Cristo com Ele vou ser\ncom meu irmão eu meu alegre no dia\ne na noite com Ele sofrerei. (2x)",
+      "2. Minha alma unida a Deus todo est,\nquero ser testemunha e verdade\npara todos os homens dispersos,\no Senhor quando em fim voltarei. (2x)",
+      "3. Nenhum homem se afaste da tua forte voz\nse convidas a humanidade\ntodos podem amar-Te também, Senhor\nquando enfim para todos virá. (2x)"
+    ],
+  },
+  {
+    id: 187,
+    category: "Misa",
+    section: "Comunhão",
+    title: `Ó JESUS, QUE ESTAIS A MEU LADO`,
+    language: "pt",
+    refrain: `Vamos todos com santa alegria\nreceber a Jesus com amor,\nsempre mais que adoremos a Jesus\nmais e digno do nosso amor. (2x)`,
+    verses: [
+      "1. Ó Jesus, que estais sempre a meu lado\najudai-me a levar minha cruz.\nDesviai-me de todo o pecado\npara que vos sirva, Ó Jesus.",
+      "2. Qual veado que corre sedento\nde águas cristalinas ao frescor,\nassim eu corro a ti desfalecido\ncom teu pronto apaga o meu ardor.",
+      "3. E com fé e também com amor\nvamos todos buscar,\no alento, o forgo e o valor\npara os combates que vamos travar",
+      "4. São combates que só de temer\nos combates das nossas paixões;\ne Jesus é que há-de vencer,\ne com Ele seremos livres."
+    ],
+  },
+  {
+    id: 188,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HADOMI NA`,
+    language: "tet",
+    verses: [
+      "1. Ha'u klamar haksolok ho hananu, hananu, (3x)\ntamba Na'i hadomi ha'u. (2x)\nHadomi ho Na'i, Na'i, Na'i, fotu sa'e, sa'e, sa'e.\nIta neon tomak laran ba Maromak. (2x)\nIta tomak hana'i no hahi. (3x)",
+      "2. Tamba Na'i mak horik ho ita. (2x)",
+      "3. Mundu tomak hahi ita Boot, ita Boot. (3x)\nTamba ita ami nia Maksoin. (2x)"
+    ],
+  },
+  {
+    id: 189,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HANANU HO HA`,
+    language: "tet",
+    refrain: `Hananu ho ha`,
+    verses: [
+      "1. Ema raiklaran, hana'i ita Na'i,\nanju ho santu, hananu ita domin.",
+      "2. Kiik ho boot, hana'i ita Na'i,\nkiak ho riku.",
+      "3. Fulan ho loron, hana'i ita Na'i,\nfitun lalehan, hananu Nia domin.",
+      "4. Tasi ho foho, hana'i ita Na'i;\ntasi ho mota hananu Nia domin.",
+      "5. Udan ho anin hananu Nia Na'i;\nbe ho be-matan hananu Nia domin."
+    ],
+  },
+  {
+    id: 190,
+    category: "Misa",
+    section: "Comunhão",
+    title: `IMI KETA TAUK`,
+    language: "tet",
+    verses: [
+      "1. Imi keta tauk, Ha'u horik ho imi;\nbuka halo diak, tuir ukun domin.\nLa'o buka ksolok, matak malirin\nho soin lalehan laek.\nHat manan los sa? Hai, manan los sa sa?\nBuka mundu nia ksolok, sei la manan buat ida.",
+      "2. Ai funan foin buras, sei nomlaek ikun,\nmundu raiklaran sei mosu naben,\nmaibe Maromak domin,\nsei roman beibeik, leno ami fuan;\nbuka moris lalehan."
+    ],
+  },
+  {
+    id: 191,
+    category: "Misa",
+    section: "Comunhão",
+    title: `FIAR JESUS`,
+    language: "tet",
+    verses: [
+      "1. Ami fiar Jesus, ami Na'i, ami hein Jesus, ami Na'i.\nAmi hadomi Jesus, ami Na'i.\nNa'i Jesus, rona ami (2x)",
+      "2. Ami buka Jesus ami Na'i, ami harohan Jesus, ami Na'i.\nAmi hananu Jesus, ami Na'i.\nNa'i Jesus, rona ami (2x)",
+      "3. Ita ho ami Jesus; ita ho ami, iha ksolok terus Jesus, ita ho ami\nita ho ami ba nafatin (2x)\nIta ho terus, Jesus, ita ho ami."
+    ],
+  },
+  {
+    id: 192,
+    category: "Misa",
+    section: "Comunhão",
+    title: `AMI AGRADESSE, NA`,
+    language: "tet",
+    refrain: `Ami agradesse, Na`,
+    verses: [
+      "1. Ami agradesse, Na'i, tan ita kmanek wain Kreda.",
+      "2. Ami agradesse, Na'i, tan ami ohin Kreda.",
+      "3. ..tan fitun no fulan ..ba loron ohin nian.",
+      "4. ..ba ami nia emar ..tan ami nia fiar.",
+      "5. ..tan ami nia Maromak ..oras ne'e, nafatin."
+    ],
+  },
+  {
+    id: 193,
+    category: "Misa",
+    section: "Comunhão",
+    title: `HAHI, HANA`,
+    language: "tet",
+    verses: [
+      "1. Hahi hana'i ita nia Aman,\nnaroman leno ita nia dalan.\nAleluia, aleluia mak Maromak domin\nKristu Jesus loron toin sa'e.\nAleluia, aleluia.",
+      "2. Moris hamutuk hodi kaer liman,\nkaer ita knaar nudar sarani...\nSarani hatene hadomi malu,\nhakarak deit tuir lialos...",
+      "3. Lori Maromak hodi haksolok\nhosi lalehan leno hodi dalan...\nHana'i Maromak, hahi nafatin\niha nia Kreda fiar sarani..."
+    ],
+  },
+  {
+    id: 194,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `FO MAI ITA LALEHAN`,
+    language: "tet",
+    verses: [
+      "1. Ha'u la hatene los oin sa atu agradesse ha'u Na'i,\nfo mai ha'u buat mesak diak,\nksolok wain iha buat ha'u nia fuan.\nFo mai ita lalehan atu hare, fo mai ita ibun atu hananu,\nfo mai ita mundu atu hadomi, ksolok wain iha ha'u nia fuan\nfo loron ida ita mundu Nia sei hadomi, ksolok iha Nia uma hau nia fuan",
+      "2. Nia domin fo mai ita hodi tun hosi lalehan\natu hela hamutuk ita hodi ita tomak",
+      "3. Loron ida ita ho Nia sei soi ita tomak.\numa, Nia uma lalehan nabilan nian,\nhamutuk iha Nia uma,\nksolok wain iha ha'u nia fuan."
+    ],
+  },
+  {
+    id: 195,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `BA ITA BOOT HASA`,
+    language: "tet",
+    refrain: `Ba ita Boot hasa`,
+    verses: [
+      "1. Na'i, iha ita Boot ha'u Na'i;\nha'u nia laran la taridu subar an;",
+      "2. Tan ita Boot nia naran\nIta dada ha'u tuir dalan moris.",
+      "3. Ba ita liman ha'u klamar hasa'e;\nIta Boot sei mai soi ha'u.",
+      "4. Keta neon diak boot iha Na'i,\nha'u klamar mos haksolok iha Maromak."
+    ],
+  },
+  {
+    id: 196,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `ALELUIA, OBRIGADU`,
+    language: "tet",
+    refrain: `Aleluia, aleluia, aleluia, obrigadu ba Jesus rohan laek.`,
+    verses: [
+      "1. Obrigadu ba povu Israel, tan, tan Nia domin domin rohan laek.\nDehan Amolulik sei haklaken tan Nia domin rohan laek.",
+      "2. Nia liman los halo diak, tan Na'i Jesus mak soi ha'u.\nTo'o sei moris, sei la mate, atu haklaken Nia domin.",
+      "3. Loron ne'e Na'i nia loron, ita haksolok ho Nia.\nIta Na'i manan funu, ita haklaken makaas.\nIta hotu be Nia fihir, ita sei moris ho Nia domin."
+    ],
+  },
+  {
+    id: 197,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `KANTA ALLELUIA!`,
+    language: "tet",
+    refrain: `Kanta aleluia, aleluia! Ita hamutuk haksolok aleluia\nKanta aleluia, aleluia!\nIta hananu ho ksolok ba Na`,
+    verses: [
+      "1. Bainhira mai hamutuk, nudar nia povu hamutuk\nita hasolok ho hananu; hananu ita nia domin,\nhananu tan Nia paz, ksolok nebe hetan.",
+      "2. Lian ida deit, hahi no haksolok;\nLian ida no haksolok;\nKristu mak hadia nebe it'o\nIta moris ida, hamutuk ito Jesus\nhaksolok ita moris ba nafatin",
+      "3. Hosi fatin ne'e, ita hetan ksolok\nba mundu tomak ita sai\nIta lori domin, nebe hamutuk\nAtu mundu mos bele hatene."
+    ],
+  },
+  {
+    id: 198,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `FO OBRIGADU BA ITA NA`,
+    language: "tet",
+    refrain: `Fo obrigadu ba ita Na`,
+    verses: [
+      "1. Iha dader manu hananu Na'i. (2x)\nfo obrigadu ba ita Na'i.",
+      "2. Oh, ha'u nia belun basa la hananu,\nto obrigadu ba ita nia Na'i. (2x)",
+      "3. Kiik eh boot, riku eh kiak. (2x)",
+      "4. Hahi ba Kristu ita nia Maksoin. (2x)",
+      "5. Fo obrigadu ba ita Na'i,\nEukaristia, Nia domin fo mai ita. (2x)",
+      "6. Hananu hotu hodi haksolok,\nto obrigadu ba ita nia Na'i. (2x)"
+    ],
+  },
+  {
+    id: 199,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `AGRADESE NA`,
+    language: "tet",
+    refrain: `Agradese Na`,
+    verses: [
+      "1. Dader san deit manu oan nia Na'i. (2x)\nfo agradese ita Na'i Maromak.",
+      "2. Beh, ema sira, tansa la mai,\nfo agradese Maromak, ita Na'i. (2x)",
+      "3. Kiik oan no boot, riku no kiak.\nhana'i, hahi Kristu, ita Maksoin. (2x)",
+      "4. Hot-hotu mai,\nfo agradese Maromak, ita Na'i. (2x)"
+    ],
+  },
+  {
+    id: 200,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `NÃO FIQUEIS TRISTES`,
+    language: "pt",
+    refrain: `Não fiqueis tristes Eu vou partir,\nEu vou partir mas voltarei. (2x)`,
+    verses: [
+      "1. Vou preparar-vos um lugar,\nnão fiqueis tristes, tende fé.",
+      "2. Vou enviar-vos um Espírito\nQue vos dará toda a verdade.",
+      "3. Anunciarei-vos uma nova luz\nQue todo o mundo salvará."
+    ],
+  },
+  {
+    id: 201,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `NA`,
+    language: "tet",
+    refrain: `Na`,
+    verses: [
+      "1. Tan It'fo fiar mai ami.",
+      "2. Tan It'fo moris.",
+      "3. Tan It'fo aihan mai ami."
+    ],
+  },
+  {
+    id: 202,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `NA`,
+    language: "tet",
+    refrain: `Oh Na`,
+    verses: [
+      "1. Na'i, rona ami tanis, ami laran susar tebes;\nNo haraik ksolok mai ami, ami sira hela ne'e.",
+      "2. Simu ita atari sira ba ita Boot nia mahan,\nHamutuk ho Jesus lan no santu sira hotu."
+    ],
+  },
+  {
+    id: 203,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `ITA MAK NA`,
+    language: "tet",
+    verses: [
+      "1. Obrigadu, Na'i, tamba ita mak Aman laran diak.\nHa'u hanoin ita nia domin,\nha'u hanoin iha ha'u neon (iha ha'u laran)\nRona ha'u Han, ita mak Na'i no ha'u belun.\nSimu ha'u lian, ita mak Na'i no ha'u belun.\nRona ha'u Han, ita mak Na'i no ha'u belun.",
+      "2. Obrigadu, Na'i, tamba ita la'o hamutuk ho ha'u.\nIta kaer ha'u liman, (to'o rohan)\nIta hare ha'u nia dalan."
+    ],
+  },
+  {
+    id: 204,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `TAMBA MORIS FO MAI AMI, ALELUIA`,
+    language: "tet",
+    verses: [
+      "1. Tamba moris fo mai ami, aleluia.\nObrigadu, Na'i Jesus, aleluia.\nObrigadu, tamba ksolok, tamba domin, aleluia.",
+      "2. It'nia mate soi ami, aleluia...\nIt'nia domin halibur ami..."
+    ],
+  },
+  {
+    id: 205,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `VIDA NE`,
+    language: "tet",
+    refrain: `Vida ne`,
+    verses: [
+      "1. Tan ne'e ami fo obrigadu, Na'i.\nBa aifuan nafatin raiklaran,....\nobrigadu Aman doben.",
+      "2. Ba manu hananu iha ailaran,...",
+      "3. Ba loron lakan iha raiklaran,...",
+      "4. Ba anin nebe suli ba tasi ho tohu tutun,",
+      "5. Ba malirin iha tohu aas tutun,...",
+      "6. Ba tasi nebe hadulas raiklaran,\nBa Aman Maromak nia domin,..."
+    ],
+  },
+  {
+    id: 206,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `OBRIGADU, NA`,
+    language: "tet",
+    refrain: `Obrigadu, obrigadu, obrigadu, obrigadu,\nobrigadu, Na`,
+    verses: [
+      "1. Obrigadu ba moris foun ami simu hosi altar,\nFoti matan ba ita krus, ami la'o ba oin nafatin.",
+      "2. Mundu ne'e iha funu, ita ema mate wain.\nHaraik simu paz ba ami, halo ami povu hamutuk.",
+      "3. Ami tamba kbit terus nobun nebe liu mosu (iha) ami leet",
+      "4. Hodi mandamentu foun ami hetan lialos;\nIta povu sei hamutuk atu manan liberdade."
+    ],
+  },
+  {
+    id: 207,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `KRISTU HARAIK FO LIBERDADE`,
+    language: "tet",
+    refrain: `Kristu haraik fo liberdade, Kristu haraik fo salvacao\nKristu haraik laran metin, Kristu lialos nia domin.`,
+    verses: [
+      "1. Na'i Maromak haraik paz no lialos, ha'u hetan diak.\nNia hasan ema hotu ba krus, ha'u diak.\nFo mai ha'u, Na'i, ita ha: rona ha'u Na'i ha'u orasau",
+      "2. Ha'u perda ha'u nia maluk,\nNa'i Jesus perda ha'u.\nNa'i hadomi moris tuir dalan los, ha'u hetan Nia.",
+      "3. Ha'u tuir dalan, dalan ksolok,\ndalan los, tuir dalan los.\nHa'u hadomi ema fuik, ema leet ha'u Na'i ninin."
+    ],
+  },
+  {
+    id: 208,
+    category: "Misa",
+    section: "Ação de Graças",
+    title: `ITA HOTU AGRADESE`,
+    language: "tet",
+    refrain: `Ita hotu agradesse tamba buat kmanek oi-oin hosi Na`,
+    verses: [
+      "1. Ami agradesse tan fulan fitun kalan nian.\nAmi agradesse tan toos natar ami nian.\nAmi agradesse tan domin rohan laek.\nObrigadu Na'i tan ita kmanek wain.",
+      "2. Ami agradesse tan tasi foho rai ne'e nian.\nAmi agradesse tan udan anin lor-loron.\nAmi agradesse tan ami emar.\nObrigadu Na'i tan ita kmanek wain.",
+      "3. Ami agradesse tan ita ami Na'i wain.\nAmi agradesse tan fiar nebe ami iha.\nAmi agradesse tan ita tahan ita Kreda.\nObrigadu Na'i tan ita kmanek wain."
+    ],
+  },
+  {
+    id: 209,
+    category: "Misa",
+    section: "Final",
+    title: `ALELUIA, DEMOS GRAÇAS AO SENHOR`,
+    language: "pt",
+    refrain: `Aleluia, aleluia, aleluia, demos graças ao Senhor.`,
+    verses: [
+      "1. Demos graças ao Senhor, pois Seu amor é sem fim.\nDiga o povo de Israel que Seu amor é sem fim.",
+      "2. Sua destra fez prodígios, pois o Senhor me salvou.\nViverei, não morrerei, p'ra Seu amor proclamar.",
+      "3. Eis o dia do Senhor, alegres nele exultaremos.\nA vitória do nosso Deus, em alta voz proclamemos.",
+      "4. Todos nós, os Seus eleitos, em Seu amor viveremos.\nDemos graças ao Senhor, pois Seu amor é sem fim.\nCantem todos os cristãos que Seu amor é sem fim.\nCante toda criatura que Seu amor é sem fim."
+    ],
+  },
+  {
+    id: 210,
+    category: "Misa",
+    section: "Final",
+    title: `MORIS FOUN`,
+    language: "tet",
+    verses: [
+      "1. Moris foun, moris foun nebe ohin ha'u simu moris\nha'u sei rai didiak.\nBa obrigadu, obrigadu iha ha'u ha'u nia laran nakali,\nHo ha'u haksolok, ho ha'u maluk sira. (2x)\n\nNo ha'u fiar, no ha'u fiar iha Na'i Jesus,\nHa'u ho moris nafatin nia kbit ha'u lori nia domin\nBa ha'u maluk sira. (2x)",
+      "2. Obrigadu obrigadu ba Na'i ha'u Maromak, obrigadu\ntan ha'u nia laran luak, ho haksolok basa Na'i Jesus\nmai horik ha'u laran.",
+      "3. Timor oan, Timor oan, ha'u alin, ha'u maun,\nhadomi tuir ba malu;\nhalo tuir, halo tuir Jesus,\nNa'i Maromak ninia ukunfuan.\nIta ba nia domin ba dook o laran nakali,\no nia tuir Jesus hirus.\nBuka tuir Jesus nia hanorin:\nHadomi, fo dame ba ha'u maluk sira. (2x)"
+    ],
+  },
+  {
+    id: 211,
+    category: "Misa",
+    section: "Final",
+    title: `RONA, HA`,
+    language: "tet",
+    refrain: `Rona, ha`,
+    verses: [
+      "1. Hosi halak sira ba loron-loron nian,\nbuat ida deit mak dom\nhadomi ha'u maluk sira boot:",
+      "2. Buat sa mak ha'u halo, moris iha mundu ne'e,\nhosi halak aat sira ba hadook ha'u anhosii Na'i.",
+      "3. Ha'u haksumik ha'u nia lia hahi ita Boot\nBa ita Na'i, ha'u Maromak.",
+      "4. Kristu, O nia Isin no Ran nebe O fo mai ha'u\nSai aihan moris kmanek wain\nNudar ha'u nia bukae."
+    ],
+  },
+  {
+    id: 212,
+    category: "Misa",
+    section: "Final",
+    title: `ORAÇÃO PELA FAMÍLIA`,
+    language: "pt",
+    refrain: `Abençoa, Senhor, as famílias, amém.\nAbençoa, Senhor, a minha também! (2x)`,
+    verses: [
+      "1. Que nenhuma família comece em qualquer de repente,\nque nenhuma família termine por falta de amor.\nQue o casal seja um para o outro de corpo e de mente\ne que nada no mundo separe um casal sonhador.\nQue nenhuma família se abrigue debaixo da ponte,\nque ninguém interfira no lar e na vida dos dois,\nque ninguém os obrigue a viver sem nenhum horizonte,\nque eles vivam do ontem, no hoje e em função do depois.\nQue a família comece e termine sabendo onde vai\ne que o homem carregue nos ombros a graça de um pai.\nQue a mulher seja um céu de ternura, aconchego e calor\ne que os filhos conheçam a força que brota do amor.",
+      "2. Que marido e mulher tenham força de amar sem medida,\nque ninguém vá dormir sem pedir ou sem dar seu perdão.\nQue as crianças aprendam no colo o sentido da vida,\nque a família celebre a partilha do abraço e do pão.\nQue marido e mulher não se traiam nem traiam seus filhos,\nque o ciúme não mate a certeza do amor entre os dois.\nQue no seu firmamento a estrela que tem maior brilho\nseja firme esperança de um céu aqui mesmo e depois."
+    ],
+  },
+  {
+    id: 213,
+    category: "Misa",
+    section: "Final",
+    title: `CIDADÃO DO INFINITO`,
+    language: "pt",
+    refrain: `Sou cidadão do infinito, do infinito, do infinito\ne levo a paz no meu caminho, no meu caminho, no meu caminho.`,
+    verses: [
+      "1. Por escutar uma voz que disse que faltava gente pra semear,\ndeixei meu lar e saí sorrindo e assobiando pra não chorar.\nFui me alistar entre os operários que deixam tudo pra te levar,\ne fui lutar por um mundo novo,\nnão tenho lar, mas ganhei um povo. (2x)",
+      "2. Eu procurei semear a paz e onde fui andando falei de Deus.\nAbençoei quem fez pouco caso e espalhou cizânia onde eu semeei.\nNão recebi condecoração por haver buscado um país irmão,\nvou semeando por entre o povo e vou sonhando este mundo novo. (2x)"
+    ],
+  },
+  {
+    id: 214,
+    category: "Misa",
+    section: "Final",
+    title: `BA HO DAME`,
+    language: "tet",
+    refrain: `Ba ho dame, haksolok nafatin,\nHasoru ema hotu ho domin.`,
+    verses: [
+      "Liafuan diak ita simu ona,\nFakar naroman ba dalan hot-hotu.",
+      "Na’i Maromak hein hela ita hotu,\nIta keta tauk, Nia hamutuk ho ita.",
+      "Viva Jesus! Viva Aman Maromak!\nIta haksolok hodi hahi Nia naran."
+    ],
+    tags: ["final", "missa", "tetum"],
+  },
+  {
+    id: 215,
+    category: "Misa",
+    section: "Final",
+    title: `ITA BOLU, HA`,
+    language: "tet",
+    verses: [
+      "1. Ita bolu, ha'u sei ba; fo ba mundu domin no paz\nHa'u sei fo ha'u nia fuan ba ha'u maun alin kiak hu.\nTan ne'e ha'u sei haksolok maski ema hewai ha'u. (2x)"
+    ],
+  },
+  {
+    id: 216,
+    category: "Misa",
+    section: "Final",
+    title: `AMI HAKLAKEN ITA REINU, NA`,
+    language: "tet",
+    refrain: `Ami haklaken ita reinu, Na`,
+    verses: [
+      "1. Reinu paz no justisa, reinu moris no lialos.",
+      "2. Reinu domin no tulun, reinu be iha ami laran.",
+      "3. Reinu be terus makaas, be laos rai ne'e nian."
+    ],
+  },
+  {
+    id: 217,
+    category: "Misa",
+    section: "Final",
+    title: `HA`,
+    language: "tet",
+    refrain: `Ha`,
+    verses: [
+      "1. Ba tafoli Ha'u liafuan Ho Ha'u naran.\nhalibur",
+      "2. Ha'u horik (ho) imi ba nafatin;\nlori paz no domin ba povu raiklaran."
+    ],
+  },
+  {
+    id: 218,
+    category: "Misa",
+    section: "Final",
+    title: `AMI HANANU, NA`,
+    language: "tet",
+    verses: [
+      "1. Ami hananu, Na'i, mai ami.\nAmi harohan, Na'i, mai ami.\nIha orasau, Na'i, mai ami.\nNa'i hit An mai. (2x)",
+      "2. Ba ema diak... Halo alin maun... Haraik paz...",
+      "3. Lubun sarani... Mai ami leet... Halo hamutuk...",
+      "4. Iha paz... Iha funu... Oin oin oin..."
+    ],
+  },
+  {
+    id: 219,
+    category: "Misa",
+    section: "Final",
+    title: `ITA MAI HOSI LALEHAN`,
+    language: "tet",
+    verses: [
+      "1. Ita mai hosi lalehan, ita dehan, hotu dehan:\nJesus mak ita nia dalan, lori ita fila lalehan.\nQ hatene ona, ita hatene tiha ana:\nJesus mak ita nia dalan, lori ita fila lalehan. (2x)",
+      "2. Jesus mak bele hasai ita hosi aat ba diak laran,",
+      "3. Aman mesak ema ida, ema ida Aman Maromak.\nIta maun alin deit hosi uluk, hosi uluk kedas."
+    ],
+  },
+  {
+    id: 220,
+    category: "Misa",
+    section: "Final",
+    title: `HA`,
+    language: "tet",
+    verses: [
+      "1. Ha'u hakarak duni tuir Na'i Jesus,\nha'u nia fuan metin ba Nia.\nBuat hotu-hotu husik ba kotuk,\ntuir Na'i Jesus mak ha'u hakarak.",
+      "2. Jesus naroman leno ha'u nia dalan,\nmoris nafatin tuir Nia hanorin;\nbuat ida deit mak ha'u hakarak:\nmoris nafatin.",
+      "3. Ha'u nia ksolok mak Na'i Jesus.\nNia futar lia bolu tuir ha'u nafatin.\nHusik buat hotu, hela hamutuk ho ha'u nafatin mai,"
+    ],
+  },
+  {
+    id: 221,
+    category: "Misa",
+    section: "Final",
+    title: `IMI BA MUNDU TOMAK, NA`,
+    language: "tet",
+    refrain: `Imi ba mundu tomak, ba haklaken Ha`,
+    verses: [
+      "1. Tansa haruka ha'u, Na'i? ha'u nia ibun foer;",
+      "2. Tansa haruka ha'u, Na'i, ha'u sei labarik ida;\ntansa haruka ne'e, Na'i.",
+      "3. Ha'u mak ne'e, Na'i, atu tuir ita hakarak;\nha'u mak ne'e, Na'i.",
+      "4. Ha'u sei ba, Na'i, tan ita la'o ho ha'u;\nha'u sei ba, Na'i."
+    ],
+  },
+  {
+    id: 222,
+    category: "Misa",
+    section: "Final",
+    title: `HARAIK LARAN MAI HA`,
+    language: "tet",
+    refrain: `Haraik laran mai ha`,
+    verses: [
+      "1. Ema foun hatama moris foun,\nsira hodi hanorin lia Kristu.\nEma foun nebe hakarak moris\nla tauk atu kaer dalan naruk.",
+      "2. Ema foun hafunu hodi hein\nsira kaer dalan atu buka lialos.\nema foun lakohi hela iha sola,",
+      "3. Ema foun hadomi laran-hotu,\nlakohi fihir rai hodi hot-kit kulit,\nema foun hamutuk ho ema kiak,\natu fo ba malu ho hahan."
+    ],
+  },
+  {
+    id: 223,
+    category: "Misa",
+    section: "Final",
+    title: `BA MESAK NIA, OLARE`,
+    language: "tet",
+    verses: [
+      "1. Kristu, ita nia belun, no matadalan;\nSoi ita ita hosi susar, haraik naroman.\nBa mesak Nia, olare, ha'u hana'i; belun.",
+      "2. saran ha'u moris, olare, to'o mate nia belun;\nKristu, ita mestre, ita nia belun;\nknananuk ida ne'e nia mai hanorin.",
+      "3. Monu ba susar laran ha'u ba nafatin,\ntamba ha'u buka Kristu ho laran metin.",
+      "4. Mane no feto oan sira hare didiak\ntuir san hare iha rai mak moris lerek.",
+      "5. Imi hare iha rai moris la ho Maromak, moris hun laek."
+    ],
+  },
+  {
+    id: 224,
+    category: "Misa",
+    section: "Final",
+    title: `FOINSA`,
+    language: "tet",
+    refrain: `Foinsa`,
+    verses: [
+      "1. Kristu: ita Boot mak ami roman;\nIta ami nia kbit no ami nia Maksoin!",
+      "2. Hametin: ami hotu fiar atu hafoun rai ami.\nKristu: ita nia\nho ami nia neon badinas ho ami nia ran manas;\nhametin ho haburas Kreda rai Timor."
+    ],
+  },
+  {
+    id: 225,
+    category: "Misa",
+    section: "Final",
+    title: `BA KAER HA`,
+    language: "tet",
+    refrain: `Ba kaer Ha`,
+    verses: [
+      "1. Na'i Jesus bolu ha'u atu serbisu,\nnatar boot atu serbisu ha'u: Jesus, ha'u mak ne'e.",
+      "2. Saran vida ba Na'i kmanek tebes,\nha'u mak ne'e.\nNa'i hanorin, Nia mak halo.\nSaran vida ba Na'i tamba domin,\nha'u oras to'o ona.",
+      "3. O maun alin nebe husu tulun, keta taka a nia fuan;\no maun alin sei terus a nia sorin,\ntaka a nia sorin, to kedas a nia tulun.",
+      "4. Hahalok diak sei halo iha rai ne'e,\nJesus fo kolen iha lalehan;\nNia sei kolen iha rai ne'e kedas,\nsei selu iha lalehan."
+    ],
+  },
+  {
+    id: 226,
+    category: "Misa",
+    section: "Final",
+    title: `EVANJELIU DEHAN KATAK`,
+    language: "tet",
+    refrain: `Evanjeliu halo tomak hananu obrigadu nafatin. (2x)`,
+    verses: [
+      "1. Evanjeliu dehan katak ita hotu sai maun alin,\ndehan katak tenke fahe tempu, tenke sai amigus;\ndehan katak tenke konfia malu, haksolok (2x) hamutuk\nno iha susar laran tenke buka Kristu. (2x)",
+      "2. Evanjeliu dehan katak tenke buka hari dame.\nEvanjeliu dehan katak domin tenke to de grasa.\nno ha'u nia moris ema kiak sei Kristu nia laran (2x)",
+      "3. Evanjeliu dehan katak lalehan mai ona ba labarik sira,\ndehan katak tenke to obrigadu ba Maromak Aman\nno iha moris tomak hananu nafatin. (2x)",
+      "4. Evanjeliu dehan katak tenke la'o moris hamutuk;\nto esperansa ba ema be tanis, la hare futuru;\ntenke to liberdade ba dadur; tenke moris hias\nJesus moris hias ona, Nia horik ho ita! (4x)"
+    ],
+  },
+  {
+    id: 227,
+    category: "Misa",
+    section: "Final",
+    title: `GRANDE AMOR`,
+    language: "pt",
+    verses: [
+      "Grande, grande amor que por nós tem o Senhor.\nGrande, grande amor de Jesus sobre a Cruz.\nGrande como oceano, fundo como o mar,\nalto, alto como o azul do Céu: assim é o meu amor."
+    ],
+  },
+  {
+    id: 228,
+    category: "Misa",
+    section: "Final",
+    title: `SAKRIFISIU BOOT LIU HOTU`,
+    language: "tet",
+    refrain: `Missa Eukaristia. (2x)`,
+    verses: [
+      "1. Sakrifisiu boot liu hotu: Missa ita, ita atu halo tuir. (2x)\nIta Kristu mak halo, husik mai ita, ita nia liafuan tuir. (2x)\nMaluk sira, it'namkari ona; lori Maromak ba ita uma;\nHela hamutuk ho ita. (2x)",
+      "2. Ita nia Missa hotu ona, fila ba uma ho ksolok. (2x)\nIta tatoli ba ema hotu-hotu Kristu nia liafuan. (2x)"
+    ],
+  },
+  {
+    id: 229,
+    category: "Misa",
+    section: "Final",
+    title: `VOS SEREIS MEUS AMIGOS`,
+    language: "pt",
+    refrain: `Vos sereis meus amigos se fizerdes o que vos mando.\nVos sereis meus amigos.`,
+    verses: [
+      "1. Dou-vos um mandamento novo\nque vos ameis uns aos outros como Eu vos amei.",
+      "2. Nisto conhecerão que sois meus discípulos\nse vos amardes uns aos outros.",
+      "3. Felizes os que levam vida sem mancha,\nque andam na lei do Senhor.",
+      "4. Felizes os que guardam seus preceitos,\ne o buscam de todo o coração."
+    ],
+  },
+  {
+    id: 230,
+    category: "Misa",
+    section: "Final",
+    title: `E PELO MUNDO VOU`,
+    language: "pt",
+    refrain: `E pelo mundo vou cantando o Teu amor,\npais disponível estou para servir-Te, Senhor. (2x)`,
+    verses: [
+      "1. Quero ouvir Teu apelo, Senhor,\nao Teu convite de amor responder\ne na alegria Te quero servir\ne anunciar o Teu reino de amor.",
+      "2. Dia a dia Tua graça me das\nnela se apoia o meu caminhar.\nSe estás no meu lado, Senhor,\no que então poderei eu temer?"
+    ],
+  },
+  {
+    id: 231,
+    category: "Misa",
+    section: "Final",
+    title: `IT`,
+    language: "tet",
+    refrain: `It`,
+    verses: [
+      "1. It'nia reinu manan iha krus.\nIt'nia reinu halibur it'nia terus povu.\nIt'nia reinu mak paz no hadomi.",
+      "2. Ema hotu nebe ho aten b'rani nebe\nsei buka harii it'nia reinu ho terus:\nsei hare, hodi harii iha paz no hadomi."
+    ],
+  },
+  {
+    id: 232,
+    category: "Misa",
+    section: "Final",
+    title: `MALUK TIMOR OAN`,
+    language: "tet",
+    verses: [
+      "1. Maluk Timor oan hotu, it'namkari ona;\nneon ksolok klamar mos, hahi Na'i Maromak.\nTatoli ba rai hotu katak ba ema tomak,\nMaromak nia futar lia, Maromak nia hadomi.",
+      "2. Hadomi ema hotu, halo diak ba ema tomak.\nMaromak nia tutor lia, Maromak nia hadomi."
+    ],
+  },
+  {
+    id: 233,
+    category: "Misa",
+    section: "Final",
+    title: `RAI SIRATASI BALUN`,
+    language: "tet",
+    verses: [
+      "1. Rai sira tasi balun, imi rona Ha'u ba!\nPovu sira hosi dook, se tilun ba ha'u lian.\nNa'i bob, ba haklaken Nia liafuan ba mundu.",
+      "2. Tuir deit ita hakarak fo'er no ha'u nanal la surik los,\nmaibe Na'i horik (ho) ha'u, hamahan ho nia liman.\nNia halo ha'u nanal sai nudar surik kroat.\nNia temi ha'u naran. Haruka ha'u, Na'i."
+    ],
+  },
+  {
+    id: 234,
+    category: "Misa",
+    section: "Final",
+    title: `VAI TRABALHAR`,
+    language: "pt",
+    refrain: `Vai trabalhar pelo mundo fora!\nEu estarei até ao fim contigo,\nesta na hora, o Senhor me chamou:\nSenhor, aqui estou!`,
+    verses: [
+      "1. O Senhor me chamou a trabalhar,\na messe é grande a ceifar,\na ceifar, o Senhor me chamou:\nSenhor, aqui estou!",
+      "2. Todo o bem que na terra alguém fizer,\nJesus no céu vai a premier\ncem por um, ja na terra Ele vai dar,\nno céu vai premier.",
+      "3. Teu irmão a tua porta vem bater\nnão vais fechar teu coração;\nteu irmão va subito socorrer."
+    ],
+  },
+  {
+    id: 235,
+    category: "Misa",
+    section: "Final",
+    title: `KRISTU, NA`,
+    language: "tet",
+    verses: [
+      "1. Kristu, Na'i Liurai (3x)\nKristu, Na'i Liurai",
+      "2. Ita ami nia Maun (3x) ita ami nia Maun (3x)\nKristu, Kristu, Kristu, ami nia Maun",
+      "3. Fo mai ami ita nia kbit Kristu (4x)\nFo mai ami ita nia domin Kristu (6x)\nFo mai ami ita nia kbit Kristu",
+      "4. Atu ami bele hamutuk Kristu (4x)\nAtu ami sai belun maun alin Kristu (6x)\nAtu ami hamutuk",
+      "5. O mai, Na'i Jesus, mai\nMai, Na'i Jesus,\nO mai, Na'i, atu soi ami\nMai, Na'i Jesus (2x)\nO mai, Na'i Jesus\nMai, Na'i Jesus, mai, mai, mai,"
+    ],
+  },
+  {
+    id: 236,
+    category: "Misa",
+    section: "Final",
+    title: `MAIS OUTRO DIA FINDOU`,
+    language: "pt",
+    verses: [
+      "1. Mais outro dia findou,\neu venho te-ver para conversar.\nMais outra noite chegou,\neu venho agradecer antes de repousar.\nAndei um dia inteiro procurando o meu irmão;\neu quis ser instrumento do Teu amor, do Teu perdão.",
+      "2. Muito obrigado, Senhor, pelo amor que eu ensinei,\npelo amor que eu recebi, muito obrigado, Senhor,\npelo amor que eu soube, por sorrisos que sorri.",
+      "3. Sou peregrino do amor\nvenho agradecer no dia que vivi\nhouve tristezas, Senhor, mas eu não quis sofrer,\npois caminhei em Ti."
+    ],
+  },
+  {
+    id: 237,
+    category: "Misa",
+    section: "Final",
+    title: `KRISTU, O HA`,
+    language: "tet",
+    verses: [
+      "1. Se Kristu husu ba ha'u: \"Mundu ne'e oin sa los?\"\nHa'u hatan ba ha'u Maun: \"Buat barak mak la los.\"",
+      "2. Buat barak la'o la los, tamba ha'u, tamba mak ita;\ntamba barak.",
+      "3. Tamba ha'u, tamba ita, ema mundu rai klaran terus\ntamba ha'u, tamba ita, ita hotu nia hahalok."
+    ],
+  },
+  {
+    id: 238,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `GLORIA`,
+    verses: [
+      "Gloria in excelsis Deo\net in terra pax hominibus bonae voluntatis.\nLaudamus te,\nbenedicimus te,\nadoramus te,\nglorificamus te,\ngratias agimus tibi,\npropter magnam gloriam tuam,\nDomine Deus, Rex caelestis,\nDeus Pater omnipotens.\nDomine Fili unigenite Jesu Christe,\nDomine Deus, Agnus Dei, Filius Patris,\nqui tollis peccata mundi, miserere nobis.\nQui tollis peccata mundi,\nsuscipe deprecationem nostram.\nQui sedes ad dexteram Patris,\nmiserere nobis.\nQuoniam tu solus sanctus,\ntu solus Dominus,\ntu solus altissimus, Jesus Christe,\ncum sancto Spiritu, in gloria Dei Patris.\nAmen."
+    ],
+    tags: ["latin"],
+  },
+  {
+    id: 239,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `SANCTUS`,
+    verses: [
+      "Sanctus, Sanctus, Sanctus\nDominus Deus Sabaoth.\nPleni sunt caeli et terra gloria tua.\nHosanna in excelsis.\nBenedictus qui venit in nomine Domini.\nHosanna in excelsis."
+    ],
+    tags: ["latin"],
+  },
+  {
+    id: 240,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `AGNUS DEI`,
+    verses: [
+      "Agnus Dei, qui tollis peccata mundi:\nmiserere nobis.\nAgnus Dei, qui tollis peccata mundi:\nmiserere nobis.\nAgnus Dei, qui tollis peccata mundi:\ndona nobis pacem."
+    ],
+    tags: ["latin"],
+  },
+  {
+    id: 241,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `PATER NOSTER`,
+    verses: [
+      "Pater noster, qui es in caelis,\nsanctificetur nomen tuum.\nAdveniat regnum tuum.\nFiat voluntas tua, sicut in caelo et in terra.\nPanem nostrum quotidianum da nobis hodie,\net dimitte nobis debita nostra,\nsicut et nos dimittimus debitoribus nostris.\nEt ne nos inducas in tentationem,\nsed libera nos a malo."
+    ],
+    tags: ["latin"],
+  },
+  {
+    id: 242,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `ADESTE FIDELES`,
+    verses: [
+      "1. Adeste fideles, laete triumphantes,\nvenite, venite in Bethlehem.\nNatum videte Regem angelorum.",
+      "Venite adoremus, venite adoremus,\nvenite adoremus Dominum.",
+      "2. En grege relicto, humiles ad cunas,\nvocati pastores adproperant.\nEt nos ovanti gradu festinemus.",
+      "3. Aeterni Parentis splendorem aeternum,\nvelatum sub carne videbimus.\nDeum infantem pannis involutum."
+    ],
+  },
+  {
+    id: 243,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `ALTA TRINITA BEATA`,
+    verses: [
+      "Alta Trinita beata, da noi sempre adorata,\ntrinita gloriosa, unita maravigliosa.\nTu sei manna saporosa e tutta desiderosa."
+    ],
+  },
+  {
+    id: 244,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `AVE VERUM CORPUS`,
+    verses: [
+      "Ave verum Corpus natum de Maria Virgine,\nvere passum, immolatum in cruce pro homine.\nCujus latus perforatum fluxit aqua et sanguine:\nesto nobis praegustatum mortis in examine.\nO Jesu dulcis, O Jesu pie, O Jesu fili Mariae."
+    ],
+  },
+  {
+    id: 245,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `BENEDICTUS SIT DEUS`,
+    verses: [
+      "Benedictus sit Deus Pater,\nUnigenitusque Dei Filius,\nsanctus quoque Spiritus:\nquia fecit nobiscum misericordiam suam."
+    ],
+  },
+  {
+    id: 246,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `CONFIRMA HOC DEUS`,
+    verses: [
+      "Confirma hoc Deus,\nquod operatus es in nobis,\na templo sancto tuo,\nquod est in Jerusalem.\nGloria Patri et Filio et Spiritui Sancto.\nSicut erat in principio et nunc et semper,\net in saecula saeculorum. Amen."
+    ],
+  },
+  {
+    id: 247,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `COR JESU SACRATISSIMUM`,
+    verses: [
+      "Cor Jesu sacratissimum, miserere nobis.\nCor Mariae immaculatum, ora pro nobis.\nO Jesu, doce me facere voluntatem tuam,\nquia Deus meus es Tu."
+    ],
+  },
+  {
+    id: 248,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `ECCE SACERDOS MAGNUS`,
+    verses: [
+      "Ecce sacerdos magnus,\nqui in diebus suis placuit Deo,\net inventus est justus,\net in tempore iracundiae factus est reconciliatio.\nIdeo jurejurando fecit illum Dominus\ncrescere in plebem suam."
+    ],
+  },
+  {
+    id: 249,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `HODIE CHRISTUS NATUS EST`,
+    verses: [
+      "Hodie Christus natus est:\nhodie Salvator apparuit:\nhodie in terra canunt angeli,\nlaetantur archangeli:\nhodie exsultant justi, dicentes:\nGloria in excelsis Deo, Alleluia."
+    ],
+  },
+  {
+    id: 250,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `LAUDES REGIAE`,
+    refrain: `Christus vincit, Christus regnat\nChristus, Christus imperat.`,
+    verses: [
+      "1. N..., summo Pontifice et universal! Patri,\npax, vita, et salus perpetua.",
+      "2. N..., reverendissimo Episcopo,\net universal! clero ei commisso,\npax, vita, et salus perpetua.",
+      "3. Tempora bona veniant,\npax Christi veniat,\nregnum Christi Veniat."
+    ],
+  },
+  {
+    id: 251,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `JESU DULCIS MEMORIA`,
+    verses: [
+      "1. Jesu dulcis memoria, dans vera cordia gaudia:\nsed super mel et omnia, ejus dulcis praesentia.",
+      "2. Nil canitur suavius, nil auditur jucundius,\nnil cogitatur dulcius, quam Jesus Dei Filius.",
+      "3. Jesu spes paenitentibus, quam pius es petentibus!\nquam bonus Te quaerentibus, sed quid invenientibus!",
+      "4. Nec lingua valet dicere, nec literae exprimere:\nexpertus potest credere, quid sit Jesum diligere.",
+      "5. Sis Jesu nostrum gaudium, qui es futurus praemium:\nsit nostra in Te gloria, per cuncta semper saecula.\nAmen."
+    ],
+  },
+  {
+    id: 252,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `LAUDA JERUSALEM DOMINUM`,
+    refrain: `Lauda, Jerusalem, Dominum. Lauda, Deum tuum, Sion.\nHosanna, hosanna, Hosanna Filio David.`,
+    verses: [
+      "1. Benedictus Dominus Deus Israel,\nquia visitavit et fecit\nredemptionem plebis suae."
+    ],
+  },
+  {
+    id: 253,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `LAUDATE DOMINUM, OMNES GENTES`,
+    verses: [
+      "Laudate Dominum, omnes gentes.\nLaudate eum, omnes populi,\nquoniam confirmata est super nos\nmisericordia ejus.\nEt veritas Domini manet in aeternum.",
+      "Gloria Patri et Filio, et Spiritui Sancto\nsicut erat in principio et nunc et\nsemper et in saecula saeculorum.\nAmen."
+    ],
+  },
+  {
+    id: 254,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `LAUDA SION SALVATOREM`,
+    verses: [
+      "Lauda Sion Salvatorem, lauda ducem et pastorem\nin hymnis et canticis.",
+      "Sit laus plena, sit sonora, sit jucunda, sit decora.\nMentis jubilatio.",
+      "Christus vincit, Christus regnat\nChristus imperat. (2x)"
+    ],
+  },
+  {
+    id: 255,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `O SACRUM CONVIVIUM`,
+    verses: [
+      "O sacrum convivium in quo Christus sumitur,\nrecolitur memoria passionis ejus: mens impletur gratia\net futurae gloriae nobis pignus datur."
+    ],
+  },
+  {
+    id: 256,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `RORATE CAELI DESUPER`,
+    refrain: `Rorate caeli desuper et nubes pluant Justum.`,
+    verses: [
+      "1. Ne irascaris, Domine:\nne ultra memineris iniquitatis:\necce civitas Sancti facta est deserta;\nSion deserta facta est.\nJerusalem desolata est.\nDomus sanctificationis tuae\net gloriae tuae\nubi laudaverunt te patres nostri.",
+      "2. Peccavimus, et facti sumus\ntanquam immundos nos,\net cecidimus quasi folium universi:\net iniquitates nostrae\nquasi ventus abstulerunt nos:\nabscondisti faciem tuam a nobis\net allisisti nos in manu iniquitatis nostrae.\nVide Domine afflictionem populi tui\net mitte quem missurus es:\nemitte Agnum dominatorem terrae,\nde Petra deserti ad montem filiae Sion:\nut auferat ipse jugum captivitatis nostrae.",
+      "3. Consolamini, consolamini, popule meus:\ncito veniet salus tua:\nquare moerore consumeris,\nquia innovavit te dolor?\nSalvabo te, noli timere,\nego enim sum Dominus Deus tuus,\nsanctus Israel, redemptor tuus."
+    ],
+  },
+  {
+    id: 257,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `TE DEUM`,
+    verses: [
+      "Te Deum laudamus:\nTe Dominum confitemur.\nTe aeternum Patrem omnis terra veneratur.",
+      "Tibi omnes angeli, tibi caeli et universae potestates:\nTibi Cherubim et Seraphim incessabili voce proclamant:\nSanctus, sanctus, sanctus Dominus Deus sabaoth.\nPleni sunt coeli et terra majestatis gloriae tuae.",
+      "Te gloriosus apostolorum chorus,\nTe prophetarum laudabilis numerus,\nTe martyrum candidatus laudat exercitus.",
+      "Te per orbem terrarum sancta confitetur Ecclesia.\nPatrem immensae majestatis.\nVenerandum tuum verum et unicum Filium.\nSanctum quoque Paraclitum Spiritum.",
+      "Tu Rex gloriae, Christe.\nTu Patris sempiternus es Filius.\nTu, ad liberandum suscepturus hominem non horruisti Virginis uterum.\nTu, devicto mortis aculeo, aperuisti credentibus regna coelorum.\nTu ad dexteram Dei sedes in gloria Patris.\nJudex crederis esse venturus.",
+      "Te ergo, quaesumus, tuis famulis subveni\nquos pretioso sanguine redemisti.\nAeterna fac cum sanctis tuis in gloria numerari.",
+      "Salvum fac populum tuum, Domine,\nEt benedic haereditati tuae.\nEt rege eos, et extolle illos usque in aeternum.\nPer singulos dies benedicimus Te.",
+      "Et laudamus nomen tuum in saeculum et in saeculum saeculi.\nDignare, Domine, die isto sine peccato nos custodire.\nMiserere nostri, Domine, miserere nostri.\nFiat misericordia tua, Domine, super nos,\nquemadmodum speravimus in Te.\nIn Te, Domine, speravi; non confundar in aeternum.",
+      "V. Te, Domine, speravi; non confundar in aeternum.\nR. Benedictus es, Domine, in firmamento coeli.\nV. Et laudabilis et globiosus et superexaltatus in saecula.\nR. Amen."
+    ],
+  },
+  {
+    id: 258,
+    category: "Misa",
+    section: "Misa Latin",
+    title: `VENI, VENI EMMANUEL`,
+    refrain: `Gaude! Gaude! Emmanuel, nascetur pro te, Israel.`,
+    verses: [
+      "1. Veni, veni Emmanuel, captivum solve Israel\nqui gemit in exilio, privatus Dei Filio.",
+      "2. Veni, O Sapientia, quae hic disponis omnia"
+    ],
+  },
+];

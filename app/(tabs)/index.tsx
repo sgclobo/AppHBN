@@ -22,7 +22,7 @@ export default function Index() {
         </Pressable>
         <Text style={styles.h3}>HAROHAN</Text>
         <Text style={styles.h2}>BA NAI</Text>
-        <Text style={styles.subtitle}>Knananuk no Orasoens Katólika</Text>
+        <Text style={styles.subtitle}>Kântikus no Orasoens Katólika</Text>
       </View>
     </View>
   );
