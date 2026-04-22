@@ -9,9 +9,16 @@ import { Ionicons } from '@expo/vector-icons';
 interface EventSummaryProps {
   plan: EventPlan;
   onPressSong: (song: Song) => void;
+  onExportJson: () => void;
+  onImportJson: () => void;
 }
 
-export const EventSummary: React.FC<EventSummaryProps> = ({ plan, onPressSong }) => {
+export const EventSummary: React.FC<EventSummaryProps> = ({ 
+  plan, 
+  onPressSong,
+  onExportJson,
+  onImportJson
+}) => {
   const getSong = (id: number | null) => SONGS_DATA.find(s => s.id === id);
   const cardRef = useRef<View>(null);
 
@@ -70,7 +77,7 @@ export const EventSummary: React.FC<EventSummaryProps> = ({ plan, onPressSong })
           {plan.selections.map((selection, index) => {
             const song = getSong(selection.songId);
             return (
-              <View key={index} style={styles.selectionRow}>
+              <View key={`${selection.partLabel}-${index}`} style={styles.selectionRow}>
                 <View style={styles.leftCol}>
                   <Text style={styles.partLabel}>{selection.partLabel}: </Text>
                 </View>
@@ -91,8 +98,20 @@ export const EventSummary: React.FC<EventSummaryProps> = ({ plan, onPressSong })
 
       <TouchableOpacity style={styles.imageSaveBtn} onPress={onSaveImage}>
           <Ionicons name="image" size={20} color="#fff" />
-          <Text style={styles.imageSaveBtnText}>Save as Image for Gallery</Text>
+          <Text style={styles.btnText}>Save as Image for Gallery</Text>
       </TouchableOpacity>
+
+      <View style={styles.jsonActions}>
+        <TouchableOpacity style={[styles.actionBtn, styles.exportBtn]} onPress={onExportJson}>
+            <Ionicons name="share-social" size={20} color="#fff" />
+            <Text style={styles.btnText}>Export as JSON</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.actionBtn, styles.importBtn]} onPress={onImportJson}>
+            <Ionicons name="cloud-upload" size={20} color="#4b2e1f" />
+            <Text style={[styles.btnText, { color: '#4b2e1f' }]}>Import JSON</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -127,11 +146,36 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 20,
     borderWidth: 1,
-    borderColor: '#3a2318'
+    borderColor: '#3a2318',
+    elevation: 2,
+    shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 3
   },
-  imageSaveBtnText: {
+  jsonActions: {
+    flexDirection: 'row',
+    marginTop: 12,
+    gap: 12
+  },
+  actionBtn: {
+    flex: 1,
+    height: 52,
+    borderRadius: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 2,
+    shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 3
+  },
+  exportBtn: {
+    backgroundColor: '#c1121f',
+  },
+  importBtn: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#ead9cf'
+  },
+  btnText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '700',
     marginLeft: 10
   },

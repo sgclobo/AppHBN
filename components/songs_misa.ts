@@ -3314,8 +3314,8 @@ export const SONGS_MISA: Song[] = [
       "Te per orbem terrarum sancta confitetur Ecclesia.\nPatrem immensae majestatis.\nVenerandum tuum verum et unicum Filium.\nSanctum quoque Paraclitum Spiritum.",
       "Tu Rex gloriae, Christe.\nTu Patris sempiternus es Filius.\nTu, ad liberandum suscepturus hominem non horruisti Virginis uterum.\nTu, devicto mortis aculeo, aperuisti credentibus regna coelorum.\nTu ad dexteram Dei sedes in gloria Patris.\nJudex crederis esse venturus.",
       "Te ergo, quaesumus, tuis famulis subveni\nquos pretioso sanguine redemisti.\nAeterna fac cum sanctis tuis in gloria numerari.",
-      "Salvum fac populum tuum, Domine,\nEt benedic haereditati tuae.\nEt rege eos, et extolle illos usque in aeternum.\nPer singulos dies benedicimus Te.",
-      "Et laudamus nomen tuum in saeculum et in saeculum saeculi.\nDignare, Domine, die isto sine peccato nos custodire.\nMiserere nostri, Domine, miserere nostri.\nFiat misericordia tua, Domine, super nos,\nquemadmodum speravimus in Te.\nIn Te, Domine, speravi; non confundar in aeternum.",
+      "Salvum fac populum tuum, Domine,\nEt benedic haereditati taeae.\nEt rege eos, et extolle illos usque in aeternum.\nPer singulos dies benedicimus Te.",
+      "Et laudamus nomen tuum in saeculum et in saeculum saeculi.\nDignare, Domine, die isto sine peccato nos custodire.\nMiserere nostri, Domine, murerere nostri.\nFiat misericordia tua, Domine, super nos,\nquemadmodum speravimus in Te.\nIn Te, Domine, speravi; non confundar in aeternum.",
       "V. Te, Domine, speravi; non confundar in aeternum.\nR. Benedictus es, Domine, in firmamento coeli.\nV. Et laudabilis et globiosus et superexaltatus in saecula.\nR. Amen."
     ],
   },
@@ -3328,6 +3328,51 @@ export const SONGS_MISA: Song[] = [
     verses: [
       "1. Veni, veni Emmanuel, captivum solve Israel\nqui gemit in exilio, privatus Dei Filio.",
       "2. Veni, O Sapientia, quae hic disponis omnia"
+    ],
+  },
+  {
+    id: 6000,
+    category: "Misa",
+    section: "Entrada",
+    title: `FOIN RAI-HUN MUTIN ATU NAKLOKE`,
+    verses: [
+      "1. Foin rai-hun mutin atu nakloke,\nfeto balu va hare rate;\nhetan anjo ida tur hela\nHalo sira hakfodak no tauk",
+    ],
+    refrain: `Hau hatene imi buka se,\nimi buka Jesus Nazare,\nnia laiha nee, imi ba lalais,\nnia moris hias on (2X)`,
+  },
+  {
+    id: 6001,
+    category: "Misa",
+    section: "Ofertório",
+    title: `AMI MAI HO HARAIK-AN`,
+    refrain: `Ami mai ho haraik an hasae\nami karan nee hamutuk kristu\nsimu ba oh Aman\nkaran nee nuudar ami isin no klamar (2x)`,
+    verses: [
+      "1. Haksolok hawelok ba maromak,\nhananu hodi hahinia naran.",
+      "2. Mundo Rai-klaran Mai hahi ba\nNai, Lalehan no kriatura mai adora",
+    ],
+  },
+  {
+    id: 6002,
+    category: "Misa",
+    section: "Gloria",
+    title: `GLORIA`,
+    refrain: `Gloria ba maromak Letan aas ba (3x)\nPaz be ema be Na'l hadomi.... 2X)`,
+    verses: [
+      "1. Gloria ba amamn maromak\nLaran neebe hakiak LaLehan no rai-klaran.\nAmi hahi, hanai no hawelok\ntamba ita kamanek wain. (Hau hananu......Gloria.....)",
+      "2. Gloria ba oan maksoin Jesus kristu\nno matadalan lialos no moris hun.\nAmi hahi, hanai no hawelok\ntamba ita ami maksoin. (Hau hananu....)",
+      "3. Gloria ba espiritu santo domin nian\nneebe hamoris lalehan no rai-klaran\nAmi hahi,Hanai no hawelok\ntamba ita kbiitwain. (Hau hananu......)",
+    ],
+  },
+  {
+    id: 6003,
+    category: "Misa",
+    section: "Comunhão",
+    title: `TE AMAREI SENHOR`,
+    refrain: `Te amarei, senhor, te amarei, senhor\nEu só encontro a paz alegria bem perto de ti (te amarei)\nTe amarei, senhor, te amarei, senhor\nEu só encontro a paz alegria bem perto de ti (te amarei)`,
+    verses: [
+      "1. Me chamaste para caminhar na vida contigo.\nDecidi para sempre seguir-te,nao voltar atras.\nMe pusestte uma brasa no peito e uma flecha na alma\nÉ dificil agora viver sem lembrar-me de ti",
+      "2. Eu pensei muitas vezes calar e nao da nem resposta.\nEu pensei na fuga esconder-me, ir longe de ti.\nMas tua força venceu e, ao final, eu fiquei seduzido.\nÉ dificil agora viver sem saudades de ti",
+      "3. O Jesus, não me deixes jamais caminar solitario,\npois conheses a minha fraqueza e o meu coração.\nVem, ensina -me a viver a vida na tua presence.\nNo amor dos irmaos, na alegria, na paz,na uniao",
     ],
   },
 ];

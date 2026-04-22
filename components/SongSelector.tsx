@@ -30,10 +30,14 @@ export const SongSelector: React.FC<SongSelectorProps> = ({
 
   const filteredSongs = useMemo(() => {
     const query = searchQuery.toLowerCase();
-    return alphabeticalSongs.filter(s => 
-      s.title.toLowerCase().includes(query) || 
-      s.id.toString().includes(query)
-    );
+    const seen = new Set();
+    return alphabeticalSongs.filter(s => {
+      const matches = s.title.toLowerCase().includes(query) || s.id.toString().includes(query);
+      if (!matches) return false;
+      if (seen.has(s.id)) return false;
+      seen.add(s.id);
+      return true;
+    });
   }, [searchQuery, alphabeticalSongs]);
 
   return (
@@ -83,7 +87,7 @@ export const SongSelector: React.FC<SongSelectorProps> = ({
 
           <FlatList
             data={filteredSongs}
-            keyExtractor={item => item.id.toString()}
+            keyExtractor={(item, index) => `song-${item.id}-${index}`}
             renderItem={({ item }) => (
               <TouchableOpacity 
                 style={styles.songItem} 

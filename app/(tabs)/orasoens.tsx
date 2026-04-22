@@ -570,6 +570,13 @@ Santo António Maria Claret! Ita be terus barak ho perseguição, atentados, ame
 
 <i>(Ami Aman 1X, Ave Maria 3X no Glória 1X)</i>`,
   },
+  "Orasaun ba S. Sebastião": {
+    id: "orasaun_sao_sebastiao",
+    section: "Orasaun ba Santu sira",
+    label: "Orasaun ba S. Sebastião",
+    content:
+      "Oh Sebastião Santo boot,\nmartir Cristo nian,\nAsu-wain defensor Santa Creda nian,\nfiar nain kumpri nain Evangelho tomak.\nO nia naran hakerek iha livro moris rohan laek\nno O nia memoria sei la lakon tinan ba tinan.\n\nHarohan mai ami ben-aventurado São Sebastião\natu ami bele hetan rahun diak\nhousi promesa Cristo nian.\n\n<b>Amen.</b>",
+  },
 };
 
 function parseInlineText(input: any): React.ReactNode[] {
