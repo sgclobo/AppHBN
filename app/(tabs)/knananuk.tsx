@@ -5,6 +5,9 @@ import { Song, SONGS_DATA } from '../../components/songs_data';
 import { ListaKnananukView } from '../../components/ListaKnananukView';
 import { FavoritusView } from '../../components/FavoritusView';
 
+import { useEvents } from '../../context/EventsContext';
+import { SlotPickerModal } from '../../components/SlotPickerModal';
+
 // Enable layout animations for Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -14,11 +17,37 @@ export default function KnananukScreen() {
     const [activeTab, setActiveTab] = useState<'lista' | 'favoritus'>('lista');
     const [selectedSong, setSelectedSong] = useState<Song | null>(null);
     const [indexVisible, setIndexVisible] = useState(false);
+    const [slotPickerVisible, setSlotPickerVisible] = useState(false);
+
+    const { activeEvent, addSongToEvent } = useEvents();
 
     // Alphabetical index for hamburger
     const alphabeticalSongs = useMemo(() => {
         return [...SONGS_DATA].sort((a, b) => a.title.localeCompare(b.title));
     }, []);
+
+    const handleAddSong = async (slotId?: string) => {
+        if (!activeEvent || !selectedSong) return;
+
+        const success = await addSongToEvent(activeEvent.id, selectedSong, slotId);
+        if (success) {
+            setSlotPickerVisible(false);
+            // Delay closing the main detail modal to let the picker dismiss smoothly on iOS
+            setTimeout(() => {
+                setSelectedSong(null);
+            }, 400);
+        }
+    };
+
+    const onAddPress = () => {
+        if (!activeEvent || !selectedSong) return;
+        
+        if (activeEvent.eventType === 'Misa') {
+            setSlotPickerVisible(true);
+        } else {
+            handleAddSong();
+        }
+    };
 
     return (
         <View style={styles.mainContainer}>
@@ -76,6 +105,14 @@ export default function KnananukScreen() {
                         <View style={styles.detailMetaBox}>
                             <Text style={styles.detailMetaText}>{selectedSong?.category} • {selectedSong?.section}</Text>
                         </View>
+
+                        {/* Add to Favoritus Button */}
+                        {activeEvent && (
+                            <TouchableOpacity style={styles.addBtn} onPress={onAddPress}>
+                                <Ionicons name="star" size={20} color="#fff" />
+                                <Text style={styles.addBtnText}>Adiciona ba Favoritus</Text>
+                            </TouchableOpacity>
+                        )}
                         
                         {selectedSong?.refrain && (
                             <View style={styles.refrainBox}>
@@ -92,6 +129,16 @@ export default function KnananukScreen() {
                         <View style={{height: 100}} />
                     </ScrollView>
                 </View>
+                
+                {activeEvent && selectedSong && (
+                    <SlotPickerModal
+                        visible={slotPickerVisible}
+                        onClose={() => setSlotPickerVisible(false)}
+                        event={activeEvent}
+                        song={selectedSong}
+                        onSelectSlot={handleAddSong}
+                    />
+                )}
             </Modal>
 
             {/* Hamburger Modal (Alphabetical Index) */}
@@ -200,4 +247,19 @@ const styles = StyleSheet.create({
     },
     menuItemText: { fontSize: 16, fontWeight: '700', color: '#4b2e1f', flex: 1 },
     menuItemId: { fontSize: 14, fontWeight: '800', color: '#c1121f', opacity: 0.5 },
+    addBtn: {
+        backgroundColor: '#c1121f',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 16,
+        borderRadius: 12,
+        marginBottom: 24,
+    },
+    addBtnText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginLeft: 8,
+    },
 });

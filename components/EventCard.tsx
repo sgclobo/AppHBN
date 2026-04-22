@@ -32,7 +32,9 @@ export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
     ]);
   };
 
-  const selectedCount = Object.values(event.songs || {}).filter(s => s != null).length;
+  const selectedCount = event.eventType === 'Misa'
+    ? Object.values(event.slots || {}).reduce((acc, songs) => acc + songs.length, 0)
+    : (event.songs?.length || 0);
 
   const handleSaveImage = async () => {
     try {

@@ -7,19 +7,16 @@ import { EventCard } from './EventCard';
 import * as DocumentPicker from 'expo-document-picker';
 import { readAsStringAsync, EncodingType } from 'expo-file-system/legacy';
 
-export const FavoritusView: React.FC<any> = () => {
-  const [events, setEvents] = useState<EventPlan[]>([]);
-  const router = useRouter();
+import { useEvents } from '../context/EventsContext';
 
-  const fetchEvents = async () => {
-    const data = await loadEvents();
-    setEvents(data);
-  };
+export const FavoritusView: React.FC<any> = () => {
+  const { events, activeEvent, setActiveEventId, refreshEvents } = useEvents();
+  const router = useRouter();
 
   useFocusEffect(
     useCallback(() => {
-      fetchEvents();
-    }, [])
+      refreshEvents();
+    }, [refreshEvents])
   );
 
   const handleImportJSON = async () => {
@@ -33,7 +30,7 @@ export const FavoritusView: React.FC<any> = () => {
       // Basic validation
       if (parsed.id && parsed.date && parsed.eventType) {
         await saveEvent(parsed);
-        fetchEvents();
+        refreshEvents();
         Alert.alert('Success', 'Event imported successfully.');
       } else {
         throw new Error('Missing required fields.');
@@ -49,6 +46,20 @@ export const FavoritusView: React.FC<any> = () => {
         <Text style={styles.title}>Events</Text>
         <Text style={styles.subtitle}>Manage your song playlists</Text>
       </View>
+
+      {activeEvent && (
+        <View style={styles.activeBanner}>
+          <View style={styles.activeBannerContent}>
+            <Ionicons name="musical-notes" size={20} color="#fff" />
+            <Text style={styles.activeBannerText} numberOfLines={1}>
+              Active event: {activeEvent.name}
+            </Text>
+          </View>
+          <TouchableOpacity onPress={() => setActiveEventId(null)}>
+            <Text style={styles.clearText}>Clear</Text>
+          </TouchableOpacity>
+        </View>
+      )}
 
       <TouchableOpacity 
         style={styles.createBtn} 
@@ -78,8 +89,8 @@ export const FavoritusView: React.FC<any> = () => {
           <EventCard 
             key={event.id} 
             event={event} 
-            onEdit={() => router.push({ pathname: '/EventFormScreen', params: { eventId: event.id } })}
-            onRefresh={fetchEvents}
+            onEdit={() => router.push({ pathname: '/EventDetailScreen', params: { eventId: event.id } })}
+            onRefresh={refreshEvents}
           />
         ))
       )}
@@ -95,6 +106,32 @@ const styles = StyleSheet.create({
   header: { marginBottom: 20 },
   title: { fontSize: 28, fontWeight: 'bold', color: '#333' },
   subtitle: { fontSize: 16, color: '#666', marginTop: 4 },
+  activeBanner: {
+    backgroundColor: '#c0392b',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 12,
+    borderRadius: 12,
+    marginBottom: 16,
+  },
+  activeBannerContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  activeBannerText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    marginLeft: 8,
+    flex: 1,
+  },
+  clearText: {
+    color: '#fff',
+    fontWeight: '900',
+    textDecorationLine: 'underline',
+    marginLeft: 12,
+  },
   createBtn: { 
     backgroundColor: '#c0392b', 
     padding: 16, 

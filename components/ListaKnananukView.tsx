@@ -3,6 +3,8 @@ import { LayoutAnimation, ScrollView, StyleSheet, Text, TextInput, TouchableOpac
 import { FontAwesome6, Ionicons } from "@expo/vector-icons";
 import { Song, SONGS_DATA } from './songs_data';
 
+import { useEvents } from '../context/EventsContext';
+
 interface ListaKnananukViewProps {
     onPressSong: (song: Song) => void;
     onPressMenu: () => void;
@@ -12,6 +14,16 @@ export const ListaKnananukView: React.FC<ListaKnananukViewProps> = ({ onPressSon
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({ "Misa": true });
     const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+    const { activeEvent } = useEvents();
+
+    const isSongInActiveEvent = (songId: number) => {
+        if (!activeEvent) return false;
+        if (activeEvent.eventType === 'Misa') {
+            return Object.values(activeEvent.slots || {}).some(songs => songs.some(s => s.id === songId));
+        }
+        return activeEvent.songs?.some(s => s.id === songId);
+    };
 
     const groupedData = useMemo(() => {
         const groups: Record<string, Record<string, Song[]>> = {};
@@ -51,24 +63,33 @@ export const ListaKnananukView: React.FC<ListaKnananukViewProps> = ({ onPressSon
         setExpandedSection(prev => prev === sec ? null : sec);
     };
 
-    const renderSongRow = (song: Song, showMeta = false) => (
-        <TouchableOpacity 
-            key={song.id} 
-            style={styles.songCard} 
-            onPress={() => onPressSong(song)}
-        >
-            <View style={styles.songTag}>
-                <Text style={styles.songId}>{song.id}</Text>
-            </View>
-            <View style={styles.songContent}>
-                <Text style={styles.songTitle}>{song.title}</Text>
-                {showMeta && (
-                    <Text style={styles.songMeta}>{song.category} • {song.section}</Text>
-                )}
-            </View>
-            <FontAwesome6 name="chevron-right" size={12} color="#c1121f" />
-        </TouchableOpacity>
-    );
+    const renderSongRow = (song: Song, showMeta = false) => {
+        const isAdded = isSongInActiveEvent(song.id);
+        
+        return (
+            <TouchableOpacity 
+                key={song.id} 
+                style={styles.songCard} 
+                onPress={() => onPressSong(song)}
+            >
+                <View style={styles.songTag}>
+                    <Text style={styles.songId}>{song.id}</Text>
+                </View>
+                <View style={styles.songContent}>
+                    <View style={styles.titleRow}>
+                        <Text style={styles.songTitle}>{song.title}</Text>
+                        {isAdded && (
+                            <Ionicons name="star" size={14} color="#FFDF00" style={{ marginLeft: 4 }} />
+                        )}
+                    </View>
+                    {showMeta && (
+                        <Text style={styles.songMeta}>{song.category} • {song.section}</Text>
+                    )}
+                </View>
+                <FontAwesome6 name="chevron-right" size={12} color="#c1121f" />
+            </TouchableOpacity>
+        );
+    };
 
     return (
         <View style={styles.container}>
@@ -277,6 +298,7 @@ const styles = StyleSheet.create({
     },
     songId: { fontSize: 14, fontWeight: '800', color: '#c1121f' },
     songContent: { flex: 1 },
+    titleRow: { flexDirection: 'row', alignItems: 'center' },
     songTitle: { fontSize: 16, fontWeight: '700', color: '#4b2e1f' },
     songMeta: { fontSize: 12, color: '#a18d7c', marginTop: 2 },
 });

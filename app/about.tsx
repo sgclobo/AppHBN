@@ -52,6 +52,39 @@ const sections = [
   }
 ];
 
+const guideSections = [
+  {
+    icon: "calendar-outline",
+    title: "1. Kria Eventu Favoritus",
+    content: 'Haneha tab "Kântikus" depois hili tab "Favoritus". Press "+ Create new event", depois hatama eventu nia naran (ez.:. "Misa Aiversariu AIFAESA") depois hili tipu eventu. Haneha Save atu kria eventu. Wainhira Save tiha ona, eventu nee automatikamente sai Active Event'
+  },
+  {
+    icon: "musical-notes-outline",
+    title: "2. Hili kântikus ba eventu",
+    content: 'Haneha ina tab  "Lista". Buka kântikus neebé hakarak husi lista ba parte misa relevante (Entrada, Salmo Responsorial, etc.). Klik iha  ikon fitun ( ★ Adisiona ba Favoritus) atu hatama kantiku nee ba parte misa relevante.'
+  },
+  {
+    icon: "save-outline",
+    title: "3. Save Eventu",
+    content: "Kântikus selesionadu sira sei salva automaticamente iha lista."
+  },
+  {
+    icon: "download-outline",
+    title: "4. Exporta arkivu JSON",
+    content: 'Haneha ikon Download  (↓) iha eventu ne\'ebé salva atu exporta hanesan arkivu JSON. Arkivu nee iha detálhes hotu husi eventu no lista kântikus, no bele partilla ho ema seluk neebe uza aplikativu ida nee. Ema neebe simu bele importa wainhira klik  butaun "Import JSON".'
+  },
+  {
+    icon: "image-outline",
+    title: "5. Save hanesan Imajen",
+    content: "Haneha ikon Kamera (📷) iha eventu ne'ebé salva atu kera imajen husi lista kântikus. Imajen nee sei salva direktamente iha galeria foto husi dispositivu, prontu atu partilla ho ema seluk."
+  },
+  {
+    icon: "trash-outline",
+    title: "6. Hamós Event",
+    content: "Klik iha ikon Delete (🗑) iha eventu ne'ebé salva atu hamós. Aksaun nee permanente; tan nee diak liu  exporta eventu nee antes hatu hamos."
+  },
+];
+
 export default function AboutScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -97,6 +130,19 @@ export default function AboutScreen() {
             )}
           </View>
         ))}
+
+        <View style={styles.guideContainer}>
+          <Text style={styles.guideMainTitle}>Gia Utilizadór</Text>
+          {guideSections.map((item, index) => (
+            <View key={index} style={styles.guideItem}>
+              <View style={styles.guideHeader}>
+                <Ionicons name={item.icon as any} size={24} color="#FFDF00" />
+                <Text style={styles.guideTitle}>{item.title}</Text>
+              </View>
+              <Text style={styles.guideContent}>{item.content}</Text>
+            </View>
+          ))}
+        </View>
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>© 2026 TimorApps</Text>
@@ -174,6 +220,43 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#E0E0E0",
     flex: 1,
+    lineHeight: 20,
+  },
+  guideContainer: {
+    marginTop: 10,
+    marginBottom: 20,
+  },
+  guideMainTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#FFDF00",
+    marginBottom: 20,
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+  },
+  guideItem: {
+    backgroundColor: "rgba(255, 255, 255, 0.05)",
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: "rgba(255, 223, 0, 0.2)",
+  },
+  guideHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  guideTitle: {
+    fontSize: 17,
+    fontWeight: "bold",
+    color: "#FFDF00",
+    marginLeft: 12,
+  },
+  guideContent: {
+    fontSize: 14,
+    color: "#E0E0E0",
     lineHeight: 20,
   },
   footer: {

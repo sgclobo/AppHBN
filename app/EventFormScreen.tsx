@@ -4,17 +4,24 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import { EventPlan, saveEvent, loadEvents } from '../utils/eventStorage';
 import { SongSelector } from '../components/SongSelector';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { useEvents } from '../context/EventsContext';
+import { MISA_SLOTS } from '../constants/misaSlots';
 
 export default function EventFormScreen() {
   const router = useRouter();
   const { eventId } = useLocalSearchParams<{ eventId?: string }>();
   const isEditing = !!eventId;
 
+  const { setActiveEventId, refreshEvents } = useEvents();
+
   const [date, setDate] = useState<Date>(new Date());
   const [time, setTime] = useState<Date>(new Date());
   const [eventType, setEventType] = useState<'Misa' | 'Terço' | 'Seluk'>('Misa');
   const [eventName, setEventName] = useState('');
-  const [songs, setSongs] = useState<EventPlan['songs']>({});
+  
+  // New structure state
+  const [slots, setSlots] = useState<Record<string, any[]>>({});
+  const [songs, setSongs] = useState<any[]>([]);
 
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [showTimePicker, setShowTimePicker] = useState(false);
@@ -30,26 +37,56 @@ export default function EventFormScreen() {
           dTime.setHours(parseInt(h, 10));
           dTime.setMinutes(parseInt(m, 10));
           setTime(dTime);
-          setEventType(ev.eventType);
+          setEventType(ev.eventType as any);
           setEventName(ev.name || '');
-          setSongs(ev.songs || {});
+          
+          // Data migration / loading
+          if (ev.eventType === 'Misa') {
+            if (ev.slots) {
+              setSlots(ev.slots);
+            } else if ((ev as any).songs && typeof (ev as any).songs === 'object' && !Array.isArray((ev as any).songs)) {
+              // Migrate old object structure to new slots structure
+              const migratedSlots: Record<string, any[]> = {};
+              const oldSongs = (ev as any).songs;
+              Object.keys(oldSongs).forEach(key => {
+                if (oldSongs[key]) {
+                  // Map old keys to new slot IDs if necessary
+                  let slotId = key;
+                  if (key === 'salmoResponsorial') slotId = 'salmo';
+                  if (key === 'aleluia') slotId = 'aclamacao';
+                  if (key === 'acaoDegracas') slotId = 'acao_gracas';
+                  if (key.startsWith('comunhao')) slotId = 'comunhao';
+                  
+                  if (!migratedSlots[slotId]) migratedSlots[slotId] = [];
+                  migratedSlots[slotId].push(oldSongs[key]);
+                }
+              });
+              setSlots(migratedSlots);
+            }
+          } else {
+            setSongs(ev.songs || []);
+          }
         }
       });
     }
   }, [eventId, isEditing]);
 
   const handleSave = async () => {
+    const id = eventId || Date.now().toString();
     const ev: EventPlan = {
-      id: eventId || Date.now().toString(),
+      id,
       date: date.toISOString().split('T')[0],
       time: `${time.getHours().toString().padStart(2, '0')}:${time.getMinutes().toString().padStart(2, '0')}`,
       eventType,
       name: eventName,
-      songs,
+      slots: eventType === 'Misa' ? slots : undefined,
+      songs: eventType !== 'Misa' ? songs : undefined,
       createdAt: isEditing ? (await loadEvents()).find(e => e.id === eventId)?.createdAt || new Date().toISOString() : new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
     await saveEvent(ev);
+    await setActiveEventId(id); // Set as active event as per requirements
+    await refreshEvents();
     router.back();
   };
 
@@ -61,39 +98,63 @@ export default function EventFormScreen() {
         setTime(new Date());
         setEventType('Misa');
         setEventName('');
-        setSongs({});
+        setSlots({});
+        setSongs([]);
       }}
     ]);
   };
 
-  const updateSong = (key: keyof EventPlan['songs'], song: any) => {
-    setSongs(prev => ({ ...prev, [key]: song }));
+  const updateSlot = (slotId: string, song: any) => {
+    setSlots(prev => ({ ...prev, [slotId]: song ? [song] : [] }));
   };
 
-  const renderSongSlots = () => {
-    const slots: Array<{ label: string, key: keyof EventPlan['songs'] }> = [
-      { label: 'ENTRADA', key: 'entrada' },
-      { label: 'SALMO RESPONSORIAL', key: 'salmoResponsorial' },
-      { label: 'ALELUIA', key: 'aleluia' },
-      { label: 'OFERTÓRIO', key: 'ofertorio' },
-      { label: 'SANCTUS', key: 'sanctus' },
-      { label: 'COMUNHÃO 1', key: 'comunhao1' },
-      { label: 'COMUNHÃO 2', key: 'comunhao2' },
-      { label: 'COMUNHÃO 3', key: 'comunhao3' },
-      { label: 'COMUNHÃO 4', key: 'comunhao4' },
-      { label: 'COMUNHÃO 5', key: 'comunhao5' },
-      { label: 'AÇÃO DE GRAÇAS', key: 'acaoDegracas' },
-      { label: 'FINAL', key: 'final' },
-    ];
+  const updateSong = (index: number, song: any) => {
+    setSongs(prev => {
+        const next = [...prev];
+        if (song) next[index] = song;
+        else next.splice(index, 1);
+        return next;
+    });
+  };
 
-    return slots.map(slot => (
+  const addSongField = () => {
+    setSongs(prev => [...prev, null]);
+  };
+
+  const renderMisaSlots = () => {
+    return MISA_SLOTS.map(slot => (
       <SongSelector 
-        key={slot.key}
+        key={slot.id}
         label={slot.label}
-        selectedSongId={songs[slot.key]?.id || null}
-        onSelect={(song) => updateSong(slot.key, song)}
+        selectedSongId={slots[slot.id]?.[0]?.id || null}
+        onSelect={(song) => updateSlot(slot.id, song)}
       />
     ));
+  };
+
+  const renderFreeFormSongs = () => {
+    // Ensure at least one field
+    const displaySongs = songs.length === 0 ? [null] : songs;
+    return (
+        <View>
+            {displaySongs.map((song, idx) => (
+                <SongSelector 
+                    key={idx}
+                    label={`${idx + 1}º Kântiku`}
+                    selectedSongId={song?.id || null}
+                    onSelect={(s) => {
+                        const next = [...songs];
+                        if (s) next[idx] = s;
+                        else next.splice(idx, 1);
+                        setSongs(next);
+                    }}
+                />
+            ))}
+            <TouchableOpacity style={styles.addBtn} onPress={() => setSongs([...songs, null])}>
+                <Text style={styles.addBtnText}>+ Adisiona Kântiku</Text>
+            </TouchableOpacity>
+        </View>
+    );
   };
 
   return (
@@ -163,7 +224,7 @@ export default function EventFormScreen() {
         <View style={styles.line} />
       </View>
 
-      {renderSongSlots()}
+      {eventType === 'Misa' ? renderMisaSlots() : renderFreeFormSongs()}
 
       <TouchableOpacity style={styles.saveBtn} onPress={handleSave}>
         <Text style={styles.saveBtnText}>💾 Save event</Text>
@@ -245,4 +306,6 @@ const styles = StyleSheet.create({
     marginBottom: 32
   },
   resetBtnText: { color: '#c0392b', fontSize: 16, fontWeight: 'bold' },
+  addBtn: { padding: 12, alignItems: 'center', borderWidth: 1, borderColor: '#c0392b', borderRadius: 8, borderStyle: 'dashed', marginBottom: 16 },
+  addBtnText: { color: '#c0392b', fontWeight: 'bold' },
 });

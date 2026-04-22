@@ -6,23 +6,44 @@ interface Props {
   event: EventPlan;
 }
 
-export const PrintableEventCard: React.FC<Props> = ({ event }) => {
-  const slots: Array<{ label: string, key: keyof EventPlan['songs'] }> = [
-    { label: 'ENTRADA', key: 'entrada' },
-    { label: 'SALMO RESPONSORIAL', key: 'salmoResponsorial' },
-    { label: 'ALELUIA', key: 'aleluia' },
-    { label: 'OFERTÓRIO', key: 'ofertorio' },
-    { label: 'SANCTUS', key: 'sanctus' },
-    { label: 'COMUNHÃO 1', key: 'comunhao1' },
-    { label: 'COMUNHÃO 2', key: 'comunhao2' },
-    { label: 'COMUNHÃO 3', key: 'comunhao3' },
-    { label: 'COMUNHÃO 4', key: 'comunhao4' },
-    { label: 'COMUNHÃO 5', key: 'comunhao5' },
-    { label: 'AÇÃO DE GRAÇAS', key: 'acaoDegracas' },
-    { label: 'FINAL', key: 'final' },
-  ];
+import { MISA_SLOTS } from '../constants/misaSlots';
 
-  const selectedSongs = slots.filter(slot => event.songs[slot.key]);
+export const PrintableEventCard: React.FC<Props> = ({ event }) => {
+  const renderMisaSlots = () => {
+    return MISA_SLOTS.map(slot => {
+      const assignedSongs = event.slots?.[slot.id] || [];
+      if (assignedSongs.length === 0) return null;
+
+      return (
+        <View key={slot.id} style={styles.songItem}>
+          <Text style={styles.slotLabel}>{slot.label}</Text>
+          {assignedSongs.map(song => (
+            <View key={song.id} style={styles.songEntry}>
+              <Text style={styles.songTitle}>{song.title}</Text>
+              <Text style={styles.songMeta}>#{song.id} · {song.category}</Text>
+            </View>
+          ))}
+        </View>
+      );
+    });
+  };
+
+  const renderFreeFormSongs = () => {
+    const songs = event.songs || [];
+    return songs.map((song, idx) => (
+      <View key={song.id} style={styles.songItem}>
+        <Text style={styles.slotLabel}>{idx + 1}º KÂNTIKU</Text>
+        <View style={styles.songEntry}>
+          <Text style={styles.songTitle}>{song.title}</Text>
+          <Text style={styles.songMeta}>#{song.id} · {song.category}</Text>
+        </View>
+      </View>
+    ));
+  };
+
+  const hasSongs = event.eventType === 'Misa' 
+    ? Object.values(event.slots || {}).some(s => s.length > 0)
+    : (event.songs?.length || 0) > 0;
 
   return (
     <View style={styles.container}>
@@ -35,16 +56,8 @@ export const PrintableEventCard: React.FC<Props> = ({ event }) => {
       <View style={styles.divider} />
       
       <View style={styles.songList}>
-        {selectedSongs.length > 0 ? (
-          selectedSongs.map((slot) => (
-            <View key={slot.key} style={styles.songItem}>
-              <Text style={styles.slotLabel}>{slot.label}</Text>
-              <Text style={styles.songTitle}>{event.songs[slot.key]?.title}</Text>
-              <Text style={styles.songMeta}>
-                #{event.songs[slot.key]?.id} · {event.songs[slot.key]?.category}
-              </Text>
-            </View>
-          ))
+        {hasSongs ? (
+          event.eventType === 'Misa' ? renderMisaSlots() : renderFreeFormSongs()
         ) : (
           <Text style={styles.noSongs}>Nenhuma música selecionada</Text>
         )}
@@ -95,6 +108,9 @@ const styles = StyleSheet.create({
   },
   songItem: {
     marginBottom: 16,
+  },
+  songEntry: {
+    marginBottom: 6,
   },
   slotLabel: {
     fontSize: 12,
