@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AppHBN",
-    "slug": "AppHBN",
+    "name": "Hananu ba Nai",
+    "slug": "hananu-ba-nai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -22,6 +22,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "shortName": "HBN",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
       "manifest": {
@@ -50,8 +51,8 @@
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow AppHBN to save images to your gallery.",
-          "savePhotosPermission": "Allow AppHBN to save images to your gallery.",
+          "photosPermission": "Allow Hananu ba Nai to save images to your gallery.",
+          "savePhotosPermission": "Allow Hananu ba Nai to save images to your gallery.",
           "isAccessMediaLocationEnabled": true
         }
       ],

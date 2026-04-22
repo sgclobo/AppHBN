@@ -5,9 +5,11 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import DevosoensTab from "../../components/DevosoensTab";
 
 type PrayerItem = {
@@ -635,18 +637,30 @@ function renderPages(pages: string[] | undefined) {
   ));
 }
 
-const grouped = Object.values(prayers).reduce<Record<string, PrayerItem[]>>(
-  (acc, item) => {
-    const sec = item.section || "Orasoens";
-    if (!acc[sec]) acc[sec] = [];
-    acc[sec].push(item);
-    return acc;
-  },
-  {},
-);
 
 export default function OracoesScreen() {
+  const [searchQuery, setSearchQuery] = useState("");
   const scrollViewRef = useRef<ScrollView>(null);
+
+  const filteredPrayers = Object.values(prayers).filter((item) => {
+    if (!searchQuery) return true;
+    const query = searchQuery.toLowerCase();
+    return (
+      (item.label || "").toLowerCase().includes(query) ||
+      (item.title || "").toLowerCase().includes(query) ||
+      (item.content || "").toLowerCase().includes(query)
+    );
+  });
+
+  const grouped = filteredPrayers.reduce<Record<string, PrayerItem[]>>(
+    (acc, item) => {
+      const sec = item.section || "Orasoens";
+      if (!acc[sec]) acc[sec] = [];
+      acc[sec].push(item);
+      return acc;
+    },
+    {},
+  );
   const [sectionLayouts, setSectionLayouts] = useState<Record<string, number>>(
     {},
   );
@@ -692,6 +706,27 @@ export default function OracoesScreen() {
           <Text style={styles.hamburgerText}>☰</Text>
         </TouchableOpacity>
       </View>
+
+      {activeTab === "Orasoens" && (
+        <View style={styles.searchContainer}>
+          <View style={styles.searchBar}>
+            <Ionicons name="search" size={20} color="#6b4f3a" />
+            <TextInput
+              placeholder="Search by title or content..."
+              placeholderTextColor="#a18d7c"
+              style={styles.searchInput}
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              clearButtonMode="while-editing"
+            />
+            {searchQuery.length > 0 && (
+              <TouchableOpacity onPress={() => setSearchQuery("")}>
+                <Ionicons name="close-circle" size={20} color="#a18d7c" />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      )}
 
       <View style={styles.tabContainer}>
         <TouchableOpacity
@@ -740,31 +775,38 @@ export default function OracoesScreen() {
         contentContainerStyle={styles.content}
       >
         {activeTab === "Orasoens" ? (
-          Object.entries(grouped).map(([sectionName, items]) => (
-            <View
-              key={sectionName}
-              style={styles.section}
-              onLayout={(e) => handleSectionLayout(sectionName, e)}
-            >
-              <Text style={styles.sectionTitle}>{sectionName}</Text>
-              {items.map((item, index) => (
-                <View key={item.id || index} style={styles.item}>
-                  {(item.title || item.label) && (
-                    <Text style={styles.itemTitle}>
-                      {item.title || item.label}
-                    </Text>
-                  )}
-                  {item.rubric ? (
-                    <Text style={styles.rubric}>
-                      {parseInlineText(item.rubric)}
-                    </Text>
-                  ) : null}
-                  {item.content ? renderParagraph(item.content) : null}
-                  {item.pages ? renderPages(item.pages) : null}
-                </View>
-              ))}
+          Object.keys(grouped).length > 0 ? (
+            Object.entries(grouped).map(([sectionName, items]) => (
+              <View
+                key={sectionName}
+                style={styles.section}
+                onLayout={(e) => handleSectionLayout(sectionName, e)}
+              >
+                <Text style={styles.sectionTitle}>{sectionName}</Text>
+                {items.map((item, index) => (
+                  <View key={item.id || index} style={styles.item}>
+                    {(item.title || item.label) && (
+                      <Text style={styles.itemTitle}>
+                        {item.title || item.label}
+                      </Text>
+                    )}
+                    {item.rubric ? (
+                      <Text style={styles.rubric}>
+                        {parseInlineText(item.rubric)}
+                      </Text>
+                    ) : null}
+                    {item.content ? renderParagraph(item.content) : null}
+                    {item.pages ? renderPages(item.pages) : null}
+                  </View>
+                ))}
+              </View>
+            ))
+          ) : (
+            <View style={styles.emptyState}>
+              <Ionicons name="search-outline" size={48} color="#ccc" />
+              <Text style={styles.emptyText}>No prayers found matching your search.</Text>
             </View>
-          ))
+          )
         ) : (
           <DevosoensTab
             scrollViewRef={scrollViewRef as any}
@@ -823,6 +865,33 @@ const styles = StyleSheet.create({
   hamburgerText: {
     fontSize: 28,
     color: "#4b2e1f",
+  },
+  searchContainer: {
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    backgroundColor: "#f7f2e8",
+  },
+  searchBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    height: 48,
+    borderWidth: 1,
+    borderColor: "#ead9cf",
+    shadowColor: "#4b2e1f",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 3,
+    elevation: 2,
+  },
+  searchInput: {
+    flex: 1,
+    marginLeft: 10,
+    fontSize: 16,
+    color: "#4b2e1f",
+    fontWeight: "500",
   },
   container: {
     flex: 1,
@@ -950,5 +1019,16 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontWeight: "700",
+  },
+  emptyState: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 60,
+  },
+  emptyText: {
+    color: "#a18d7c",
+    marginTop: 12,
+    fontSize: 16,
+    textAlign: "center",
   },
 });
