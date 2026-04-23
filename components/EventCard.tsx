@@ -11,7 +11,8 @@ import {
 } from "react-native";
 import { captureRef } from "react-native-view-shot";
 import { MISA_SLOTS } from "../constants/misaSlots";
-import { EventPlan, deleteEvent } from "../utils/eventStorage";
+import { useEvents } from "../context/EventsContext";
+import { EventPlan } from "../utils/eventStorage";
 import { exportJSON } from "../utils/jsonHelpers";
 
 import { PrintableEventCard } from "./PrintableEventCard";
@@ -25,16 +26,31 @@ interface Props {
 export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
   const cardRef = useRef<View>(null);
   const printRef = useRef<View>(null);
+  const { deleteEvent } = useEvents();
+
+  const doDelete = async () => {
+    await deleteEvent(String(event.id));
+    await onRefresh();
+  };
 
   const handleDelete = () => {
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      const confirmed = window.confirm(
+        "Are you sure you want to delete this event?",
+      );
+      if (confirmed) {
+        void doDelete();
+      }
+      return;
+    }
+
     Alert.alert("Delete Event", "Are you sure you want to delete this event?", [
       { text: "Cancel", style: "cancel" },
       {
         text: "Delete",
         style: "destructive",
-        onPress: async () => {
-          await deleteEvent(event.id);
-          onRefresh();
+        onPress: () => {
+          void doDelete();
         },
       },
     ]);

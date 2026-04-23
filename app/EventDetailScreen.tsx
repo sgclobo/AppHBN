@@ -1,9 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
     Alert,
     Modal,
+    Platform,
     ScrollView,
     StyleSheet,
     Text,
@@ -42,6 +43,16 @@ export default function EventDetailScreen() {
   const isActive = activeEventId === event.id;
 
   const handleDelete = () => {
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      const confirmed = window.confirm(
+        "Ita sigur katak hakarak hamoos eventu ne'e?",
+      );
+      if (confirmed) {
+        void deleteEvent(String(event.id)).then(() => router.back());
+      }
+      return;
+    }
+
     Alert.alert(
       "Hamoos Eventu",
       "Ita sigur katak hakarak hamoos eventu ne'e?",
@@ -51,7 +62,7 @@ export default function EventDetailScreen() {
           text: "Hamoos",
           style: "destructive",
           onPress: async () => {
-            await deleteEvent(event.id);
+            await deleteEvent(String(event.id));
             router.back();
           },
         },

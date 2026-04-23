@@ -1,14 +1,14 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Song } from '../components/songs_data';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Song } from "../components/songs_data";
 
-const KEY = '@favoritus_events';
-const ACTIVE_EVENT_KEY = '@favoritus_active_event_id';
+const KEY = "@favoritus_events";
+const ACTIVE_EVENT_KEY = "@favoritus_active_event_id";
 
 export interface EventPlan {
   id: string;
   date: string;
   time: string;
-  eventType: 'Misa' | 'Terço' | 'Seluk' | string; // Seluk/others can be free-form
+  eventType: "Misa" | "Terço" | "Seluk" | string; // Seluk/others can be free-form
   name: string;
   slots?: {
     [slotId: string]: Song[];
@@ -25,7 +25,7 @@ export const loadEvents = async (): Promise<EventPlan[]> => {
 
 export const saveEvent = async (event: EventPlan): Promise<void> => {
   const events = await loadEvents();
-  const idx = events.findIndex(e => e.id === event.id);
+  const idx = events.findIndex((e) => e.id === event.id);
   if (idx >= 0) events[idx] = event;
   else events.unshift(event);
   await AsyncStorage.setItem(KEY, JSON.stringify(events));
@@ -33,11 +33,15 @@ export const saveEvent = async (event: EventPlan): Promise<void> => {
 
 export const deleteEvent = async (id: string): Promise<void> => {
   const events = await loadEvents();
-  await AsyncStorage.setItem(KEY, JSON.stringify(events.filter(e => e.id !== id)));
-  
+  const normalizedId = String(id);
+  await AsyncStorage.setItem(
+    KEY,
+    JSON.stringify(events.filter((e) => String(e.id) !== normalizedId)),
+  );
+
   // Clear active event if it was the one deleted
   const activeId = await getActiveEventId();
-  if (activeId === id) {
+  if (activeId === normalizedId) {
     await setActiveEventId(null);
   }
 };
