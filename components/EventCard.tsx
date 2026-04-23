@@ -1,12 +1,19 @@
-import React, { useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert, Platform } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { EventPlan, deleteEvent } from '../utils/eventStorage';
-import { exportJSON } from '../utils/jsonHelpers';
-import { captureRef } from 'react-native-view-shot';
-import * as MediaLibrary from 'expo-media-library';
+import { Ionicons } from "@expo/vector-icons";
+import * as MediaLibrary from "expo-media-library";
+import React, { useRef } from "react";
+import {
+    Alert,
+    Platform,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from "react-native";
+import { captureRef } from "react-native-view-shot";
+import { EventPlan, deleteEvent } from "../utils/eventStorage";
+import { exportJSON } from "../utils/jsonHelpers";
 
-import { PrintableEventCard } from './PrintableEventCard';
+import { PrintableEventCard } from "./PrintableEventCard";
 
 interface Props {
   event: EventPlan;
@@ -19,41 +26,58 @@ export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
   const printRef = useRef<View>(null);
 
   const handleDelete = () => {
-    Alert.alert('Delete Event', 'Are you sure you want to delete this event?', [
-      { text: 'Cancel', style: 'cancel' },
-      { 
-        text: 'Delete', 
-        style: 'destructive', 
+    Alert.alert("Delete Event", "Are you sure you want to delete this event?", [
+      { text: "Cancel", style: "cancel" },
+      {
+        text: "Delete",
+        style: "destructive",
         onPress: async () => {
           await deleteEvent(event.id);
           onRefresh();
-        }
-      }
+        },
+      },
     ]);
   };
 
-  const selectedCount = event.eventType === 'Misa'
-    ? Object.values(event.slots || {}).reduce((acc, songs) => acc + songs.length, 0)
-    : (event.songs?.length || 0);
+  const selectedCount =
+    event.eventType === "Misa"
+      ? Object.values(event.slots || {}).reduce(
+          (acc, songs) => acc + songs.length,
+          0,
+        )
+      : event.songs?.length || 0;
 
   const handleSaveImage = async () => {
     try {
-      if (Platform.OS === 'web') {
-        Alert.alert("Web Version", "Image capture is optimized for Android/iOS.");
+      if (Platform.OS === "web") {
+        if (!printRef.current) return;
+        const uri = await captureRef(printRef, {
+          format: "png",
+          quality: 1,
+          result: "data-uri",
+        });
+
+        const link = document.createElement("a");
+        link.href = uri;
+        link.download = `${(event.name || event.eventType).replace(/[^a-z0-9]/gi, "_").toLowerCase()}-songs.png`;
+        link.click();
         return;
       }
       const { status } = await MediaLibrary.requestPermissionsAsync(true);
-      if (status !== 'granted') {
-        Alert.alert("Permission Error", "We need permission to save to your gallery.");
+      if (status !== "granted") {
+        Alert.alert(
+          "Permission Error",
+          "We need permission to save to your gallery.",
+        );
         return;
       }
       if (printRef.current) {
         // Wait a bit for the hidden view to be ready if needed
-        await new Promise(resolve => setTimeout(resolve, 500));
-        const uri = await captureRef(printRef, { 
-          format: 'png', 
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        const uri = await captureRef(printRef, {
+          format: "png",
           quality: 1.0,
-          result: 'tmpfile'
+          result: "tmpfile",
         });
         if (uri) {
           await MediaLibrary.saveToLibraryAsync(uri);
@@ -74,12 +98,18 @@ export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
   return (
     <View>
       {/* Visible Card */}
-      <TouchableOpacity style={styles.card} onPress={() => onEdit(event)} activeOpacity={0.7} ref={cardRef} collapsable={false}>
-        <View style={styles.content}>
-          <Text style={styles.topRow}>{event.date} · {event.time} · {event.eventType}</Text>
+      <View style={styles.card} ref={cardRef} collapsable={false}>
+        <TouchableOpacity
+          style={styles.content}
+          onPress={() => onEdit(event)}
+          activeOpacity={0.7}
+        >
+          <Text style={styles.topRow}>
+            {event.date} · {event.time} · {event.eventType}
+          </Text>
           <Text style={styles.title}>{event.name || event.eventType}</Text>
           <Text style={styles.subtitle}>{selectedCount} songs selected</Text>
-        </View>
+        </TouchableOpacity>
         <View style={styles.actions}>
           <TouchableOpacity style={styles.actionBtn} onPress={handleExport}>
             <Ionicons name="download-outline" size={24} color="#a18d7c" />
@@ -91,7 +121,7 @@ export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
             <Ionicons name="trash-outline" size={24} color="#c0392b" />
           </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+      </View>
 
       {/* Hidden Card for Printing/Capture */}
       <View style={styles.hiddenContainer} pointerEvents="none">
@@ -105,13 +135,13 @@ export const EventCard: React.FC<Props> = ({ event, onEdit, onRefresh }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderRadius: 8,
     padding: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 12,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
@@ -124,21 +154,21 @@ const styles = StyleSheet.create({
   },
   topRow: {
     fontSize: 12,
-    color: '#888',
+    color: "#888",
     marginBottom: 4,
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: "bold",
+    color: "#333",
     marginBottom: 4,
   },
   subtitle: {
     fontSize: 13,
-    color: '#c0392b',
+    color: "#c0392b",
   },
   actions: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginLeft: 12,
   },
   actionBtn: {
@@ -146,8 +176,8 @@ const styles = StyleSheet.create({
     padding: 4,
   },
   hiddenContainer: {
-    position: 'absolute',
+    position: "absolute",
     left: -5000, // Move off-screen
     top: 0,
-  }
+  },
 });

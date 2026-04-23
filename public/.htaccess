@@ -1,8 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Always serve real files and directories directly.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Never rewrite common PWA assets.
+  RewriteRule ^(manifest\.json|site\.webmanifest|apple-touch-icon\.png|icon-192\.png|icon-512\.png|icon\.png|favicon\.png|favicon\.ico)$ - [L]
+
+  # SPA fallback for routes.
   RewriteRule . /index.html [L]
 </IfModule>

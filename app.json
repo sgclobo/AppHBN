@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Hananu ba Nai",
-    "slug": "hananu-ba-nai",
+    "name": "Harohan ba Nai",
+    "slug": "harohan-ba-nai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -22,37 +22,53 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "shortName": "HBN",
+      "name": "Harohan ba Nai",
+      "shortName": "Harohan",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
       "manifest": {
+        "name": "Harohan ba Nai",
+        "short_name": "Harohan",
+        "description": "Kântikus no Orasoens Katólika",
+        "start_url": "/",
         "theme_color": "#c1121f",
         "background_color": "#FDF9FF",
         "display": "standalone",
         "orientation": "portrait",
         "icons": [
           {
-            "src": "./assets/images/icon.png",
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "/icon-512.png",
             "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+          },
+          {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
             "type": "image/png"
           },
           {
-            "src": "./assets/images/icon-maskable.png",
+            "src": "/icon-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
           }
         ]
       }
-
     },
     "plugins": [
       "expo-router",
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow Hananu ba Nai to save images to your gallery.",
-          "savePhotosPermission": "Allow Hananu ba Nai to save images to your gallery.",
+          "photosPermission": "Allow Harohan ba Nai to save images to your gallery.",
+          "savePhotosPermission": "Allow Harohan ba Nai to save images to your gallery.",
           "isAccessMediaLocationEnabled": true
         }
       ],
