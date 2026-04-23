@@ -1,3 +1,5 @@
+Options -MultiViews
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -6,6 +8,10 @@
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
+
+  # Never rewrite JS/CSS bundles or static assets.
+  RewriteRule ^_expo/ - [L]
+  RewriteRule ^assets/ - [L]
 
   # Never rewrite common PWA assets.
   RewriteRule ^(manifest\.json|site\.webmanifest|apple-touch-icon\.png|icon-192\.png|icon-512\.png|icon\.png|favicon\.png|favicon\.ico)$ - [L]

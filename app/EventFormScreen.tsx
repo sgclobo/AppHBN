@@ -1,8 +1,9 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
     Alert,
+    Modal,
     Platform,
     ScrollView,
     StyleSheet,
@@ -244,57 +245,93 @@ export default function EventFormScreen() {
         />
       )}
 
-      {Platform.OS === "web" && (showDatePicker || showTimePicker) && (
-        <View style={styles.webPickerOverlay}>
-          <View style={styles.webPickerContent}>
-            <Text style={styles.webPickerTitle}>
-              {showDatePicker ? "Select date" : "Select time"}
-            </Text>
-            <input
-              type={showDatePicker ? "date" : "time"}
-              value={
-                showDatePicker
-                  ? formatDateForInput(date)
-                  : formatTimeForInput(time)
-              }
-              onChange={(event) => {
-                const value = event.target.value;
-                if (!value) return;
-
-                if (showDatePicker) {
-                  const next = new Date(value);
-                  if (!isNaN(next.getTime())) setDate(next);
-                } else {
-                  const [hours, minutes] = value.split(":").map(Number);
-                  if (!isNaN(hours) && !isNaN(minutes)) {
-                    const next = new Date(time);
-                    next.setHours(hours);
-                    next.setMinutes(minutes);
-                    setTime(next);
+      {Platform.OS === "web" && showDatePicker && (
+        <Modal
+          visible={true}
+          transparent={true}
+          animationType="fade"
+          onRequestClose={() => setShowDatePicker(false)}
+        >
+          <View style={styles.webPickerOverlay}>
+            <View style={styles.webPickerContent}>
+              <Text style={styles.webPickerTitle}>Select date</Text>
+              <input
+                type="date"
+                value={formatDateForInput(date)}
+                onChange={(event) => {
+                  const value = event.target.value;
+                  if (value) {
+                    const next = new Date(value);
+                    if (!isNaN(next.getTime())) setDate(next);
                   }
-                }
-              }}
-              style={{
-                width: "100%",
-                height: "40px",
-                fontSize: "16px",
-                borderRadius: "8px",
-                border: "1px solid #ccc",
-                padding: "0 8px",
-                marginBottom: "16px",
-              }}
-            />
-            <TouchableOpacity
-              style={styles.webPickerDoneBtn}
-              onPress={() => {
-                setShowDatePicker(false);
-                setShowTimePicker(false);
-              }}
-            >
-              <Text style={styles.webPickerDoneText}>Done</Text>
-            </TouchableOpacity>
+                }}
+                style={{
+                  width: "100%",
+                  height: "40px",
+                  fontSize: "16px",
+                  borderRadius: "8px",
+                  border: "1px solid #ccc",
+                  padding: "0 8px",
+                  marginBottom: "16px",
+                  boxSizing: "border-box",
+                }}
+              />
+              <TouchableOpacity
+                style={styles.webPickerDoneBtn}
+                onPress={() => setShowDatePicker(false)}
+              >
+                <Text style={styles.webPickerDoneText}>Done</Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
+        </Modal>
+      )}
+
+      {Platform.OS === "web" && showTimePicker && (
+        <Modal
+          visible={true}
+          transparent={true}
+          animationType="fade"
+          onRequestClose={() => setShowTimePicker(false)}
+        >
+          <View style={styles.webPickerOverlay}>
+            <View style={styles.webPickerContent}>
+              <Text style={styles.webPickerTitle}>Select time</Text>
+              <input
+                type="time"
+                value={formatTimeForInput(time)}
+                onChange={(event) => {
+                  const value = event.target.value;
+                  if (value) {
+                    const [hours, minutes] = value.split(":").map(Number);
+                    if (!isNaN(hours) && !isNaN(minutes)) {
+                      const next = new Date(time);
+                      next.setHours(hours);
+                      next.setMinutes(minutes);
+                      setTime(next);
+                    }
+                  }
+                }}
+                style={{
+                  width: "100%",
+                  height: "40px",
+                  fontSize: "16px",
+                  borderRadius: "8px",
+                  border: "1px solid #ccc",
+                  padding: "0 8px",
+                  marginBottom: "16px",
+                  boxSizing: "border-box",
+                }}
+              />
+              <TouchableOpacity
+                style={styles.webPickerDoneBtn}
+                onPress={() => setShowTimePicker(false)}
+              >
+                <Text style={styles.webPickerDoneText}>Done</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
       )}
 
       <Text style={styles.label}>EVENT TYPE</Text>
@@ -441,15 +478,10 @@ const styles = StyleSheet.create({
   },
   addBtnText: { color: "#c0392b", fontWeight: "bold" },
   webPickerOverlay: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+    flex: 1,
     backgroundColor: "rgba(0,0,0,0.4)",
     justifyContent: "center",
     alignItems: "center",
-    zIndex: 1000,
     padding: 20,
   },
   webPickerContent: {
@@ -458,6 +490,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 12,
     padding: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   webPickerTitle: {
     fontSize: 14,
