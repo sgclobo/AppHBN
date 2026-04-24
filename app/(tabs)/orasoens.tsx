@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import React, { useRef, useState } from "react";
 import {
   LayoutChangeEvent,
@@ -9,8 +10,12 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import DevosoensTab from "../../components/DevosoensTab";
+import {
+  bvsData,
+  oTercoData,
+  tercoMisericordiaTetumData,
+} from "../../components/devosoens_data";
 
 type PrayerItem = {
   id?: string;
@@ -637,9 +642,9 @@ function renderPages(pages: string[] | undefined) {
   ));
 }
 
-
 export default function OracoesScreen() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [devosoensSearchQuery, setDevosoensSearchQuery] = useState("");
   const scrollViewRef = useRef<ScrollView>(null);
 
   const filteredPrayers = Object.values(prayers).filter((item) => {
@@ -676,6 +681,38 @@ export default function OracoesScreen() {
     "ORAÇÃO BA VIZITA IHA FAMÍLIA",
   ];
 
+  const normalizedDevosoensSearchQuery = devosoensSearchQuery
+    .trim()
+    .toLowerCase();
+  const devosoensSearchContent: Record<string, string[]> = {
+    "Ita nia Nain Feto nia Rozáriu": [
+      oTercoData[0].label,
+      oTercoData[0].content,
+    ],
+    "Tersu Mizerikórdia Divina": [
+      tercoMisericordiaTetumData.title,
+      ...tercoMisericordiaTetumData.sections.flatMap((section: any) => [
+        section.title,
+        ...section.content.map((item: any) => item.text),
+      ]),
+    ],
+    "Dalan Kruz": [bvsData["Dalan Kruz"].title, ...bvsData["Dalan Kruz"].pages],
+    "ORAÇÃO BA VIZITA IHA FAMÍLIA": [
+      bvsData["ORAÇÃO BA VIZITA IHA FAMÍLIA"].title,
+      ...bvsData["ORAÇÃO BA VIZITA IHA FAMÍLIA"].pages,
+    ],
+  };
+
+  const filteredDevosoensSections = devosoensSections.filter((sectionName) => {
+    if (!normalizedDevosoensSearchQuery) {
+      return true;
+    }
+
+    return [sectionName, ...(devosoensSearchContent[sectionName] ?? [])].some(
+      (value) => value.toLowerCase().includes(normalizedDevosoensSearchQuery),
+    );
+  });
+
   const handleSectionLayout = (
     sectionName: string,
     event: LayoutChangeEvent,
@@ -693,7 +730,7 @@ export default function OracoesScreen() {
   };
 
   const currentSections =
-    activeTab === "Orasoens" ? Object.keys(grouped) : devosoensSections;
+    activeTab === "Orasoens" ? Object.keys(grouped) : filteredDevosoensSections;
 
   return (
     <View style={styles.mainContainer}>
@@ -721,6 +758,27 @@ export default function OracoesScreen() {
             />
             {searchQuery.length > 0 && (
               <TouchableOpacity onPress={() => setSearchQuery("")}>
+                <Ionicons name="close-circle" size={20} color="#a18d7c" />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      )}
+
+      {activeTab === "Devosoens" && (
+        <View style={styles.searchContainer}>
+          <View style={styles.searchBar}>
+            <Ionicons name="search" size={20} color="#6b4f3a" />
+            <TextInput
+              placeholder="Search by title or content..."
+              placeholderTextColor="#a18d7c"
+              style={styles.searchInput}
+              value={devosoensSearchQuery}
+              onChangeText={setDevosoensSearchQuery}
+              clearButtonMode="while-editing"
+            />
+            {devosoensSearchQuery.length > 0 && (
+              <TouchableOpacity onPress={() => setDevosoensSearchQuery("")}>
                 <Ionicons name="close-circle" size={20} color="#a18d7c" />
               </TouchableOpacity>
             )}
@@ -804,13 +862,17 @@ export default function OracoesScreen() {
           ) : (
             <View style={styles.emptyState}>
               <Ionicons name="search-outline" size={48} color="#ccc" />
-              <Text style={styles.emptyText}>No prayers found matching your search.</Text>
+              <Text style={styles.emptyText}>
+                No prayers found matching your search.
+              </Text>
             </View>
           )
         ) : (
           <DevosoensTab
             scrollViewRef={scrollViewRef as any}
             onSectionLayout={handleSectionLayout}
+            searchQuery={devosoensSearchQuery}
+            visibleSections={filteredDevosoensSections}
           />
         )}
       </ScrollView>
